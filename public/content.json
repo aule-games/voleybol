@@ -1,8 +1,8 @@
 {
-  "schema": 2,
+  "schema": 3,
   "demo": false,
-  "revision": 2,
-  "rightsRevision": 2,
+  "revision": 3,
+  "rightsRevision": 3,
   "publishedAt": "2026-10-22T19:34:18.198Z",
   "validUntil": "2026-10-29T19:34:18.198Z",
   "rights": {
@@ -497,10 +497,10 @@
       }
     ]
   },
-  "localOnly": true,
   "modes": {
     "fixtures": "fictional",
     "roster": "real",
     "quiz": "factual"
-  }
+  },
+  "previewOnly": true
 }

@@ -17,7 +17,7 @@ export interface QuestionSource { title: string; url: string; checkedAt: string 
 export interface Question { id: string; revision: number; text: string; choices: Choice[]; correctId: string; explanation: string; season?: string; source?: QuestionSource }
 export interface QuizPack { id: string; revision: number; questions: Question[] }
 export interface Content {
-  schema: 1 | 2; demo: boolean; localOnly?: true;
+  schema: 1 | 2 | 3; demo: boolean; localOnly?: true; previewOnly?: true;
   modes?: { fixtures: 'fictional'; roster: 'real'; quiz: 'factual' };
   revision: number; rightsRevision: number; publishedAt: string; validUntil: string;
   rights: { expiresAt: string; withdrawnIds: string[] };

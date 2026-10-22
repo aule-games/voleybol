@@ -9,7 +9,7 @@ Setup references: [Vite](https://vite.dev/guide/), [Vitest](https://vitest.dev/g
 ## Module boundaries
 
 - `src/domain/`: pure prediction, lineup and quiz rules; stable IDs rather than answer indexes.
-- `src/data/`: strict fictional and local-preview schemas and the single atomic content coordinator.
+- `src/data/`: strict fictional, local-preview and approved-host preview schemas and the single atomic content coordinator.
 - `src/platform/`: append-only storage, bounded export renderer and disabled analytics wrapper.
 - `src/router.ts`: the only fragment codec; `src/main.ts` and `src/ui/` render native DOM with `textContent`.
 - `tests/`: unit boundaries plus built-output browser flows. No tests import the private planning material.
@@ -18,13 +18,13 @@ The UI is intentionally a first slice, not a general game engine. It has no fram
 
 ## Content envelope
 
-`public/content.json` is the only fetched content asset. Schema 1 remains fictional-only. Schema 2 is the explicitly classified real-roster/factual-quiz/fictional-fixtures local preview; it is rejected unless the coordinator is on an exact loopback host. See [the current contract](local-content.md). Unknown common fields and schema versions fail closed. Public-ready files must never include private reviewer identities, correspondence, permission documents or private paths.
+`public/content.json` is the only fetched content asset. Schema 1 remains fictional-only. Schema 2 is the explicitly classified real-roster/factual-quiz/fictional-fixtures local preview; it is rejected unless the coordinator is on an exact loopback host. Schema 3 is the separate approved-host test preview; it requires `previewOnly: true` and an explicit caller opt-in, limited to loopback or the exact GitHub Pages content URL. See [the current contract](local-content.md) and [deployment workflow](deployment.md). Unknown common fields and schema versions fail closed. Public-ready files must never include private reviewer identities, correspondence, permission documents or private paths.
 
-The envelope has `schema`, `demo`, `revision`, `rightsRevision`, `publishedAt`, `validUntil`, `rights`, `fixtures`, `roster`, and `quiz`; schema 2 also requires `localOnly` and `modes`. UTC timestamps use full ISO form, such as `2026-10-22T12:00:00.000Z`. Visible dates are formatted in `Europe/Istanbul`, explicitly labelled TSİ.
+The envelope has `schema`, `demo`, `revision`, `rightsRevision`, `publishedAt`, `validUntil`, `rights`, `fixtures`, `roster`, and `quiz`; schema 2 also requires `localOnly` and `modes`, while schema 3 requires `previewOnly` and `modes`. UTC timestamps use full ISO form, such as `2026-10-22T12:00:00.000Z`. Visible dates are formatted in `Europe/Istanbul`, explicitly labelled TSİ.
 
 One request reads at most **256 KiB** with a **5000 ms** total deadline, `cache: no-store`, `credentials: omit`, and `redirect: error`. No retries occur automatically. Both the header and body are checked. Stale or obsolete generations cannot become current. A common validation failure closes the envelope; malformed mode data closes only that mode in the same snapshot. No old/new modes are combined.
 
-Current schema bounds: 21 non-final fixtures, 42 finals, 35 players, one five-question fictional pack or ten-question sourced local-preview pack (four choices per question). The accepted later programme permits four packs / 20 questions and at most two explicitly cleared historical roster versions; neither is implemented yet. Limits are engineering bounds, not rights clearance.
+Current schema bounds: 21 non-final fixtures, 42 finals, 35 players, one five-question fictional pack or ten-question sourced preview pack (four choices per question). The accepted later programme permits four packs / 20 questions and at most two explicitly cleared historical roster versions; neither is implemented yet. Limits are engineering bounds, not rights clearance.
 
 ### Revision rules
 
@@ -34,13 +34,13 @@ Current schema bounds: 21 non-final fixtures, 42 finals, 35 players, one five-qu
 4. Change quiz content/key/order with a higher pack revision; bump affected question revisions too. An active attempt freezes on observed updates. Completed mappable answers are rescored by stable choice IDs; unavailable questions/choices become unscored.
 5. Remove withdrawn identities from newly distributed content; put their IDs into `rights.withdrawnIds` and increase policy/content revisions. The validator refuses active rows with withdrawn IDs. Never package an unsafe historical snapshot in JavaScript.
 
-The current running-app checks are not a full editorial diff validator across deployments/reloads. Cross-deployment editorial tooling remains required before public real-data release. Static files and previously downloaded/shared PNGs cannot be recalled. Hosting/cache withdrawal controls and source-specific distribution permission must be proven before any publication.
+The current running-app checks are not a full editorial diff validator across deployments/reloads. Cross-deployment editorial tooling remains required before public real-data release. Static files and previously downloaded/shared PNGs cannot be recalled. Production release requires proven hosting/cache withdrawal controls and a source-specific distribution basis. The owner-authorized bounded public test is an exception to those release prerequisites, not proof of editorial/withdrawal coverage, a licence grant, or production certification.
 
 ### Author a fresh local example
 
 `npm run demo:refresh` is an explicit local authoring tool, not a browser bypass. It creates two upcoming fictional matches, one postponed match, one final, fourteen placeholder players and five original questions about the demo's rules. It never runs during `dev`, `verify`, `build` or a fetch. New authoring changes freshness stamps; refreshing a browser request never does. Fixtures become stale after 24 hours; the first two lock earlier at their own start times.
 
-The real local preview is a separate explicit schema and authoring operation. `demo:refresh` refuses to overwrite it. Source-specific public distribution clearance remains open; manual entry and attribution are not blanket permission.
+The real-content previews use separate explicit schemas and authoring operation. `demo:refresh` refuses to overwrite it. Source-specific public distribution clearance remains open; manual entry and attribution are not blanket permission.
 
 ## Prediction transaction
 
@@ -72,7 +72,7 @@ Shared links are read-only. Copying one into the current draft requires explicit
 
 Preparation fetches a fresh policy and captures selection/content/rights as one immutable generation. The file expires after 60 seconds or sooner on policy expiry, selection/content/rights changes, navigation, hide or offline. Old object URLs are revoked. For schema 1, the final share button directly calls native share with the prepared File during user activation, without awaited work first. Cancellation is neutral; neither promise resolution nor download/copy means a post was published. No automatic retries or outbound posts occur.
 
-Schema 2 disables native external sharing and omits club marks from PNGs; text and image copy identify real names and the local-preview status.
+Schemas 2 and 3 disable native external sharing and omit club marks from PNGs; text and image copy identify real names and test-preview status. Name-only PNG download and link copy remain available.
 
 PNG dimensions: 1080×1350, 64 px safe boundary, name font at least 40 px, word wrapping at most three lines. Overflow disables PNG rather than truncating a name; text/link remain available. Canvas is released after rendering and one active Blob URL is retained. Real iOS/Android native share behavior is not certified by browser mocks.
 
@@ -141,4 +141,4 @@ An unknown outcome is not success. Inspect the destination before retrying. Clip
 
 Unit and browser cases cover a bounded subset of the full programme, not all planned contract families. Added hardening checks cover injected hide/pagehide/pageshow events, exact lock and 24-hour editorial freshness guards, Lisbon DST with TSİ display, corrected results, delayed renders, Blob URL cleanup, sharing errors and nested static placement. DOM lifecycle events are not proof of real OS suspension or actual BFCache admission. Automated 200% CSS magnification checks control reachability and overflow; native browser zoom and screen-reader use still require manual verification.
 
-Remaining proof includes actual device sharing, screen-reader/native-zoom audit, broader real-roster combinations beyond the checked current pool, supported historical roster compatibility, all lifecycle/concurrency/error permutations, fresh-clone onboarding, comparable throttled WebKit and real-device performance, actual host/cache withdrawal, content rights/editorial rehearsal, and external review. Current synthetic name/encoder tests and local performance measurements are bounded evidence, not completion of those gates. Browser test servers bind only to loopback ports 4173 and 4175 and stop when the suite ends. Run only one Playwright invocation at a time: a second invocation can remove the first run's trace artifacts even when it subsequently refuses an occupied port. No public deployment, hosting setup or CI is included.
+Remaining proof includes actual device sharing, screen-reader/native-zoom audit, broader real-roster combinations beyond the checked current pool, supported historical roster compatibility, all lifecycle/concurrency/error permutations, fresh-clone onboarding, comparable throttled WebKit and real-device performance, actual host/cache withdrawal, content rights/editorial rehearsal, and external review. Current synthetic name/encoder tests and local performance measurements are bounded evidence, not completion of those gates. Browser test servers bind only to loopback ports 4173 and 4175 and stop when the suite ends. Run only one Playwright invocation at a time: a second invocation can remove the first run's trace artifacts even when it subsequently refuses an occupied port. The GitHub Pages CI/deployment configuration is included; see [deployment](deployment.md) for publication rules and live-verification requirements.

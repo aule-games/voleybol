@@ -29,7 +29,7 @@ UI uses `Avenir Next`, falling back to `Segoe UI`, platform sans-serif. Display 
 
 ## Export contract
 
-The PNG stays 1080 × 1350, with seven full names, six court slots and a separate libero. The visible ink stays inside a 64 px safe boundary. The italic wordmark's origin is inset beyond 64 px to allow for glyph overhang. Names use at least 40 px and at most three lines; overflow still fails safely to the text/link fallback. The current local-preview PNG contains real athlete names with truthful local-test copy; club marks and player likenesses are not included in the export.
+The PNG stays 1080 × 1350, with seven full names, six court slots and a separate libero. The visible ink stays inside a 64 px safe boundary. The italic wordmark's origin is inset beyond 64 px to allow for glyph overhang. Names use at least 40 px and at most three lines; overflow still fails safely to the text/link fallback. The current test-preview PNG contains real athlete names with truthful test-version copy; club marks and player likenesses are not included in the export.
 
 ## Verification boundaries
 

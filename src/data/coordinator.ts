@@ -1,4 +1,4 @@
-import { isLoopback } from './identities.ts';
+import { isLoopback, isPublicPreviewTarget } from './identities.ts';
 import type { Content, Fixture } from '../domain/types.ts';
 import { freeze, MAX_BYTES, validateContent } from './validate.ts';
 import { fail } from '../platform/result.ts';
@@ -39,7 +39,9 @@ export class ContentCoordinator {
         const bytes = new Uint8Array(length); let offset = 0;
         for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.byteLength; }
         if (controller.signal.aborted) return fail('CONTENT_SUPERSEDED', 'content');
-        return validateContent(JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes)), this.now(), { allowLocalPreview: isLoopback(this.url) });
+        return validateContent(JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes)), this.now(), {
+          allowLocalPreview: isLoopback(this.url), allowPublicPreview: isPublicPreviewTarget(this.url),
+        });
       } catch { return fail('CONTENT_UNAVAILABLE', 'content'); }
     };
     const result = await Promise.race([read(), deadline]); clearTimeout(timeout);

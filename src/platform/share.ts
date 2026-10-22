@@ -8,7 +8,7 @@ export interface PreparedTeam { url: string; text: string; file: File | null; bl
 export function preparedValid(prepared: PreparedTeam, content: Content | null, selection: string, now: number, online: boolean): boolean {
   return !!content && online && currentPolicy(content, now) && now < prepared.expiresAt && content.revision === prepared.revision && content.rightsRevision === prepared.rightsRevision && prepared.selection === selection;
 }
-export function lineupText(players: Player[], real = false): string { return `${real ? 'Yerel test · Gerçek oyuncularla hayal takımım' : 'Kurgusal demo · Hayalimdeki takım'}\n${players.map((p, i) => `${SLOT_LABELS[i]}: ${p.name}`).join('\n')}\nAltı saha yeri + ayrı libero. Resmî rotasyon değildir.`; }
+export function lineupText(players: Player[], real = false): string { return `${real ? 'Test sürümü · Gerçek oyuncularla hayal takımım' : 'Kurgusal demo · Hayalimdeki takım'}\n${players.map((p, i) => `${SLOT_LABELS[i]}: ${p.name}`).join('\n')}\nAltı saha yeri + ayrı libero. Resmî rotasyon değildir.`; }
 export function wrapName(ctx: Pick<CanvasRenderingContext2D, 'measureText'>, name: string, width: number): string[] | null {
   const lines: string[] = []; let line = '';
   for (const word of name.split(/\s+/)) {
@@ -30,7 +30,7 @@ export async function renderTeamPng(players: Player[], asOf: string, signal?: Ab
     ctx.fillStyle = '#48263D'; ctx.font = 'italic bold 62px Georgia, serif'; ctx.fillText('filedeyiz.', 82, 121);
     ctx.fillStyle = '#B04B3C'; ctx.fillRect(64, 156, 68, 5);
     ctx.fillStyle = '#48263D'; ctx.font = 'italic 76px Georgia, serif'; ctx.fillText('Benim yedilim.', 64, 253);
-    ctx.font = '25px system-ui, sans-serif'; ctx.fillText(real ? 'YEREL TEST · GERÇEK OYUNCULAR' : 'KURGUSAL DEMO · GEÇİCİ İSİM', 64, 300);
+    ctx.font = '25px system-ui, sans-serif'; ctx.fillText(real ? 'TEST SÜRÜMÜ · GERÇEK OYUNCULAR' : 'KURGUSAL DEMO · GEÇİCİ İSİM', 64, 300);
     ctx.fillStyle = '#48263D'; ctx.fillRect(64, 340, 952, 580);
     ctx.strokeStyle = '#B897AA'; ctx.lineWidth = 2; ctx.strokeRect(79, 355, 922, 550);
     ctx.beginPath(); ctx.moveTo(79, 628); ctx.lineTo(1001, 628); ctx.moveTo(79, 634); ctx.lineTo(1001, 634); ctx.stroke();
@@ -80,7 +80,7 @@ export async function renderTeamPng(players: Player[], asOf: string, signal?: Ab
       catch { finish(fail('SHARE_FAILED', 'share')); }
     });
     if (signal?.aborted) return fail('SHARE_EXPIRED', 'share');
-    return result.ok ? ok(new File([result.value], real ? 'hayalimdeki-takim-yerel.png' : 'hayalimdeki-takim-demo.png', { type: 'image/png' })) : result;
+    return result.ok ? ok(new File([result.value], real ? 'hayalimdeki-takim-test.png' : 'hayalimdeki-takim-demo.png', { type: 'image/png' })) : result;
   } catch { return fail('SHARE_FAILED', 'share'); }
   finally { canvas.width = canvas.height = 0; }
 }

@@ -18,6 +18,37 @@ async function pickTeam(page: Page) {
   }
 }
 
+// Rehost the real built bytes at the approved origin; this is not live CDN/TLS proof.
+test('Pages project path loads real content and exports a cross-device team link', async ({ page, request }) => {
+  const base = 'https://aule-games.github.io/voleybol/';
+  const errors: string[] = []; const external: string[] = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('request', r => {
+    const url = new URL(r.url());
+    // WebKit emits local PNG blob requests too; these do not access the network.
+    if (['http:', 'https:'].includes(url.protocol) && !r.url().startsWith(base)) external.push(r.url());
+  });
+  await page.route(`${base}**`, async route => {
+    const remote = new URL(route.request().url());
+    const local = new URL(remote.pathname.slice('/voleybol'.length), 'http://127.0.0.1:4173');
+    await route.fulfill({ response: await request.get(local.href) });
+  });
+  await page.goto(`${base}#/takim`);
+  await expect(page.locator('.demo-banner')).toContainText('Herkese açık test sürümü');
+  await pickTeam(page); await page.getByRole('button', { name: 'Takımımı onayla', exact: true }).click();
+  await page.getByRole('button', { name: 'Paylaşım önizlemesini hazırla' }).click();
+  const exported = (await page.getByLabel('Takım metni ve bağlantısı').inputValue()).split('\n').at(-1)!;
+  expect(exported).toContain(`${base}#/takim?`);
+  await expect(page.getByText('Bu test bağlantısını başka bir cihazda açabilirsin.', { exact: false })).toBeVisible();
+  await page.goto(exported); await page.reload();
+  await expect(page.getByText('7/7 oyuncu seçildi', { exact: true })).toBeVisible();
+  await expect(page.locator('.slot-list img')).toHaveCount(14);
+  for (const img of await page.locator('.slot-list img').all()) await expect.poll(() => img.evaluate(i => (i as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await page.getByRole('navigation').getByRole('link', { name: 'Quiz', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'On soru. Sıfır acele.' })).toBeVisible();
+  expect(errors).toEqual([]); expect(external).toEqual([]);
+});
+
 test('all 14 current identities load both marks without third-party traffic', async ({ page }) => {
   const errors: string[] = [], external: string[] = [];
   page.on('pageerror', e => errors.push(e.message)); page.on('request', r => { if (new URL(r.url()).origin !== 'http://127.0.0.1:4173') external.push(r.url()); });
@@ -51,7 +82,7 @@ for (const width of [320, 360, 1440]) test(`real lineup at ${width}px keeps comp
   const img = page.locator('#share-preview img'); await expect(img).toHaveJSProperty('naturalWidth', 1080); await expect(img).toHaveJSProperty('naturalHeight', 1350);
   const field = page.getByLabel('Takım metni ve bağlantısı'); await expect(field).toHaveValue(/Gerçek oyuncular/); await expect(field).not.toHaveValue(/Kurgusal/);
   for (const i of indices) expect(await field.inputValue()).toContain(raw.roster.players[i]!.name);
-  if (width === 1440) { const download = page.waitForEvent('download'); await page.getByRole('button', { name: 'PNG indir', exact: true }).click(); const file = await download; expect(file.suggestedFilename()).toBe('hayalimdeki-takim-yerel.png'); await file.saveAs(`${artifactDir}/${browserName}-team-export.png`); }
+  if (width === 1440) { const download = page.waitForEvent('download'); await page.getByRole('button', { name: 'PNG indir', exact: true }).click(); const file = await download; expect(file.suggestedFilename()).toBe('hayalimdeki-takim-test.png'); await file.saveAs(`${artifactDir}/${browserName}-team-export.png`); }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
@@ -99,7 +130,7 @@ test('old local records stay stored without remapping into the new roster or qui
   expect(await page.evaluate(() => Object.keys(localStorage).filter(k => k.startsWith('voleybol:v1:record:')).length)).toBe(2);
 });
 
-test('local preview never offers native external share even when browser supports it', async ({ page }) => {
+test('test preview never offers native external share even when browser supports it', async ({ page }) => {
   await page.addInitScript(() => { Object.defineProperty(navigator, 'canShare', { value: () => true }); Object.defineProperty(navigator, 'share', { value: () => { throw Error('Must not call'); } }); });
   await page.goto(teamLink); await page.getByRole('button', { name: 'Paylaşım önizlemesini hazırla' }).click();
   await expect(page.getByRole('button', { name: 'PNG indir', exact: true })).toBeVisible();

@@ -48,12 +48,16 @@ export function freeze<T>(value: T): T {
   if (value && typeof value === 'object' && !Object.isFrozen(value)) { Object.freeze(value); for (const v of Object.values(value)) freeze(v); }
   return value;
 }
-/** Schema 2 is an explicit mixed-content local preview, rejected by default. */
-export function validateContent(raw: unknown, now: number, options: { allowLocalPreview?: boolean } = {}): Result<Content> {
-  const real = isObject(raw) && raw.schema === 2;
+/** Real-content previews need explicit caller policy; schema 2 remains local-only. */
+export function validateContent(raw: unknown, now: number, options: { allowLocalPreview?: boolean; allowPublicPreview?: boolean } = {}): Result<Content> {
+  const local = isObject(raw) && raw.schema === 2;
+  const publicPreview = isObject(raw) && raw.schema === 3;
+  const real = local || publicPreview;
   const keys = ['schema', 'demo', 'revision', 'rightsRevision', 'publishedAt', 'validUntil', 'rights', 'fixtures', 'roster', 'quiz'];
-  if (real) keys.push('localOnly', 'modes');
-  if (real && (!options.allowLocalPreview || raw.localOnly !== true || raw.demo !== false || !isObject(raw.modes)
+  if (real) keys.push(local ? 'localOnly' : 'previewOnly', 'modes');
+  if (local && (!options.allowLocalPreview || raw.localOnly !== true)) return fail('CONTENT_INVALID', 'content');
+  if (publicPreview && (!options.allowPublicPreview || raw.previewOnly !== true)) return fail('CONTENT_INVALID', 'content');
+  if (real && (raw.demo !== false || !isObject(raw.modes)
     || !exact(raw.modes, ['fixtures', 'roster', 'quiz']) || raw.modes.fixtures !== 'fictional' || raw.modes.roster !== 'real' || raw.modes.quiz !== 'factual')) return fail('CONTENT_INVALID', 'content');
   if (!Number.isFinite(now) || !isObject(raw) || !exact(raw, keys)
     || (!real && (raw.schema !== 1 || raw.demo !== true)) || !integer(raw.revision) || !integer(raw.rightsRevision)
@@ -71,7 +75,10 @@ export function validateContent(raw: unknown, now: number, options: { allowLocal
   if (!rosterValid) issues.push('roster');
   const quizValid = quiz(raw.quiz, withdrawn, real, now);
   if (!quizValid) issues.push('quiz');
-  return ok(freeze({ schema: real ? 2 : 1, demo: !real, ...(real ? { localOnly: true as const, modes: { fixtures: 'fictional' as const, roster: 'real' as const, quiz: 'factual' as const } } : {}), revision: raw.revision, rightsRevision: raw.rightsRevision, publishedAt: raw.publishedAt, validUntil: raw.validUntil,
+  return ok(freeze({ schema: local ? 2 : publicPreview ? 3 : 1, demo: !real,
+    ...(local ? { localOnly: true as const } : publicPreview ? { previewOnly: true as const } : {}),
+    ...(real ? { modes: { fixtures: 'fictional' as const, roster: 'real' as const, quiz: 'factual' as const } } : {}),
+    revision: raw.revision, rightsRevision: raw.rightsRevision, publishedAt: raw.publishedAt, validUntil: raw.validUntil,
     rights: { expiresAt: raw.rights.expiresAt, withdrawnIds: [...withdrawn] },
     fixtures: fixturesValid ? structuredClone(raw.fixtures as Fixture[]) : [],
     roster: rosterValid ? structuredClone(raw.roster as Roster) : null, quiz: quizValid ? structuredClone(raw.quiz as QuizPack) : null, issues }));

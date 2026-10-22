@@ -89,9 +89,9 @@ function modeFallback(text: string): HTMLElement {
 function render() {
   const snapshot = content();
   const banner = document.querySelector<HTMLElement>('.demo-banner')!;
-  banner.replaceChildren(el('strong', snapshot?.schema === 2 ? 'Yerel test sürümü' : snapshot ? 'Kurgusal demo' : 'Özel prototip'),
-    el('span', snapshot?.schema === 2 ? 'Gerçek oyuncular ve kaynaklı quiz. Tahmin maçları kurgusaldır. Resmî bir uygulama değildir.' : snapshot ? 'Gerçek sporcu, kulüp veya maç verisi içermez.' : 'İçerik doğrulanıyor.'));
-  document.title = snapshot?.schema === 2 ? 'Filedeyiz · Yerel test' : 'Filedeyiz · Kurgusal demo';
+  banner.replaceChildren(el('strong', (snapshot && snapshot.schema !== 1) ? (snapshot.schema === 3 ? 'Herkese açık test sürümü' : 'Yerel test sürümü') : snapshot ? 'Kurgusal demo' : 'Test sürümü'),
+    el('span', (snapshot && snapshot.schema !== 1) ? 'Gerçek oyuncular ve kaynaklı quiz. Tahmin maçları kurgusaldır. Resmî bir uygulama değildir.' : snapshot ? 'Gerçek sporcu, kulüp veya maç verisi içermez.' : 'İçerik doğrulanıyor.'));
+  document.title = (snapshot && snapshot.schema !== 1) ? 'Filedeyiz · Test sürümü' : 'Filedeyiz · Kurgusal demo';
   if (snapshot) lastBlockSignature = blockSignature(snapshot);
   main.replaceChildren();
   main.dataset.mode = route.ok ? route.value.mode : 'invalid';
@@ -102,9 +102,9 @@ function render() {
   if (view.memoryOnly) main.append(notice(COPY.STORAGE_MEMORY, true));
   if (view.quarantined) main.append(notice(`${view.quarantined} bozuk veya uyumsuz kayıt uygulanmadı; diğer kayıtlar korundu.`, true));
   if (view.count > 500) main.append(notice('Kayıt sınırına ulaşıldı. Eski kayıtlar silinmedi; yeni kayıtlar yalnızca oturumda tutulur.', true));
-  if (loading && !content()) { main.append(heading('Oyunlar hazırlanıyor', 'ÖZEL PROTOTİP'), el('p', 'Yerel içerik doğrulanıyor…')); return; }
+  if (loading && !content()) { main.append(heading('Oyunlar hazırlanıyor', 'TEST SÜRÜMÜ'), el('p', 'İçerik doğrulanıyor…')); return; }
   if (!content()) {
-    main.append(heading('İçerik şu an açılamıyor', 'ÖZEL PROTOTİP'), notice(COPY[contentError ?? 'CONTENT_INVALID'], true), button('Yenile', () => void refresh())); return;
+    main.append(heading('İçerik şu an açılamıyor', 'TEST SÜRÜMÜ'), notice(COPY[contentError ?? 'CONTENT_INVALID'], true), button('Yenile', () => void refresh())); return;
   }
   if (!usable()) main.append(notice(COPY.CONTENT_STALE, true));
   if (loading) main.append(el('p', 'İçerik doğrulanıyor…', 'muted'));
@@ -137,7 +137,7 @@ function renderHome() {
   } else main.append(modeFallback('Şu an tahmine açık maç yok. Süresi dolmuş, ertelenmiş veya doğrulanamayan maçlara tahmin alınmaz.'));
   const paths = el('div', undefined, 'home-paths');
   const team = link('', '#/takim', 'path-link team-path'); team.append(el('span', 'TAKIMINI KUR', 'eyebrow'), el('h2', 'Senin yedilin kim?'), el('p', 'Altı saha yeri, bir libero. Bütçe yok, transfer yok. Sadece senin seçimin.'), el('span', 'Takımını kur →', 'action-text'));
-  const quiz = link('', '#/quiz', 'path-link quiz-path'); quiz.append(el('span', `QUIZ · ${c.quiz?.questions.length ?? 0} SORU`, 'eyebrow'), el('h2', 'Biraz oyun, biraz mola.'), el('p', c.schema === 2 ? 'Son üç tamamlanmış Sultanlar Ligi sezonundan on soru. Cevabın ardından kaynağını keşfet.' : 'Acele etmeden, beş kısa soru. Bu demo paketinde oyunun kurallarını keşfet.'), el('span', 'Quiz’i aç →', 'action-text'));
+  const quiz = link('', '#/quiz', 'path-link quiz-path'); quiz.append(el('span', `QUIZ · ${c.quiz?.questions.length ?? 0} SORU`, 'eyebrow'), el('h2', 'Biraz oyun, biraz mola.'), el('p', c.schema !== 1 ? 'Son üç tamamlanmış Sultanlar Ligi sezonundan on soru. Cevabın ardından kaynağını keşfet.' : 'Acele etmeden, beş kısa soru. Bu demo paketinde oyunun kurallarını keşfet.'), el('span', 'Quiz’i aç →', 'action-text'));
   paths.append(team, quiz); main.append(paths);
 }
 async function savePick(match: Fixture) {
@@ -278,10 +278,10 @@ function renderBuilder() {
   }
   const prepare = button(preparing ? 'Önizleme hazırlanıyor…' : 'Paylaşım önizlemesini hazırla', () => void prepareShare([...ids], imported?.roster ?? c.roster!.version), 'button secondary');
   prepare.disabled = !team.ok || preparing || !navigator.onLine; main.append(prepare);
-  main.append(el('p', c.schema === 2 ? `${c.roster.players.length} gerçek oyuncu · Kulüpler: 2026–27 sezonu · Kontrol: ${dateTR(c.roster.asOf)}. Bayraklar temsil edilen ülkeyi gösterir; bu bir resmî kadro değildir.` : `Seçili kurgusal oyuncular · ${dateTR(c.roster.asOf)} · Kaynak: özgün demo kadrosu`, 'source'));
-  if (c.schema === 2) {
+  main.append(el('p', c.schema !== 1 ? `${c.roster.players.length} gerçek oyuncu · Kulüpler: 2026–27 sezonu · Kontrol: ${dateTR(c.roster.asOf)}. Bayraklar temsil edilen ülkeyi gösterir; bu bir resmî kadro değildir.` : `Seçili kurgusal oyuncular · ${dateTR(c.roster.asOf)} · Kaynak: özgün demo kadrosu`, 'source'));
+  if (c.schema !== 1) {
     const sources = el('details', undefined, 'guide'); sources.append(el('summary', 'Oyuncu kaynakları ve logo notu'));
-    sources.append(el('p', 'Kulüp armaları yalnızca bu yerel testte gösterilir. Hakları sahiplerine aittir; resmî ilişki veya herkese açık kullanım izni iddia edilmez. Armalar PNG kartına eklenmez.'));
+    sources.append(el('p', 'Kulüp armalarının hakları sahiplerine aittir. Bu bağımsız taraftar prototipi resmî bir uygulama veya kulüp iş birliği değildir. Armalar PNG kartına eklenmez.'));
     const list = el('ul');
     for (const p of c.roster.players) { const item = el('li'); const source = link(`${p.name} · lig kaydı`, p.sourceUrl!); source.target = '_blank'; source.rel = 'noopener noreferrer'; item.append(source); list.append(item); }
     sources.append(list); main.append(sources);
@@ -298,7 +298,7 @@ async function prepareShare(ids: string[], roster: string) {
   const team = validateLineup(ids, roster, fresh.value, Date.now()); const url = teamUrl(base, roster, ids);
   if (!team.ok || !url.ok) { preparation = null; preparing = false; error('LINEUP_INVALID'); render(); return; }
   const policyAt = Date.now();
-  const png = await renderTeamPng(team.value, fresh.value.roster!.asOf, operation.signal, fresh.value.schema === 2);
+  const png = await renderTeamPng(team.value, fresh.value.roster!.asOf, operation.signal, fresh.value.schema !== 1);
   // A cancelled native callback must never clear a newer request's busy state.
   if (preparation !== operation) return;
   preparation = null; preparing = false;
@@ -306,7 +306,7 @@ async function prepareShare(ids: string[], roster: string) {
   if (location.hash !== hash) { render(); return; }
   if (token !== generation || content() !== fresh.value || !currentPolicy(fresh.value, Date.now()) || Date.now() >= policyAt + 60_000 || !navigator.onLine || !visible()) { error('SHARE_EXPIRED'); render(); return; }
   const file = png.ok ? png.value : null;
-  prepared = { url: url.value, text: lineupText(team.value, fresh.value.schema === 2), file, blobUrl: file ? URL.createObjectURL(file) : null,
+  prepared = { url: url.value, text: lineupText(team.value, fresh.value.schema !== 1), file, blobUrl: file ? URL.createObjectURL(file) : null,
     expiresAt: Math.min(policyAt + 60_000, Date.parse(fresh.value.validUntil), Date.parse(fresh.value.rights.expiresAt)), revision: fresh.value.revision, rightsRevision: fresh.value.rightsRevision, selection: ids.join(','), pngError: png.ok ? null : png.error.code };
   say('Önizleme hazır. Henüz hiçbir yere gönderilmedi. Doğrulama 60 saniye geçerlidir.'); render(); document.getElementById('share-preview')?.scrollIntoView({ block: 'nearest' });
 }
@@ -316,7 +316,7 @@ function validPrepared(): boolean {
 }
 function renderPrepared() {
   const p = prepared!; const panel = el('section', undefined, 'share-preview'); panel.id = 'share-preview'; panel.append(el('h2', 'Takımın paylaşım önizlemesi'));
-  if (p.blobUrl) { const img = el('img'); img.src = p.blobUrl; img.width = 1080; img.height = 1350; img.alt = content()?.schema === 2 ? 'Gerçek oyuncularla hayal takımı. Yerel test kartı; oyuncu adları aşağıdaki metinde de yer alır.' : 'Kurgusal takım kartı. Oyuncu adları aşağıdaki metinde de yer alır.'; panel.append(img); }
+  if (p.blobUrl) { const img = el('img'); img.src = p.blobUrl; img.width = 1080; img.height = 1350; img.alt = (content() && content()!.schema !== 1) ? 'Gerçek oyuncularla hayal takımı. Test kartı; oyuncu adları aşağıdaki metinde de yer alır.' : 'Kurgusal takım kartı. Oyuncu adları aşağıdaki metinde de yer alır.'; panel.append(img); }
   else panel.append(notice(p.pngError === 'SHARE_OVERFLOW' ? COPY.SHARE_OVERFLOW : 'Görsel oluşturulamadı. Takımın korundu; metni veya bağlantıyı kullan.', true));
   const field = el('textarea'); field.readOnly = true; field.value = `${p.text}\n\n${p.url}`; field.rows = 12; field.setAttribute('aria-label', 'Takım metni ve bağlantısı'); panel.append(field);
   const actions = el('div', undefined, 'actions');
@@ -325,7 +325,7 @@ function renderPrepared() {
     let canShare = false;
     try { canShare = typeof navigator.share === 'function' && typeof navigator.canShare === 'function' && navigator.canShare({ files: [p.file] }); }
     catch { /* An unavailable capability must not remove download/text fallback. */ }
-    if (canShare && content()?.schema !== 2) {
+    if (canShare && content()?.schema === 1) {
       const native = button(sharing ? 'Paylaşım açık…' : 'Paylaş…', () => {
         if (sharing || !validPrepared()) return;
         sharing = true;
@@ -356,8 +356,8 @@ function renderPrepared() {
       }).catch(fallback);
     } catch { fallback(); }
   }, 'button secondary'));
-  if (content()?.schema === 2) panel.append(el('p', 'Yerel test: dış uygulamalara doğrudan paylaşım kapalı. PNG yalnızca adları içerir; kulüp armaları dışa aktarılmaz.', 'source'));
-  panel.append(actions, el('p', 'Bağlantı bu yerel prototipe aittir; başka cihazdan erişilebilir bir site yayımlanmadı.', 'source')); main.append(panel);
+  if ((content() && content()!.schema !== 1)) panel.append(el('p', 'Test sürümü: dış uygulamalara doğrudan paylaşım kapalı. PNG yalnızca adları içerir; kulüp armaları dışa aktarılmaz.', 'source'));
+  panel.append(actions, el('p', location.hostname === 'aule-games.github.io' ? 'Bu test bağlantısını başka bir cihazda açabilirsin. Oyun kayıtların cihazlar arasında aktarılmaz.' : 'Bu bağlantı yerel adrese aittir; başka cihazda çalışmayabilir.', 'source')); main.append(panel);
 }
 function startQuiz(practice: boolean) {
   const pack = usable()?.quiz; if (!pack) return;
@@ -368,7 +368,7 @@ function renderQuiz() {
   main.append(heading('Bir quiz molası.', `QUIZ · ${content()?.quiz?.questions.length ?? 0} SORU · SÜRE SINIRI YOK`));
   const c = usable(); if (!c?.quiz) { main.append(modeFallback('Quiz paketi şu an kullanılamıyor.'), button('Yenile', () => void refresh())); return; }
   const pack = c.quiz; const count = pack.questions.length;
-  main.append(el('p', c.schema === 2 ? 'Sultanlar Ligi: 2023–24, 2024–25 ve 2025–26. Üç tamamlanmış sezon; her cevabın açıklaması ve kaynağı var.' : 'İlk demo paketi: bu oyunun kuralları. Gerçek voleybol bilgi bankası değildir.', 'muted'));
+  main.append(el('p', c.schema !== 1 ? 'Sultanlar Ligi: 2023–24, 2024–25 ve 2025–26. Üç tamamlanmış sezon; her cevabın açıklaması ve kaynağı var.' : 'İlk demo paketi: bu oyunun kuralları. Gerçek voleybol bilgi bankası değildir.', 'muted'));
   if (!attempt) {
     const welcome = el('section', undefined, 'quiz-welcome');
     const number = el('span', String(count).padStart(2, '0'), 'quiz-number'); number.setAttribute('aria-hidden', 'true');
@@ -427,7 +427,7 @@ function renderQuiz() {
     }); confirm.disabled = !tentative; panel.append(confirm);
   }
   if (quizIndex > 0) panel.append(button('Önceki soru', () => { quizIndex--; tentative = null; history.pushState({ questionIndex: quizIndex }, '', '#/quiz'); render(); focusHeading(); }, 'text-button'));
-  main.append(panel, el('p', c.schema === 2 ? 'Onaylanan yanıt değiştirilemez. Kaynak bağlantısı cevabın ardından görünür.' : 'Kaynak: bu demonun özgün oyun rehberi. Onaylanan yanıt değiştirilemez.', 'source'));
+  main.append(panel, el('p', c.schema !== 1 ? 'Onaylanan yanıt değiştirilemez. Kaynak bağlantısı cevabın ardından görünür.' : 'Kaynak: bu demonun özgün oyun rehberi. Onaylanan yanıt değiştirilemez.', 'source'));
 }
 function routeChanged() {
   changed(); route = parseFragment(location.hash); picker = null; message = '';

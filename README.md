@@ -1,8 +1,8 @@
 # Volleyball fan prototype
 
-Three small Turkish-language games: fictional set-score predictions, a seven-player dream team chosen from **14 real players**, and **10 sourced Sultanlar Ligi questions**. Private local preview only. Club crests and represented-country flags appear in the builder. No accounts, prizes, analytics SDK or external fonts are included. The working title is provisional.
+Three small Turkish-language games: fictional set-score predictions, a seven-player dream team chosen from **14 real players**, and **10 sourced Sultanlar Ligi questions**. A bounded test preview, not a production release. Club crests and represented-country flags appear in the builder. No accounts, prizes, analytics SDK or external fonts are included. The working title is provisional.
 
-See [local content and provenance](docs/local-content.md) for sources, current clubs, asset-use limits and compatibility rules. This is not a public release or a rights-clearance claim.
+See [local content and provenance](docs/local-content.md) for sources, current clubs, asset-use limits and compatibility rules. See [deployment](docs/deployment.md) for the GitHub Pages test workflow. This is not a rights-clearance or endorsement claim.
 
 ## Run locally
 
@@ -15,7 +15,7 @@ npm run dev
 
 Open [the team builder](http://127.0.0.1:5173/#/takim) or [the quiz](http://127.0.0.1:5173/#/quiz). Choose seven players, confirm, then reload to test persistence. The quiz has ten questions from 2023–24, 2024–25 and 2025–26, with explanations and primary-source links after each answer.
 
-The local preview is explicitly dated and expires **2026-10-29 19:34 UTC**. Fetching/building never renews it. `demo:refresh` is for fictional data only and deliberately refuses to overwrite this real-content preview. Recheck the facts before authoring a new content/policy revision. Predictions keep their original fictional dates and can be closed or stale.
+The test preview is explicitly dated and expires **2026-10-29 19:34 UTC**. Fetching/building never renews it. `demo:refresh` is for fictional data only and deliberately refuses to overwrite this real-content preview. Recheck the facts before authoring a new content/policy revision. Predictions keep their original fictional dates and can be closed or stale.
 
 ## Verify
 
@@ -38,8 +38,8 @@ Run browser commands one at a time. Performance uses unchanged current content a
 - **Quiz:** one original ten-question pack about the last three completed Sultanlar seasons; stable question/choice IDs, explicit confirmation, read-only Back, correction/freeze behavior. Each answer has a dated primary source. Legacy five-question records remain readable; this is not a four-pack bank.
 - **Privacy:** analytics is unconditionally disabled; no vendor code or request path exists. Browser records use the `voleybol:` prefix. Clear-data is selective and requires confirmation.
 
-This is not a release candidate. Historical roster compatibility, full diagnostic coverage, all lifecycle/performance/device checks, cleared real content, external review, and hosting/privacy/publication decisions remain incomplete. No deployment or CI configuration is provided. A private repository and a `noindex` tag do not make a deployed website private.
+This is not a release candidate. Historical roster compatibility, full diagnostic coverage, all lifecycle/performance/device checks, full public-use clearance and external review remain incomplete. The Pages workflow verifies the build before publishing from `main`. A private repository and a `noindex` tag do not make a deployed website private.
 
 See [development contracts and recovery](docs/development.md) for content limits, revision rules, error recovery, and remaining verification boundaries.
 
-See [visual direction](docs/visual-design.md) for the warm plum/coral identity, local typography, original court illustration and share-card constraints. The three-game scope and accepted design are unchanged; the private real-content slice is documented separately.
+See [visual direction](docs/visual-design.md) for the warm plum/coral identity, local typography, original court illustration and share-card constraints. The three-game scope and accepted design are unchanged; the real-content preview is documented separately.

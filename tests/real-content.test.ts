@@ -3,17 +3,17 @@ import { readFileSync } from 'node:fs';
 import raw from '../public/content.json' with { type: 'json' };
 import { validateContent } from '../src/data/validate.ts';
 import { ContentCoordinator } from '../src/data/coordinator.ts';
-import { CLUBS, COUNTRIES, isLoopback, officialSource } from '../src/data/identities.ts';
+import { CLUBS, COUNTRIES, isLoopback, isPublicPreviewTarget, officialSource } from '../src/data/identities.ts';
 import { attemptState, beginAttempt, confirmAnswer } from '../src/domain/quiz.ts';
 import { validateLineup } from '../src/domain/lineup.ts';
 import { lineupText } from '../src/platform/share.ts';
 import { GameStore } from '../src/platform/storage.ts';
 import { memoryStorage, response, TEAM } from './fixtures.ts';
 const now = Date.parse(raw.publishedAt) + 1000;
-const parse = (data: unknown = structuredClone(raw)) => validateContent(data, now, { allowLocalPreview: true });
+const parse = (data: unknown = structuredClone(raw)) => validateContent(data, now, { allowPublicPreview: true });
 const current = () => { const r = parse(); if (!r.ok) throw Error('Invalid real preview'); return r.value; };
 
-describe('explicit local mixed-content contract', () => {
+describe('explicit mixed-content preview contracts', () => {
   it('defaults closed; distinguishes real names/facts from fictional matches', () => {
     expect(validateContent(raw, now).ok).toBe(false);
     const c = current(); expect(c.issues).toEqual([]); expect(c.demo).toBe(false); expect(c.modes).toEqual({ fixtures: 'fictional', roster: 'real', quiz: 'factual' });
@@ -25,6 +25,33 @@ describe('explicit local mixed-content contract', () => {
   });
   it.each(['http://localhost', 'http://127.0.0.1', 'http://[::1]'])('permits local preview %s', async origin => {
     const c = new ContentCoordinator(new URL('/content.json', origin), async () => response(raw), () => now); expect((await c.refresh()).ok).toBe(true);
+  });
+  it('permits the explicit HTTPS Pages content target, but never the old local-only schema there', async () => {
+    const url = new URL('https://aule-games.github.io/voleybol/content.json');
+    expect(isPublicPreviewTarget(url)).toBe(true);
+    expect((await new ContentCoordinator(url, async () => response(raw), () => now).refresh()).ok).toBe(true);
+    const { previewOnly: _preview, ...body } = raw;
+    const local = { ...body, schema: 2, localOnly: true };
+    expect(validateContent(local, now, { allowLocalPreview: true }).ok).toBe(true);
+    expect(validateContent(local, now, { allowPublicPreview: true }).ok).toBe(false);
+    expect((await new ContentCoordinator(url, async () => response(local), () => now).refresh()).ok).toBe(false);
+    expect(validateContent(raw, now, { allowLocalPreview: true }).ok).toBe(false);
+    expect(parse({ ...raw, previewOnly: false }).ok).toBe(false);
+    expect(parse({ ...raw, localOnly: true }).ok).toBe(false);
+    expect(parse({ ...raw, schema: 4 }).ok).toBe(false);
+  });
+  it.each([
+    'http://aule-games.github.io/voleybol/content.json',
+    'https://aule-games.github.io/another-project/content.json',
+    'https://aule-games.github.io/voleybol/content.json?preview=1',
+    'https://aule-games.github.io/voleybol/content.json#preview',
+    'https://aule-games.github.io:444/voleybol/content.json',
+    'https://user:pass@aule-games.github.io/voleybol/content.json',
+    'https://aule-games.github.io.evil.invalid/voleybol/content.json',
+    'https://voleybol.pages.dev/content.json',
+  ])('rejects an unapproved public preview target %s', async href => {
+    const url = new URL(href); expect(isPublicPreviewTarget(url)).toBe(false);
+    expect((await new ContentCoordinator(url, async () => response(raw), () => now).refresh()).ok).toBe(false);
   });
   it('does not reinterpret old player IDs or old roster links', () => {
     const c = current(); expect(c.roster!.players).toHaveLength(14);
@@ -52,7 +79,7 @@ describe('explicit local mixed-content contract', () => {
   });
   it('keeps withdrawal and expiry gates on real content', () => {
     const d = structuredClone(raw); d.rights.withdrawnIds = [d.roster.players[0]!.id] as never[]; const r = parse(d); expect(r.ok && r.value.roster).toBeNull();
-    expect(validateContent(raw, Date.parse(raw.validUntil), { allowLocalPreview: true }).ok).toBe(false);
+    expect(validateContent(raw, Date.parse(raw.validUntil), { allowPublicPreview: true }).ok).toBe(false);
   });
   it('does not label a real-name team fictional in text exports', () => {
     const c = current(); expect(lineupText(c.roster!.players.slice(0, 7), true)).toContain('Gerçek oyuncular'); expect(lineupText(c.roster!.players.slice(0, 7), true)).not.toContain('Kurgusal');

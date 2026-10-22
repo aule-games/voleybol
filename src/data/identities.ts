@@ -10,6 +10,10 @@ export const COUNTRIES = { TR: { name: 'Türkiye', mark: 'marks/countries/tr.svg
 export function isLoopback(url: URL): boolean {
   return ['http:', 'https:'].includes(url.protocol) && ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
 }
+/** Deliberate preview target, not authentication or a copyright permission check. */
+export function isPublicPreviewTarget(url: URL): boolean {
+  return isLoopback(url) || url.href === 'https://aule-games.github.io/voleybol/content.json';
+}
 export function officialSource(value: unknown, kind: 'player' | 'quiz'): value is string {
   if (typeof value !== 'string' || value.length > 500) return false;
   try {
