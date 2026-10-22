@@ -1,0 +1,190 @@
+{
+  "checkedAt": "2026-10-22T19:34:18.198Z",
+  "scope": "Private local preview only; no public-use or endorsement clearance. Club marks remain their owners property.",
+  "countryMeaning": "National representation, not birthplace or exhaustive citizenship. All selected players represent Türkiye.",
+  "clubSeason": "2026-27",
+  "clubMarks": [
+    {
+      "file": "public/marks/clubs/vakifbank.svg",
+      "url": "https://www.vakifbanksporkulubu.com/Assets/images/logo.svg",
+      "sha256": "f0eb0758b0c6950a942f010af2e4458439cd25029dda094c36900aaa4cb5e42e",
+      "bytes": 56152
+    },
+    {
+      "file": "public/marks/clubs/eczacibasi.png",
+      "url": "https://www.eczacibasisporkulubu.org.tr/images/esk-logo.png",
+      "sha256": "00215f81bfb2ab8dbd7ce3527e64fbca60078eb9a42350e04fe7b790ac6829a4",
+      "bytes": 51116
+    },
+    {
+      "file": "public/marks/clubs/fenerbahce.png",
+      "url": "https://www.eczacibasisporkulubu.org.tr/public/65x65/files/teams/fenerbahce.png",
+      "sha256": "a4d6d86457e685569ddfab5f0325ffe0dc4c9f9c252ee8aa844af8e83dac950f",
+      "bytes": 8185
+    },
+    {
+      "file": "public/marks/clubs/galatasaray.png",
+      "url": "https://www.galatasaray.org/assets/img/gs_logo.png",
+      "sha256": "28c760a1a127bde3f1e4557e2e57e19af6291d93defd6d7633a97379a95fecc8",
+      "bytes": 20080
+    },
+    {
+      "file": "public/marks/clubs/thy.png",
+      "url": "https://thyspor.org/logo_48x48.png",
+      "sha256": "b3f0d98d96ddbbadc0dd1af653f2167047991bcec3c2fcdff736a8536a9dd185",
+      "bytes": 2930
+    }
+  ],
+  "countryMark": {
+    "file": "public/marks/countries/tr.svg",
+    "source": "https://github.com/lipis/flag-icons/blob/main/flags/4x3/tr.svg",
+    "license": "MIT; adjacent LICENSE.txt",
+    "sha256": "256a1d6afbedb9f731566982331a1cd1ad14aba211b8a61d338855879505e74f"
+  },
+  "nationalTeamSources": [
+    "https://tvf.org.tr/takim/a-milli-kadin-takimi-kadro",
+    "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/teams/women/7551/players/"
+  ],
+  "players": [
+    {
+      "id": "real-wd-q16535532",
+      "name": "Cansu Özbay",
+      "role": "setter",
+      "clubId": "vakifbank",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205745/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q16535532&oldid=2554119539",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q65949766",
+      "name": "Elif Şahin",
+      "role": "setter",
+      "clubId": "eczacibasi",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205863/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q65949766&oldid=2554123627",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q20853404",
+      "name": "Melissa Vargas",
+      "role": "opposite",
+      "clubId": "fenerbahce",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206094/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q20853404&oldid=2555106592",
+      "roleUseBasis": "Manually verified official-source fact; NOT a matching Wikidata P413 value"
+    },
+    {
+      "id": "real-wd-q99387328",
+      "name": "Alexia Carutasu",
+      "role": "opposite",
+      "clubId": "galatasaray",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205623/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q99387328&oldid=2548294906",
+      "roleUseBasis": "Manually verified official-source fact; NOT a matching Wikidata P413 value"
+    },
+    {
+      "id": "real-wd-q55384174",
+      "name": "Ebrar Karakurt",
+      "role": "outside",
+      "clubId": "eczacibasi",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205483/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q55384174&oldid=2554122506",
+      "roleUseBasis": "Manually verified official-source fact; NOT a matching Wikidata P413 value"
+    },
+    {
+      "id": "real-wd-q16146392",
+      "name": "Hande Baladın",
+      "role": "outside",
+      "clubId": "fenerbahce",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204934/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q16146392&oldid=2548294740",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q96902355",
+      "name": "Derya Cebecioğlu",
+      "role": "outside",
+      "clubId": "thy",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205057/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q96902355&oldid=2552311491",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q65950006",
+      "name": "Saliha Şahin",
+      "role": "outside",
+      "clubId": "fenerbahce",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205866/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q65950006&oldid=2555428160",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q2610534",
+      "name": "Eda Erdem Dündar",
+      "role": "middle",
+      "clubId": "fenerbahce",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205240/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q2610534&oldid=2548295412",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q48977782",
+      "name": "Zehra Güneş",
+      "role": "middle",
+      "clubId": "vakifbank",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205362/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q48977782&oldid=2554120174",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q2866702",
+      "name": "Aslı Kalaç",
+      "role": "middle",
+      "clubId": "eczacibasi",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205457/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q2866702&oldid=2552312754",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q125696642",
+      "name": "Deniz Uyanık",
+      "role": "middle",
+      "clubId": "vakifbank",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206079/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q125696642&oldid=2551153100",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q3108218",
+      "name": "Gizem Örge",
+      "role": "libero",
+      "clubId": "fenerbahce",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205733/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q3108218&oldid=2552314292",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    },
+    {
+      "id": "real-wd-q41806462",
+      "name": "Simge Aköz",
+      "role": "libero",
+      "clubId": "eczacibasi",
+      "countryCode": "TR",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204823/",
+      "wikidataRevisionUrl": "https://www.wikidata.org/w/index.php?title=Q41806462&oldid=2548296743",
+      "roleUseBasis": "Wikidata P413, independently checked against official source"
+    }
+  ]
+}

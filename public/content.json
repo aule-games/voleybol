@@ -1,0 +1,506 @@
+{
+  "schema": 2,
+  "demo": false,
+  "revision": 2,
+  "rightsRevision": 2,
+  "publishedAt": "2026-10-22T19:34:18.198Z",
+  "validUntil": "2026-10-29T19:34:18.198Z",
+  "rights": {
+    "expiresAt": "2026-10-29T19:34:18.198Z",
+    "withdrawnIds": []
+  },
+  "fixtures": [
+    {
+      "id": "demo-match-1",
+      "home": "Mercan",
+      "away": "Turkuaz",
+      "startsAt": "2026-10-22T17:44:22.835Z",
+      "locksAt": "2026-10-22T17:44:22.835Z",
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "scheduled",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": null
+    },
+    {
+      "id": "demo-match-2",
+      "home": "Kehribar",
+      "away": "Menekşe",
+      "startsAt": "2026-10-22T20:44:22.835Z",
+      "locksAt": "2026-10-22T20:44:22.835Z",
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "scheduled",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": null
+    },
+    {
+      "id": "demo-match-3",
+      "home": "Turkuaz",
+      "away": "Kehribar",
+      "startsAt": null,
+      "locksAt": null,
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "postponed",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": null
+    },
+    {
+      "id": "demo-match-4",
+      "home": "Menekşe",
+      "away": "Mercan",
+      "startsAt": "2026-10-22T11:44:22.835Z",
+      "locksAt": "2026-10-22T11:44:22.835Z",
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "final",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": "3-2"
+    }
+  ],
+  "roster": {
+    "version": "real-20261022-v1",
+    "asOf": "2026-10-22T19:34:18.198Z",
+    "players": [
+      {
+        "id": "real-wd-q16535532",
+        "name": "Cansu Özbay",
+        "role": "setter",
+        "clubId": "vakifbank",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205745/"
+      },
+      {
+        "id": "real-wd-q65949766",
+        "name": "Elif Şahin",
+        "role": "setter",
+        "clubId": "eczacibasi",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205863/"
+      },
+      {
+        "id": "real-wd-q20853404",
+        "name": "Melissa Vargas",
+        "role": "opposite",
+        "clubId": "fenerbahce",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206094/"
+      },
+      {
+        "id": "real-wd-q99387328",
+        "name": "Alexia Carutasu",
+        "role": "opposite",
+        "clubId": "galatasaray",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205623/"
+      },
+      {
+        "id": "real-wd-q55384174",
+        "name": "Ebrar Karakurt",
+        "role": "outside",
+        "clubId": "eczacibasi",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205483/"
+      },
+      {
+        "id": "real-wd-q16146392",
+        "name": "Hande Baladın",
+        "role": "outside",
+        "clubId": "fenerbahce",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204934/"
+      },
+      {
+        "id": "real-wd-q96902355",
+        "name": "Derya Cebecioğlu",
+        "role": "outside",
+        "clubId": "thy",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205057/"
+      },
+      {
+        "id": "real-wd-q65950006",
+        "name": "Saliha Şahin",
+        "role": "outside",
+        "clubId": "fenerbahce",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205866/"
+      },
+      {
+        "id": "real-wd-q2610534",
+        "name": "Eda Erdem Dündar",
+        "role": "middle",
+        "clubId": "fenerbahce",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205240/"
+      },
+      {
+        "id": "real-wd-q48977782",
+        "name": "Zehra Güneş",
+        "role": "middle",
+        "clubId": "vakifbank",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205362/"
+      },
+      {
+        "id": "real-wd-q2866702",
+        "name": "Aslı Kalaç",
+        "role": "middle",
+        "clubId": "eczacibasi",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205457/"
+      },
+      {
+        "id": "real-wd-q125696642",
+        "name": "Deniz Uyanık",
+        "role": "middle",
+        "clubId": "vakifbank",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206079/"
+      },
+      {
+        "id": "real-wd-q3108218",
+        "name": "Gizem Örge",
+        "role": "libero",
+        "clubId": "fenerbahce",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205733/"
+      },
+      {
+        "id": "real-wd-q41806462",
+        "name": "Simge Aköz",
+        "role": "libero",
+        "clubId": "eczacibasi",
+        "countryCode": "TR",
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204823/"
+      }
+    ]
+  },
+  "quiz": {
+    "id": "sultanlar-2024-2026",
+    "revision": 1,
+    "questions": [
+      {
+        "id": "sultanlar-q01",
+        "revision": 1,
+        "text": "2023–24 Sultanlar Ligi şampiyonluğunu hangi takım kazandı?",
+        "choices": [
+          {
+            "id": "sq01-0",
+            "text": "VakıfBank"
+          },
+          {
+            "id": "sq01-1",
+            "text": "Fenerbahçe Opet"
+          },
+          {
+            "id": "sq01-2",
+            "text": "Eczacıbaşı Dynavit"
+          },
+          {
+            "id": "sq01-3",
+            "text": "Türk Hava Yolları"
+          }
+        ],
+        "correctId": "sq01-1",
+        "explanation": "2023–24 sezonunun şampiyonu Fenerbahçe Opet, ikincisi Eczacıbaşı Dynavit oldu. Takım adları o sezonki sponsorlarıyla yazıldı.",
+        "season": "2023-24",
+        "source": {
+          "title": "TVF · 2023–24 final ödülleri",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q02",
+        "revision": 1,
+        "text": "2023–24 Sultanlar Ligi final etabının MVP ödülünü kim aldı?",
+        "choices": [
+          {
+            "id": "sq02-0",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "sq02-1",
+            "text": "Eda Erdem Dündar"
+          },
+          {
+            "id": "sq02-2",
+            "text": "Ana Cristina"
+          },
+          {
+            "id": "sq02-3",
+            "text": "Melissa Vargas"
+          }
+        ],
+        "correctId": "sq02-3",
+        "explanation": "Final etabının en değerli oyuncusu, Fenerbahçe Opet forması giyen Melissa Vargas seçildi.",
+        "season": "2023-24",
+        "source": {
+          "title": "TVF · 2023–24 final ödülleri",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q03",
+        "revision": 1,
+        "text": "2023–24 Sultanlar Ligi final etabında en iyi libero seçilen oyuncu kimdi?",
+        "choices": [
+          {
+            "id": "sq03-0",
+            "text": "Gizem Örge"
+          },
+          {
+            "id": "sq03-1",
+            "text": "Simge Aköz"
+          },
+          {
+            "id": "sq03-2",
+            "text": "Ayça Aykaç"
+          },
+          {
+            "id": "sq03-3",
+            "text": "Gizem Güreşen"
+          }
+        ],
+        "correctId": "sq03-0",
+        "explanation": "TVF’nin final etabı ödüllerinde en iyi libero ödülü Fenerbahçe Opet’ten Gizem Örge’ye verildi.",
+        "season": "2023-24",
+        "source": {
+          "title": "TVF · 2023–24 final ödülleri",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q04",
+        "revision": 1,
+        "text": "VakıfBank, 2024–25 Sultanlar Ligi final serisini Fenerbahçe Medicana karşısında hangi seri skoruyla kazandı?",
+        "choices": [
+          {
+            "id": "sq04-0",
+            "text": "3–2"
+          },
+          {
+            "id": "sq04-1",
+            "text": "3–1"
+          },
+          {
+            "id": "sq04-2",
+            "text": "3–0"
+          },
+          {
+            "id": "sq04-3",
+            "text": "2–0"
+          }
+        ],
+        "correctId": "sq04-2",
+        "explanation": "VakıfBank üç galibiyetle seriyi 3–0 bitirdi. Bu seri skorudur; şampiyonluğu getiren üçüncü maçın set skoru 3–1’di.",
+        "season": "2024-25",
+        "source": {
+          "title": "TVF · 2024–25 şampiyonluk serisi",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-sampiyon-vakifbank",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q05",
+        "revision": 1,
+        "text": "2024–25 Sultanlar Ligi finalinin MVP ödülünü hangi pasör kazandı?",
+        "choices": [
+          {
+            "id": "sq05-0",
+            "text": "Elif Şahin"
+          },
+          {
+            "id": "sq05-1",
+            "text": "Cansu Özbay"
+          },
+          {
+            "id": "sq05-2",
+            "text": "Bojana Drca"
+          },
+          {
+            "id": "sq05-3",
+            "text": "Naz Aydemir Akyol"
+          }
+        ],
+        "correctId": "sq05-1",
+        "explanation": "VakıfBank’ın pasörü Cansu Özbay, 2024–25 finalinin en değerli oyuncusu seçildi.",
+        "season": "2024-25",
+        "source": {
+          "title": "TVF · 2024–25 final ödülleri",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q06",
+        "revision": 1,
+        "text": "2024–25 Sultanlar Ligi final serisinde 113 km/sa ile en hızlı servis ödülünü kim aldı?",
+        "choices": [
+          {
+            "id": "sq06-0",
+            "text": "Melissa Vargas"
+          },
+          {
+            "id": "sq06-1",
+            "text": "Marina Markova"
+          },
+          {
+            "id": "sq06-2",
+            "text": "Arina Fedorovtseva"
+          },
+          {
+            "id": "sq06-3",
+            "text": "Kiera Van Ryk"
+          }
+        ],
+        "correctId": "sq06-3",
+        "explanation": "TVF’nin ödül açıklamasına göre final serisinde ölçülen 113 km/sa servis Kiera Van Ryk’a aitti. Bu soru tüm zamanlar rekorunu değil, o final serisinin ödülünü soruyor.",
+        "season": "2024-25",
+        "source": {
+          "title": "TVF · 2024–25 final ödülleri",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q07",
+        "revision": 1,
+        "text": "2025–26 Sultanlar Ligi sezonunu şampiyon tamamlayan takım hangisiydi?",
+        "choices": [
+          {
+            "id": "sq07-0",
+            "text": "VakıfBank"
+          },
+          {
+            "id": "sq07-1",
+            "text": "Fenerbahçe Medicana"
+          },
+          {
+            "id": "sq07-2",
+            "text": "Eczacıbaşı Dynavit"
+          },
+          {
+            "id": "sq07-3",
+            "text": "Galatasaray Daikin"
+          }
+        ],
+        "correctId": "sq07-0",
+        "explanation": "2025–26 sezonunun şampiyonu VakıfBank oldu; Fenerbahçe Medicana sezonu ikinci bitirdi.",
+        "season": "2025-26",
+        "source": {
+          "title": "TVF · 2025–26 final ödülleri",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu-1",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q08",
+        "revision": 1,
+        "text": "2025–26 Sultanlar Ligi finalinin MVP ödülünü kim kazandı?",
+        "choices": [
+          {
+            "id": "sq08-0",
+            "text": "Zehra Güneş"
+          },
+          {
+            "id": "sq08-1",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "sq08-2",
+            "text": "Marina Markova"
+          },
+          {
+            "id": "sq08-3",
+            "text": "Melissa Vargas"
+          }
+        ],
+        "correctId": "sq08-2",
+        "explanation": "2025–26 finalinin en değerli oyuncusu ödülü VakıfBank’tan Marina Markova’ya verildi.",
+        "season": "2025-26",
+        "source": {
+          "title": "TVF · 2025–26 final ödülleri",
+          "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu-1",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q09",
+        "revision": 1,
+        "text": "2025–26’da VakıfBank ile kariyerinin ilk Sultanlar Ligi şampiyonluğunu yaşayan pasör çaprazı kimdi?",
+        "choices": [
+          {
+            "id": "sq09-0",
+            "text": "Kiera Van Ryk"
+          },
+          {
+            "id": "sq09-1",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "sq09-2",
+            "text": "Melissa Vargas"
+          },
+          {
+            "id": "sq09-3",
+            "text": "Alexia Carutasu"
+          }
+        ],
+        "correctId": "sq09-1",
+        "explanation": "Tijana Bošković, Türkiye’deki ilk lig şampiyonluğunu 2025–26 sezonunda VakıfBank ile yaşadı. Burada kupa veya Avrupa şampiyonluğu değil, Sultanlar Ligi soruluyor.",
+        "season": "2025-26",
+        "source": {
+          "title": "VakıfBank · 2025–26 şampiyonluk değerlendirmesi",
+          "url": "https://www.vakifbanksporkulubu.com/tr/haber-detay/vakifbank-son-13-sezonun-9unda-zirveye-cikti-n2821",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      },
+      {
+        "id": "sultanlar-q10",
+        "revision": 1,
+        "text": "2025–26 şampiyonluğuyla VakıfBank’ın Türkiye Ligi şampiyonluk sayısı kaça yükseldi?",
+        "choices": [
+          {
+            "id": "sq10-0",
+            "text": "12"
+          },
+          {
+            "id": "sq10-1",
+            "text": "13"
+          },
+          {
+            "id": "sq10-2",
+            "text": "15"
+          },
+          {
+            "id": "sq10-3",
+            "text": "17"
+          }
+        ],
+        "correctId": "sq10-2",
+        "explanation": "Kulübün şampiyonluk değerlendirmesi, 2025–26 zaferini 15. Türkiye Ligi şampiyonluğu olarak kaydediyor.",
+        "season": "2025-26",
+        "source": {
+          "title": "VakıfBank · 2025–26 şampiyonluk değerlendirmesi",
+          "url": "https://www.vakifbanksporkulubu.com/tr/haber-detay/vakifbank-son-13-sezonun-9unda-zirveye-cikti-n2821",
+          "checkedAt": "2026-10-22T19:34:18.198Z"
+        }
+      }
+    ]
+  },
+  "localOnly": true,
+  "modes": {
+    "fixtures": "fictional",
+    "roster": "real",
+    "quiz": "factual"
+  }
+}

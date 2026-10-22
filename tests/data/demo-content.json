@@ -1,0 +1,273 @@
+{
+  "schema": 1,
+  "demo": true,
+  "revision": 1,
+  "rightsRevision": 1,
+  "publishedAt": "2026-10-22T15:44:22.835Z",
+  "validUntil": "2026-10-23T15:44:22.835Z",
+  "rights": {
+    "expiresAt": "2026-10-23T15:44:22.835Z",
+    "withdrawnIds": []
+  },
+  "fixtures": [
+    {
+      "id": "demo-match-1",
+      "home": "Mercan",
+      "away": "Turkuaz",
+      "startsAt": "2026-10-22T17:44:22.835Z",
+      "locksAt": "2026-10-22T17:44:22.835Z",
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "scheduled",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": null
+    },
+    {
+      "id": "demo-match-2",
+      "home": "Kehribar",
+      "away": "Menekşe",
+      "startsAt": "2026-10-22T20:44:22.835Z",
+      "locksAt": "2026-10-22T20:44:22.835Z",
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "scheduled",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": null
+    },
+    {
+      "id": "demo-match-3",
+      "home": "Turkuaz",
+      "away": "Kehribar",
+      "startsAt": null,
+      "locksAt": null,
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "postponed",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": null
+    },
+    {
+      "id": "demo-match-4",
+      "home": "Menekşe",
+      "away": "Mercan",
+      "startsAt": "2026-10-22T11:44:22.835Z",
+      "locksAt": "2026-10-22T11:44:22.835Z",
+      "checkedAt": "2026-10-22T15:44:22.835Z",
+      "state": "final",
+      "scheduleRevision": 1,
+      "reopened": false,
+      "resultRevision": 1,
+      "result": "3-2"
+    }
+  ],
+  "roster": {
+    "version": "demo-v1",
+    "asOf": "2026-10-22T15:44:22.835Z",
+    "players": [
+      {
+        "id": "p1",
+        "name": "Ada Örnek",
+        "role": "setter"
+      },
+      {
+        "id": "p2",
+        "name": "İpek Örnek",
+        "role": "setter"
+      },
+      {
+        "id": "p3",
+        "name": "Ece Örnek",
+        "role": "opposite"
+      },
+      {
+        "id": "p4",
+        "name": "Güneş Örnek",
+        "role": "opposite"
+      },
+      {
+        "id": "p5",
+        "name": "Duru Örnek",
+        "role": "outside"
+      },
+      {
+        "id": "p6",
+        "name": "Çiğdem Örnek",
+        "role": "outside"
+      },
+      {
+        "id": "p7",
+        "name": "Yağmur Örnek",
+        "role": "outside"
+      },
+      {
+        "id": "p8",
+        "name": "Öykü Örnek",
+        "role": "outside"
+      },
+      {
+        "id": "p9",
+        "name": "Selin Örnek",
+        "role": "middle"
+      },
+      {
+        "id": "p10",
+        "name": "İdil Örnek",
+        "role": "middle"
+      },
+      {
+        "id": "p11",
+        "name": "Bahar Örnek",
+        "role": "middle"
+      },
+      {
+        "id": "p12",
+        "name": "Ceren Örnek",
+        "role": "middle"
+      },
+      {
+        "id": "p13",
+        "name": "Defne Örnek",
+        "role": "libero"
+      },
+      {
+        "id": "p14",
+        "name": "Nehir Örnek",
+        "role": "libero"
+      }
+    ]
+  },
+  "quiz": {
+    "id": "demo-quiz",
+    "revision": 1,
+    "questions": [
+      {
+        "id": "q1",
+        "revision": 1,
+        "text": "Bu demoda yedi kişilik hayal takımında kaç pasör seçilir?",
+        "choices": [
+          {
+            "id": "q1-c1",
+            "text": "Bir"
+          },
+          {
+            "id": "q1-c2",
+            "text": "İki"
+          },
+          {
+            "id": "q1-c3",
+            "text": "Üç"
+          },
+          {
+            "id": "q1-c4",
+            "text": "Dört"
+          }
+        ],
+        "correctId": "q1-c1",
+        "explanation": "Demo takım şablonunda bir pasör yeri var. İki smaçör ve iki orta oyuncu seçiliyor."
+      },
+      {
+        "id": "q2",
+        "revision": 1,
+        "text": "Bu demoda libero, takım görselinde nerede gösterilir?",
+        "choices": [
+          {
+            "id": "q2-c1",
+            "text": "Takımın dışında bırakılır"
+          },
+          {
+            "id": "q2-c2",
+            "text": "Ayrı bir libero alanında"
+          },
+          {
+            "id": "q2-c3",
+            "text": "İki farklı yerde"
+          },
+          {
+            "id": "q2-c4",
+            "text": "Kaleci alanında"
+          }
+        ],
+        "correctId": "q2-c2",
+        "explanation": "Görselde altı saha yeri ve ayrı bir libero alanı var. Bu, resmî bir rotasyon çizimi değil."
+      },
+      {
+        "id": "q3",
+        "revision": 1,
+        "text": "Mercan – Turkuaz maçında “3-1” tahmini, bu oyunda ne anlama gelir?",
+        "choices": [
+          {
+            "id": "q3-c1",
+            "text": "Turkuaz 3 set alır"
+          },
+          {
+            "id": "q3-c2",
+            "text": "Maç berabere biter"
+          },
+          {
+            "id": "q3-c3",
+            "text": "Mercan 3, Turkuaz 1 set alır"
+          },
+          {
+            "id": "q3-c4",
+            "text": "Toplam 3 sayı oynanır"
+          }
+        ],
+        "correctId": "q3-c3",
+        "explanation": "Bu oyunda skorun ilk sayısı her zaman soldaki, yani ev sahibi takıma aittir."
+      },
+      {
+        "id": "q4",
+        "revision": 1,
+        "text": "Aynı kurgusal oyuncuyu hayal takımında kaç kez seçebilirsin?",
+        "choices": [
+          {
+            "id": "q4-c1",
+            "text": "İki kez"
+          },
+          {
+            "id": "q4-c2",
+            "text": "Her yere"
+          },
+          {
+            "id": "q4-c3",
+            "text": "Role göre üç kez"
+          },
+          {
+            "id": "q4-c4",
+            "text": "Bir kez"
+          }
+        ],
+        "correctId": "q4-c4",
+        "explanation": "Yedi yer, yedi farklı oyuncuyla tamamlanır. Aynı oyuncu ikinci bir yere eklenemez."
+      },
+      {
+        "id": "q5",
+        "revision": 1,
+        "text": "Bu prototipte tahminlerin nerede saklanır?",
+        "choices": [
+          {
+            "id": "q5-c1",
+            "text": "Herkese açık bir sıralamada"
+          },
+          {
+            "id": "q5-c2",
+            "text": "Bu tarayıcıda; depolama kapalıysa yalnızca oturumda"
+          },
+          {
+            "id": "q5-c3",
+            "text": "Bir kulübün hesabında"
+          },
+          {
+            "id": "q5-c4",
+            "text": "Sosyal medya profilinde"
+          }
+        ],
+        "correctId": "q5-c2",
+        "explanation": "Hesap ve sunucu kaydı yok. Tarayıcı verileri silinebilir; bu yüzden oyun ödüllü veya rekabetçi değildir."
+      }
+    ]
+  }
+}
