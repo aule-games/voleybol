@@ -52,7 +52,8 @@ export async function renderTeamPng(players: Player[], asOf: string, signal?: Ab
       ctx.textAlign = 'center'; ctx.fillStyle = libero ? '#FFF9F2' : '#48263D'; ctx.font = 'bold 24px system-ui, sans-serif';
       ctx.fillText(libero ? 'L' : String(i + 1).padStart(2, '0'), markX + 25, markY + 41);
       ctx.fillStyle = libero ? '#48263D' : '#FFF9F2'; let lines: string[] | null = null; let font = 44;
-      for (; font >= 40; font -= 2) { ctx.font = `bold ${font}px system-ui, sans-serif`; lines = wrapName(ctx, p.name, libero ? width - 190 : width - 36); if (lines) break; }
+      // Three lines use the smallest supported size to clear both jersey and role.
+      for (; font >= 40; font -= 2) { ctx.font = `bold ${font}px system-ui, sans-serif`; lines = wrapName(ctx, p.name, libero ? width - 190 : width - 36); if (lines && (lines.length < 3 || font === 40)) break; }
       if (!lines || (libero && lines.length > 1)) return fail('SHARE_OVERFLOW', 'share');
       ctx.textAlign = libero ? 'left' : 'center';
       const nameX = libero ? x + 150 : center;

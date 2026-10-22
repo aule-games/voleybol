@@ -120,7 +120,8 @@ test('T16 full compound names survive PNG, text, link and a 360px picker', async
   const ink = await page.evaluate(probe).then(p => p.ink);
   const nameInk = ink.filter(i => /^bold (40|42|44)px/.test(i.font));
   expect(nameInk.slice(0, 3).map(i => i.text)).toEqual(['Çiğdem', 'Özgecan', 'Örnekgül']);
-  expect(nameInk[2]!.bottom).toBeLessThanOrEqual(ink.find(i => i.text === 'Pasör')!.top);
+  expect(nameInk[0]!.top).toBeGreaterThanOrEqual(340 + 86 + 4);
+  expect(nameInk[2]!.bottom + 4).toBeLessThanOrEqual(ink.find(i => i.text === 'Pasör')!.top);
   expect(nameInk.map(i => i.text).join(' ')).toBe(names.join(' '));
   for (const line of nameInk.slice(0, -1)) expect(line.width).toBeLessThanOrEqual(952 / 3 - 36);
   const url = text.split('\n').at(-1)!;
