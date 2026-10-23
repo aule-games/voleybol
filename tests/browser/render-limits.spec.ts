@@ -150,6 +150,11 @@ for (const [label, index, name] of [
   const data = sample(); data.roster.players.find(p => p.id === TEAM[index])!.name = name;
   await page.route('**/content.json', route => route.fulfill({ json: data }));
   await page.setViewportSize({ width: 360, height: 900 }); await page.goto(teamRoute);
+  if (label === 'four lines') console.log('FONT_DIAGNOSTIC', await page.evaluate(() => {
+    const ctx = document.createElement('canvas').getContext('2d')!;
+    ctx.font = 'bold 40px system-ui, sans-serif';
+    return { font: ctx.font, width: 952 / 3 - 36, oldPair: ctx.measureText('Çiğdem Çiğdem').width, newWord: ctx.measureText('Örnekgül').width, newPair: ctx.measureText('Örnekgül Örnekgül').width };
+  }));
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('button', { name: 'Paylaşım önizlemesini hazırla' }).click();
   await expect(page.locator('#share-preview')).toContainText('Oyuncu adları görsele eksiksiz sığmıyor');

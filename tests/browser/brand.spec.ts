@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { createRequire } from 'node:module';
 import { NOW, sample, TEAM } from '../fixtures.ts';
 
 test.beforeEach(async ({ page }) => {
@@ -49,6 +50,12 @@ test('branded PNG keeps the portrait size and a full-name text fallback', async 
     const at = (x: number, y: number) => [...ctx.getImageData(x, y, 1, 1).data];
     return { paper: at(0, 0), court: at(65, 341), libero: at(65, 953) };
   });
+  // Inspect the encoded artifact independently of a second browser canvas.
+  const { PNG } = createRequire(import.meta.url)('playwright-core/lib/utilsBundle');
+  const bytes = await image.evaluate(async img => [...new Uint8Array(await (await fetch((img as HTMLImageElement).src)).arrayBuffer())]);
+  const png = PNG.sync.read(Buffer.from(bytes));
+  const at = (x: number, y: number) => [...png.data.subarray((png.width * y + x) * 4, (png.width * y + x) * 4 + 4)];
+  console.log('PNG_DIAGNOSTIC', JSON.stringify({ browserCopy: colors, encoded: { width: png.width, height: png.height, paper: at(0, 0), court: at(65, 341), libero: at(65, 953) } }));
   expect(colors).toEqual({ paper: [255, 249, 242, 255], court: [72, 38, 61, 255], libero: [238, 227, 237, 255] });
   for (const id of TEAM) await expect(page.getByLabel('Takım metni ve bağlantısı')).toHaveValue(new RegExp(sample().roster.players.find(p => p.id === id)!.name));
 });
