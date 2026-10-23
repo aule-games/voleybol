@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
-import raw from '../public/content.json' with { type: 'json' };
+import raw from './data/legacy-real-content.json' with { type: 'json' };
 import { validateContent } from '../src/data/validate.ts';
 import { ContentCoordinator } from '../src/data/coordinator.ts';
 import { CLUBS, COUNTRIES, isLoopback, isPublicPreviewTarget, officialSource } from '../src/data/identities.ts';
@@ -13,7 +13,7 @@ const now = Date.parse(raw.publishedAt) + 1000;
 const parse = (data: unknown = structuredClone(raw)) => validateContent(data, now, { allowPublicPreview: true });
 const current = () => { const r = parse(); if (!r.ok) throw Error('Invalid real preview'); return r.value; };
 
-describe('explicit mixed-content preview contracts', () => {
+describe('legacy schema-3 mixed-content preview contracts', () => {
   it('defaults closed; distinguishes real names/facts from fictional matches', () => {
     expect(validateContent(raw, now).ok).toBe(false);
     const c = current(); expect(c.issues).toEqual([]); expect(c.demo).toBe(false); expect(c.modes).toEqual({ fixtures: 'fictional', roster: 'real', quiz: 'factual' });
@@ -38,7 +38,7 @@ describe('explicit mixed-content preview contracts', () => {
     expect(validateContent(raw, now, { allowLocalPreview: true }).ok).toBe(false);
     expect(parse({ ...raw, previewOnly: false }).ok).toBe(false);
     expect(parse({ ...raw, localOnly: true }).ok).toBe(false);
-    expect(parse({ ...raw, schema: 4 }).ok).toBe(false);
+    expect(parse({ ...raw, schema: 5 }).ok).toBe(false);
   });
   it.each([
     'http://aule-games.github.io/voleybol/content.json',

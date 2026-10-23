@@ -16,15 +16,19 @@ Setup references: [Vite](https://vite.dev/guide/), [Vitest](https://vitest.dev/g
 
 The UI is intentionally a first slice, not a general game engine. It has no framework, backend, service worker or offline submission queue.
 
+## International amendment — 2026-10-23
+
+The current local build uses schema 4: exactly 100 players, 10 coaches, budget 65, and 100 sourced questions with `roundSize: 10`. Schema 4 keeps the schema-3 host/policy guards. It supersedes the earlier 35-player / four-pack programme described in historical notes. See [the complete contract](international-content.md) and [the versioned 65-point amendment](budget-65-2026-10-23.md).
+
 ## Content envelope
 
 `public/content.json` is the only fetched content asset. Schema 1 remains fictional-only. Schema 2 is the explicitly classified real-roster/factual-quiz/fictional-fixtures local preview; it is rejected unless the coordinator is on an exact loopback host. Schema 3 is the separate approved-host test preview; it requires `previewOnly: true` and an explicit caller opt-in, limited to loopback or the exact GitHub Pages content URL. See [the current contract](local-content.md) and [deployment workflow](deployment.md). Unknown common fields and schema versions fail closed. Public-ready files must never include private reviewer identities, correspondence, permission documents or private paths.
 
-The envelope has `schema`, `demo`, `revision`, `rightsRevision`, `publishedAt`, `validUntil`, `rights`, `fixtures`, `roster`, and `quiz`; schema 2 also requires `localOnly` and `modes`, while schema 3 requires `previewOnly` and `modes`. UTC timestamps use full ISO form, such as `2026-10-22T12:00:00.000Z`. Visible dates are formatted in `Europe/Istanbul`, explicitly labelled TSİ.
+The envelope has `schema`, `demo`, `revision`, `rightsRevision`, `publishedAt`, `validUntil`, `rights`, `fixtures`, `roster`, and `quiz`; schema 2 also requires `localOnly` and `modes`, while schemas 3 and 4 require `previewOnly` and `modes`. UTC timestamps use full ISO form, such as `2026-10-22T12:00:00.000Z`. Visible dates are formatted in `Europe/Istanbul`, explicitly labelled TSİ.
 
 One request reads at most **256 KiB** with a **5000 ms** total deadline, `cache: no-store`, `credentials: omit`, and `redirect: error`. No retries occur automatically. Both the header and body are checked. Stale or obsolete generations cannot become current. A common validation failure closes the envelope; malformed mode data closes only that mode in the same snapshot. No old/new modes are combined.
 
-Current schema bounds: 21 non-final fixtures, 42 finals, 35 players, one five-question fictional pack or ten-question sourced preview pack (four choices per question). The accepted later programme permits four packs / 20 questions and at most two explicitly cleared historical roster versions; neither is implemented yet. Limits are engineering bounds, not rights clearance.
+Legacy schema 1–3 bounds: 21 non-final fixtures, 42 finals, 35 players, one five-question fictional pack or ten-question sourced preview pack (four choices per question). The accepted later programme permits four packs / 20 questions and at most two explicitly cleared historical roster versions; neither is implemented yet. Limits are engineering bounds, not rights clearance.
 
 ### Revision rules
 
@@ -72,7 +76,7 @@ Shared links are read-only. Copying one into the current draft requires explicit
 
 Preparation fetches a fresh policy and captures selection/content/rights as one immutable generation. The file expires after 60 seconds or sooner on policy expiry, selection/content/rights changes, navigation, hide or offline. Old object URLs are revoked. For schema 1, the final share button directly calls native share with the prepared File during user activation, without awaited work first. Cancellation is neutral; neither promise resolution nor download/copy means a post was published. No automatic retries or outbound posts occur.
 
-Schemas 2 and 3 disable native external sharing and omit club marks from PNGs; text and image copy identify real names and test-preview status. Name-only PNG download and link copy remain available.
+Schemas 2, 3 and 4 disable native external sharing and omit club marks from PNGs; text and image copy identify real names and test-preview status. Name-only PNG download and link copy remain available.
 
 PNG dimensions: 1080×1350, 64 px safe boundary, name font at least 40 px, word wrapping at most three lines. Overflow disables PNG rather than truncating a name; text/link remain available. Canvas is released after rendering and one active Blob URL is retained. Real iOS/Android native share behavior is not certified by browser mocks.
 
@@ -84,7 +88,11 @@ Compound Turkish/accented names are checked in the full-size PNG, text and canon
 
 ## Built-output performance measurements
 
-Run `npm run measure:performance -- .gstack/benchmark-reports/local-run` with no other browser tests running. The script builds first, owns a loopback-only Vite preview on port 4176 and closes it on completion. It measures the unchanged current content, not mocked network data or renewed dates. Expired content or no available prediction control fails the run instead of recording an error screen as a fast playable game.
+Run `npm run measure:performance -- .gstack/benchmark-reports/local-run` with no other browser tests running. The script builds first, owns a loopback-only Vite preview on port 4176 and closes it on completion. It measures the unchanged current content, not mocked network data or renewed dates. Expired content still fails the run rather than recording an error screen as a fast playable game.
+
+**Measurement correction, 2026-10-23:** the previous script required an open prediction on both home and prediction routes. Once the original fictional fixtures locked, that assumption caused a timeout despite correctly rendered controls. Home now measures the team link and verifies navigation. Predictions measure rendered score fields plus the history control: an open fixture must accept a score; an all-locked state must contain disabled score fields and explicit warnings, then successfully open history. Each sample records the actual interaction. Locked-state timing does not establish playable-prediction latency and is not directly comparable to the former open-fixture marker. No fixture or policy dates are renewed.
+
+The first corrected run also exposed the script's obsolete assumption that every quiz reload shows the welcome screen. Schema 4 correctly resumes its automatically saved attempt. The measurement now accepts either the start control or an enabled answer in the restored quiz and checks the corresponding real interaction. Warm samples preserve browser storage, so their summary can combine initial-start and resumed-attempt states; raw samples and summary interaction labels distinguish them. No storage or clock reset is used to hide the persistence behavior.
 
 Each of home, predictions, builder and quiz gets five fresh-context cold loads and five warm-context reloads. Chromium uses a 360×800 viewport, 4× CPU slowdown, 1.6 Mbps download/upload and 150 ms latency. Record usable-control median/worst, FCP/LCP/navigation/resource timing, five-second pre-interaction CLS, one initial content request, local-only requests and a successful real interaction. Initial JS gzip must stay at or below 100 KiB, every Chromium usable sample at or below 2500 ms, and CLS at or below 0.1. Reports preserve raw samples, engine/machine and build/script/content hashes. Never infer p95 from five samples.
 

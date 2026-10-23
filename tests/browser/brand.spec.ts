@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+import { createRequire } from 'node:module';
+import { readFile } from 'node:fs/promises';
 import { NOW, sample, TEAM } from '../fixtures.ts';
 
 test.beforeEach(async ({ page }) => {
@@ -35,7 +37,7 @@ test('brand artwork stays local and decorative; progress is not announced twice'
   expect(await page.locator('.button').first().evaluate(button => getComputedStyle(button).transitionDuration)).toBe('0s');
 });
 
-test('branded PNG keeps the portrait size and a full-name text fallback', async ({ page }) => {
+test('branded PNG keeps the portrait size and a full-name text fallback', async ({ page }, info) => {
   await page.goto(`/#/takim?v=1&r=demo-v1&p=${TEAM.join(',')}`);
   await page.getByRole('button', { name: 'Paylaşım önizlemesini hazırla' }).click();
   const image = page.locator('.share-preview img');
@@ -49,6 +51,19 @@ test('branded PNG keeps the portrait size and a full-name text fallback', async 
     const at = (x: number, y: number) => [...ctx.getImageData(x, y, 1, 1).data];
     return { paper: at(0, 0), court: at(65, 341), libero: at(65, 953) };
   });
+  // This decoder is exported by the pinned Playwright runtime; no extra dependency.
+  // Assert the actual download as well as the preview's second-canvas copy.
+  const { PNG } = createRequire(import.meta.url)('playwright-core/lib/utilsBundle');
+  const pendingDownload = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'PNG indir', exact: true }).click();
+  const path = info.outputPath('branded-team.png');
+  await (await pendingDownload).saveAs(path);
+  const png = PNG.sync.read(await readFile(path));
+  const at = (x: number, y: number) => [...png.data.subarray((png.width * y + x) * 4, (png.width * y + x) * 4 + 4)];
+  const encodedColors = { paper: at(0, 0), court: at(65, 341), libero: at(65, 953) };
+  if (JSON.stringify(colors) !== JSON.stringify(encodedColors)) console.log('PNG_DIAGNOSTIC', JSON.stringify({ browserCopy: colors, encoded: encodedColors }));
+  expect([png.width, png.height]).toEqual([1080, 1350]);
+  expect(encodedColors).toEqual({ paper: [255, 249, 242, 255], court: [72, 38, 61, 255], libero: [238, 227, 237, 255] });
   expect(colors).toEqual({ paper: [255, 249, 242, 255], court: [72, 38, 61, 255], libero: [238, 227, 237, 255] });
   for (const id of TEAM) await expect(page.getByLabel('Takım metni ve bağlantısı')).toHaveValue(new RegExp(sample().roster.players.find(p => p.id === id)!.name));
 });

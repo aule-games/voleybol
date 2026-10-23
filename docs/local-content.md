@@ -1,4 +1,6 @@
-# Real-content test preview
+# Historical real-content test preview
+
+**2026-10-23 amendment:** the current local source uses [the international schema-4 contract](international-content.md). The following dated schema-3 evidence is preserved for the earlier published checkpoint and regression fixture; it is not a description of the new 100-player build.
 
 Dated 2026-10-22. A bounded test preview; not a production release, licensing clearance, or official club/federation product. Schema 3 prepares the specifically requested GitHub Pages preview; schema 2 remains loopback-only.
 

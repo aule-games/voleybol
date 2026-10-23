@@ -1,4 +1,4 @@
-import type { Content, Player } from '../domain/types.ts';
+import type { Coach, Content, Player } from '../domain/types.ts';
 import { SLOT_LABELS } from '../domain/types.ts';
 import { currentPolicy } from '../data/validate.ts';
 import { fail, ok } from './result.ts';
@@ -8,18 +8,24 @@ export interface PreparedTeam { url: string; text: string; file: File | null; bl
 export function preparedValid(prepared: PreparedTeam, content: Content | null, selection: string, now: number, online: boolean): boolean {
   return !!content && online && currentPolicy(content, now) && now < prepared.expiresAt && content.revision === prepared.revision && content.rightsRevision === prepared.rightsRevision && prepared.selection === selection;
 }
-export function lineupText(players: Player[], real = false): string { return `${real ? 'Test sürümü · Gerçek oyuncularla hayal takımım' : 'Kurgusal demo · Hayalimdeki takım'}\n${players.map((p, i) => `${SLOT_LABELS[i]}: ${p.name}`).join('\n')}\nAltı saha yeri + ayrı libero. Resmî rotasyon değildir.`; }
+export interface TeamDetails { coach: Coach; spent: number; cap: number; version: string }
+export function lineupText(players: Player[], real = false, details?: TeamDetails): string { return `${details ? 'Benim kurduğum takım bu, katılıyor musun?\n' : ''}${real ? 'Test sürümü · Gerçek oyuncularla hayal takımım' : 'Kurgusal demo · Hayalimdeki takım'}\n${players.map((p, i) => `${SLOT_LABELS[i]}: ${p.name}${details ? ` · ${p.cost} puan` : ''}`).join('\n')}${details ? `\nKoç: ${details.coach.name} · ${details.coach.cost} puan\nBütçe: ${details.spent}/${details.cap} puan · Sürüm: ${details.version}` : ''}\nAltı saha yeri + ayrı libero. Resmî rotasyon değildir.`; }
 export function wrapName(ctx: Pick<CanvasRenderingContext2D, 'measureText'>, name: string, width: number): string[] | null {
   const lines: string[] = []; let line = '';
   for (const word of name.split(/\s+/)) {
-    if (ctx.measureText(word).width > width) return null;
-    const candidate = line ? `${line} ${word}` : word;
-    if (ctx.measureText(candidate).width > width) { lines.push(line); line = word; } else line = candidate;
+    // Only use a real hyphen as an additional break opportunity; never shorten
+    // names, insert hyphens or split arbitrary overwide character sequences.
+    const parts = ctx.measureText(word).width > width ? word.split(/(?<=-)/).filter(Boolean) : [word];
+    for (const [i, part] of parts.entries()) {
+      if (ctx.measureText(part).width > width) return null;
+      const candidate = line ? `${line}${i === 0 ? ' ' : ''}${part}` : part;
+      if (ctx.measureText(candidate).width > width) { lines.push(line); line = part; } else line = candidate;
+    }
   }
   if (line) lines.push(line);
   return lines.length <= 3 ? lines : null;
 }
-export async function renderTeamPng(players: Player[], asOf: string, signal?: AbortSignal, real = false): Promise<Result<File>> {
+export async function renderTeamPng(players: Player[], asOf: string, signal?: AbortSignal, real = false, details?: TeamDetails): Promise<Result<File>> {
   if (signal?.aborted) return fail('SHARE_EXPIRED', 'share');
   if (players.length !== 7) return fail('LINEUP_INVALID', 'share');
   const canvas = document.createElement('canvas'); canvas.width = 1080; canvas.height = 1350;
@@ -29,7 +35,7 @@ export async function renderTeamPng(players: Player[], asOf: string, signal?: Ab
     // Italic f overhangs its origin; inset it so visible ink stays inside the 64px safe area.
     ctx.fillStyle = '#48263D'; ctx.font = 'italic bold 62px Georgia, serif'; ctx.fillText('filedeyiz.', 82, 121);
     ctx.fillStyle = '#B04B3C'; ctx.fillRect(64, 156, 68, 5);
-    ctx.fillStyle = '#48263D'; ctx.font = 'italic 76px Georgia, serif'; ctx.fillText('Benim yedilim.', 64, 253);
+    ctx.fillStyle = '#48263D'; ctx.font = 'italic 76px Georgia, serif'; ctx.fillText('Benim yedilim.', 68, 253);
     ctx.font = '25px system-ui, sans-serif'; ctx.fillText(real ? 'TEST SÜRÜMÜ · GERÇEK OYUNCULAR' : 'KURGUSAL DEMO · GEÇİCİ İSİM', 64, 300);
     ctx.fillStyle = '#48263D'; ctx.fillRect(64, 340, 952, 580);
     ctx.strokeStyle = '#B897AA'; ctx.lineWidth = 2; ctx.strokeRect(79, 355, 922, 550);
@@ -62,10 +68,14 @@ export async function renderTeamPng(players: Player[], asOf: string, signal?: Ab
       ctx.fillText(SLOT_LABELS[i]!, nameX, libero ? y + 109 : y + 260);
     }
     ctx.textAlign = 'left'; ctx.fillStyle = '#48263D'; ctx.font = 'italic 36px Georgia, serif';
-    ctx.fillText('Altı saha yeri. Bir libero. Benim seçimim.', 64, 1171);
+    const coachLine = details ? `Koç: ${details.coach.name} · ${details.coach.cost} puan` : 'Altı saha yeri. Bir libero. Benim seçimim.';
+    if (ctx.measureText(coachLine).width > 944) ctx.font = 'italic 28px Georgia, serif';
+    if (ctx.measureText(coachLine).width > 944) return fail('SHARE_OVERFLOW', 'share');
+    ctx.fillText(coachLine, 68, 1171);
     ctx.fillStyle = '#695964'; ctx.font = '25px system-ui, sans-serif';
-    ctx.fillText(`${real ? 'Seçilmiş kadro' : 'Örnek kadro'} · ${new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul' }).format(new Date(asOf))} · Resmî rotasyon değildir.`, 64, 1222);
-    ctx.fillText(real ? 'Taraftar seçimi. Resmî takım veya kulüp iş birliği değildir.' : 'Oyuncu adları ve bu görsel demo için oluşturulmuştur.', 64, 1264);
+    ctx.fillText(details ? `Bütçe: ${details.spent}/${details.cap} puan · ${details.version}` : `${real ? 'Seçilmiş kadro' : 'Örnek kadro'} · ${new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul' }).format(new Date(asOf))} · Resmî rotasyon değildir.`, 64, 1222);
+    ctx.fillText(details ? 'Benim kurduğum takım bu, katılıyor musun?' : real ? 'Taraftar seçimi. Resmî takım veya kulüp iş birliği değildir.' : 'Oyuncu adları ve bu görsel demo için oluşturulmuştur.', 64, details ? 1253 : 1264);
+    if (details) { ctx.font = '19px system-ui, sans-serif'; ctx.fillText('Taraftar seçimi. Resmî rotasyon veya kulüp iş birliği değildir.', 64, 1281); }
     // Native encoding cannot be stopped, but our wait, buffer and late callback are bounded.
     const result = await new Promise<Result<Blob>>(resolve => {
       let settled = false;

@@ -19,7 +19,7 @@ const report = {
     webkit: 'Unthrottled comparison only. No equivalent CPU/network throttle or CLS API is assumed.',
     cold: 'New browser context; Chromium HTTP cache explicitly cleared before navigation.',
     warm: 'Same context after one unmeasured priming navigation; normal reload, cache headers unchanged. Revalidation is not a memory-cache hit.',
-    usable: 'First animation frame after a mode-specific visible enabled control and valid rendered content exist; followed by a real interaction after metric collection.',
+    usable: 'First animation frame after a mode-specific visible enabled control and valid rendered content exist; followed by a real interaction after metric collection. Home uses the team link. Predictions use the history control and rendered score fields, including the legitimate all-locked state; this is not a claim that an expired fixture accepts a prediction. Quiz measures the start button or an enabled answer in the automatically restored attempt; each sample records its interaction and warm summaries can mix start/resume states.',
     observation: 'At least five seconds after navigation before interaction; CLS maximum session window, excluding recent input.',
     host: 'Loopback Vite preview of dist; NOT production/CDN latency or cache proof. Real current demo content, no clock mock.',
     limits: 'Five samples report median/worst, never p95. No earlier timing baseline. Native phone/OS and physical GPU memory remain unmeasured.',
@@ -80,8 +80,9 @@ try {
               }).observe({ type: 'largest-contentful-paint', buffered: true });
               const check = () => {
                 const main = document.querySelector(`main[data-mode="${mode}"]`);
-                const selector = { home: '.featured-match a', tahmin: 'input[type="radio"]:not(:disabled)', takim: '#slot-0:not(:disabled)', quiz: '.quiz-welcome button:not(:disabled)' }[mode];
+                const selector = { home: '.team-path', tahmin: '.subnav button:not(:disabled)', takim: '#slot-0:not(:disabled)', quiz: '.quiz-welcome button:not(:disabled), .quiz-panel input[type="radio"]:not(:disabled)' }[mode];
                 const control = main?.querySelector(selector);
+                if (mode === 'tahmin' && !main?.querySelector('.match-row input[type="radio"]')) return;
                 if (m.usable === null && control?.getClientRects().length) requestAnimationFrame(() => {
                   if (m.usable === null && control.isConnected && control.getClientRects().length) m.usable = performance.now();
                 });
@@ -110,21 +111,46 @@ try {
               resources, observationMs: performance.now(), navigation: nav.toJSON() };
           });
           // A timing marker alone is not evidence that an interaction works.
+          let interaction;
           if (mode === 'home') {
-            await page.locator('.featured-match a').first().click();
-            await page.locator('main[data-mode="tahmin"] input[type="radio"]').first().waitFor();
+            await page.locator('.team-path').click();
+            await page.locator('main[data-mode="takim"] #slot-0').waitFor();
+            interaction = 'team-navigation';
           } else if (mode === 'tahmin') {
-            const radio = page.locator('input[type="radio"]:not(:disabled)').first(); await radio.check();
-            if (!(await radio.isChecked())) throw new Error('Prediction interaction failed');
+            const radio = page.locator('input[type="radio"]:not(:disabled)').first();
+            if (await radio.count()) {
+              await radio.check();
+              if (!(await radio.isChecked())) throw new Error('Prediction interaction failed');
+              interaction = 'open-fixture-score-selection';
+            } else {
+              const validLockedState = await page.locator('.match-row').evaluateAll(rows => rows.length > 0 && rows.every(row => {
+                const inputs = [...row.querySelectorAll('input[type="radio"]')];
+                return inputs.length > 0 && inputs.every(input => input.disabled) && !!row.querySelector('.notice.warning');
+              }));
+              if (!validLockedState) throw new Error('Missing prediction controls or unexplained disabled state');
+              await page.getByRole('button', { name: 'Tahminlerim', exact: true }).click();
+              await page.getByText('Henüz kayıtlı tahminin yok.', { exact: true }).waitFor();
+              interaction = 'locked-fixtures-history';
+            }
           } else if (mode === 'takim') {
             await page.locator('#slot-0').click(); await page.locator('.player-option').first().waitFor();
+            interaction = 'player-picker';
           } else {
-            await page.getByRole('button', { name: 'Quiz’e başla' }).click(); await page.getByRole('radio').first().waitFor();
+            const start = page.getByRole('button', { name: 'Quiz’e başla' });
+            if (await start.count()) {
+              await start.click(); await page.getByRole('radio').first().waitFor();
+              interaction = 'quiz-start';
+            } else {
+              const answer = page.locator('.quiz-panel input[type="radio"]:not(:disabled)').first();
+              await answer.check();
+              if (!(await answer.isChecked())) throw new Error('Restored quiz interaction failed');
+              interaction = 'quiz-resume-answer-selection';
+            }
           }
           page.off('request', onRequest); page.off('pageerror', onError);
           // Interactions can change the fragment. Restore the benchmark URL before the next reload.
           await page.evaluate(url => history.replaceState(null, '', url), url);
-          const row = { engine, version: browser.version(), mode, cache, sample, ...metrics, requests, errors, interactionPassed: true };
+          const row = { engine, version: browser.version(), mode, cache, sample, ...metrics, requests, errors, interaction, interactionPassed: true };
           report.runs.push(row);
           await writeFile(`${output}/results.json`, JSON.stringify(report, null, 2));
           console.log(`${engine} ${mode} ${cache} ${sample}/5: usable=${Math.round(metrics.usable)}ms CLS=${metrics.cls ?? 'N/A'}`);
@@ -140,7 +166,7 @@ try {
   };
   for (const engine of ['chromium', 'webkit']) for (const mode of routes) for (const cache of ['cold', 'warm']) {
     const runs = report.runs.filter(r => r.engine === engine && r.mode === mode && r.cache === cache);
-    report.summary.push({ engine, mode, cache, usable: stats(runs.map(r => r.usable)), cls: stats(runs.map(r => r.cls)), fcp: stats(runs.map(r => r.fcp)), lcp: stats(runs.map(r => r.lcp)),
+    report.summary.push({ engine, mode, cache, interactions: [...new Set(runs.map(r => r.interaction))], usable: stats(runs.map(r => r.usable)), cls: stats(runs.map(r => r.cls)), fcp: stats(runs.map(r => r.fcp)), lcp: stats(runs.map(r => r.lcp)),
       contentRequests: runs.map(r => r.resources.filter(x => x.path === '/content.json').length), errors: runs.flatMap(r => r.errors) });
   }
   report.finishedAt = new Date().toISOString();

@@ -10,14 +10,20 @@ export interface Fixture {
   checkedAt: string; state: MatchState; scheduleRevision: number; reopened: boolean;
   resultRevision: number; result: Score | null;
 }
-export interface Player { id: string; name: string; role: Role; clubId?: string; countryCode?: string; sourceUrl?: string }
-export interface Roster { version: string; asOf: string; players: Player[] }
+export interface Player { id: string; name: string; role: Role; clubId?: string; countryCode?: string; sourceUrl?: string; cost?: number; sourceLabel?: string }
+export interface Coach { id: string; name: string; cost: number; reference: string; sourceUrl: string }
+export const TEAM_BUDGET = 65 as const;
+export interface Roster { version: string; asOf: string; players: Player[]; budget?: typeof TEAM_BUDGET; coaches?: Coach[] }
+export interface BudgetTeam { roster: string; ids: string[]; coachId: string; teamId: string }
+export const TEAM_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
+export const QUIZ_CATEGORIES = ['league', 'vnl', 'olympics', 'europe', 'world'] as const;
+export type QuizCategory = typeof QUIZ_CATEGORIES[number];
 export interface Choice { id: string; text: string }
 export interface QuestionSource { title: string; url: string; checkedAt: string }
-export interface Question { id: string; revision: number; text: string; choices: Choice[]; correctId: string; explanation: string; season?: string; source?: QuestionSource }
-export interface QuizPack { id: string; revision: number; questions: Question[] }
+export interface Question { id: string; revision: number; text: string; choices: Choice[]; correctId: string; explanation: string; season?: string; source?: QuestionSource; category?: QuizCategory }
+export interface QuizPack { id: string; revision: number; questions: Question[]; roundSize?: 10 }
 export interface Content {
-  schema: 1 | 2 | 3; demo: boolean; localOnly?: true; previewOnly?: true;
+  schema: 1 | 2 | 3 | 4; demo: boolean; localOnly?: true; previewOnly?: true;
   modes?: { fixtures: 'fictional'; roster: 'real'; quiz: 'factual' };
   revision: number; rightsRevision: number; publishedAt: string; validUntil: string;
   rights: { expiresAt: string; withdrawnIds: string[] };
