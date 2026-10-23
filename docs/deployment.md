@@ -14,6 +14,12 @@ The source repository and its Git history become visible when its visibility is 
 
 The workflow pins official actions to commit hashes, reads Node from `.nvmrc`, installs the lockfile with `npm ci`, and packages **only `dist`**. No user-managed token or third-party account is needed. The deploy job alone receives Pages/OIDC write permissions. Manual workflow dispatch also publishes only from `main`.
 
+### CI runtime amendment — 2026-10-23
+
+The first international PR check passed type/content/unit/build checks but hit the unchanged 20-minute job limit while downloading 119 MB of browser-system packages from the runner's regional Ubuntu mirror. Browser tests never started; this run is not counted as passing. It ran Ubuntu 24.04, so the separate `ubuntu-latest` migration notice was not its cause.
+
+The verification job now uses the [official Playwright container workflow](https://playwright.dev/docs/ci#via-containers), pinned to version **1.64.1-noble** and its verified Microsoft registry digest, matching the locked test package. The image already contains browser binaries and system dependencies; a preflight checks the package version and required executable paths. This avoids the repeated apt-download bottleneck, not the tests: all type/content/unit/build and Chromium/WebKit tests, four workers, zero retries, the 20-minute job limit, and main-only deployment remain unchanged. The container runs as UID 1001; no privileged container or extra Linux capability is granted. The host runner is pinned to Ubuntu 24.04 to avoid an unrelated moving-label change. Image/version upgrades must be deliberate and paired.
+
 Vite's relative `base: './'` and hash routes preserve the `/voleybol/` project path, including assets, content fetches, refresh and shared-team URLs. Browser tests also exercise nested static hosting without root-asset or SPA fallbacks. A rehosted-byte test covers the exact approved HTTPS origin; live CDN/HTTPS verification is a separate post-deploy check.
 
 ## Current local amendment — 2026-10-23
