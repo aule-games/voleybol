@@ -8,8 +8,11 @@ type Probe = { canvases: HTMLCanvasElement[]; callbacks: (() => void)[]; created
 const probe = () => (window as unknown as { __limits: Probe }).__limits;
 
 test.beforeEach(async ({ page }) => {
-  await page.clock.install({ time: new Date(NOW) });
+  // install() starts a running clock: pausing at that same instant can be in
+  // the past by the next protocol call. No app runs during this setup interval.
+  await page.clock.install({ time: new Date(NOW - 60_000) });
   await page.clock.pauseAt(new Date(NOW));
+  expect(await page.evaluate(() => Date.now())).toBe(NOW);
   await page.route('**/content.json', route => route.fulfill({ json: sample() }));
 });
 
@@ -144,17 +147,23 @@ test('T16 full compound names survive PNG, text, link and a 360px picker', async
 
 for (const [label, index, name] of [
   ['single token', 0, 'Ç'.repeat(120)],
-  ['four lines', 0, 'Çiğdem Çiğdem Çiğdem Çiğdem'],
+  ['four lines', 0, 'Örnekgül Örnekgül Örnekgül Örnekgül'],
   ['libero overflow', 6, 'İnci Öykü Uzun Deneme Örnek Soyadı Deneme'],
 ] as const) test(`T16 ${label} refuses a clipped PNG and preserves the full name`, async ({ page }) => {
   const data = sample(); data.roster.players.find(p => p.id === TEAM[index])!.name = name;
   await page.route('**/content.json', route => route.fulfill({ json: data }));
   await page.setViewportSize({ width: 360, height: 900 }); await page.goto(teamRoute);
-  if (label === 'four lines') console.log('FONT_DIAGNOSTIC', await page.evaluate(() => {
-    const ctx = document.createElement('canvas').getContext('2d')!;
-    ctx.font = 'bold 40px system-ui, sans-serif';
-    return { font: ctx.font, width: 952 / 3 - 36, oldPair: ctx.measureText('Çiğdem Çiğdem').width, newWord: ctx.measureText('Örnekgül').width, newPair: ctx.measureText('Örnekgül Örnekgül').width };
-  }));
+  if (label === 'four lines') {
+    // Prove this is four individually fitting lines, not an overwide token or
+    // a name that legitimately fits two words per line in another OS font.
+    const metrics = await page.evaluate(() => {
+      const ctx = document.createElement('canvas').getContext('2d')!;
+      ctx.font = 'bold 40px system-ui, sans-serif';
+      return { word: ctx.measureText('Örnekgül').width, pair: ctx.measureText('Örnekgül Örnekgül').width };
+    });
+    expect(metrics.word).toBeLessThanOrEqual(952 / 3 - 36);
+    expect(metrics.pair).toBeGreaterThan(952 / 3 - 36);
+  }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('button', { name: 'Paylaşım önizlemesini hazırla' }).click();
   await expect(page.locator('#share-preview')).toContainText('Oyuncu adları görsele eksiksiz sığmıyor');

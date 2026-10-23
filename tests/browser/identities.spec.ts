@@ -6,28 +6,35 @@ import { COACH_IDENTITIES, PLAYER_AFFILIATIONS, TEAM_IDENTITIES } from '../../sr
 const artifacts = '.gstack/qa-reports/affiliations-complete-20261023';
 test.beforeEach(async ({ page }) => { await page.clock.setFixedTime(new Date(Date.parse(raw.publishedAt) + 1000)); });
 
-test('reviewed international clubs and coach employers load locally at narrow widths', async ({ page, browserName }) => {
+// Keep each exhaustive role check within its own unchanged 30-second test budget.
+for (const [slot, role] of [[0, 'setter'], [1, 'opposite'], [2, 'outside'], [4, 'middle'], [6, 'libero']] as const) test(`reviewed ${role} clubs load locally at narrow widths`, async ({ page }) => {
   const external: string[] = []; const errors: string[] = [];
   page.on('pageerror', e => errors.push(e.message));
   page.on('request', r => { if (new URL(r.url()).origin !== 'http://127.0.0.1:4173') external.push(r.url()); });
   await page.setViewportSize({ width: 320, height: 900 }); await page.goto('/#/takim');
-  for (const [slot, role] of [[0, 'setter'], [1, 'opposite'], [2, 'outside'], [4, 'middle'], [6, 'libero']] as const) {
-    await page.locator(`#slot-${slot}`).click();
-    for (const player of raw.roster.players.filter(p => p.role === role)) {
-      const option = page.locator('.player-option').filter({ has: page.locator('strong', { hasText: new RegExp(`^${player.name}$`) }) });
-      const affiliation = PLAYER_AFFILIATIONS[player.id];
-      const club = affiliation ? (affiliation.teamId ? TEAM_IDENTITIES[affiliation.teamId] : undefined) : TEAM_IDENTITIES[player.clubId];
-      if (club) {
-        await expect(option.locator('.identity-badge.club')).toHaveText(club.name);
-        if (club.mark) {
-          await expect(option.locator('.identity-badge.club img')).toHaveJSProperty('complete', true);
-          await expect.poll(() => option.locator('.identity-badge.club img').evaluate(i => (i as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
-        } else await expect(option).toContainText('Arma doğrulanmadı');
-      } else { await expect(option.locator('.club')).toHaveCount(0); await expect(option).toContainText(affiliation?.note ?? 'Kulüp bilgisi doğrulanmadı'); }
-      if (affiliation?.note) await expect(option.locator('.identity-note')).toHaveText(affiliation.note);
-    }
-    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  await page.locator(`#slot-${slot}`).click();
+  for (const player of raw.roster.players.filter(p => p.role === role)) {
+    const option = page.locator('.player-option').filter({ has: page.locator('strong', { hasText: new RegExp(`^${player.name}$`) }) });
+    const affiliation = PLAYER_AFFILIATIONS[player.id];
+    const club = affiliation ? (affiliation.teamId ? TEAM_IDENTITIES[affiliation.teamId] : undefined) : TEAM_IDENTITIES[player.clubId];
+    if (club) {
+      await expect(option.locator('.identity-badge.club')).toHaveText(club.name);
+      if (club.mark) {
+        await expect(option.locator('.identity-badge.club img')).toHaveJSProperty('complete', true);
+        await expect.poll(() => option.locator('.identity-badge.club img').evaluate(i => (i as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+      } else await expect(option).toContainText('Arma doğrulanmadı');
+    } else { await expect(option.locator('.club')).toHaveCount(0); await expect(option).toContainText(affiliation?.note ?? 'Kulüp bilgisi doğrulanmadı'); }
+    if (affiliation?.note) await expect(option.locator('.identity-note')).toHaveText(affiliation.note);
   }
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  expect(errors).toEqual([]); expect(external).toEqual([]);
+});
+
+test('reviewed coach employers load locally at narrow widths', async ({ page, browserName }) => {
+  const external: string[] = []; const errors: string[] = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('request', r => { if (new URL(r.url()).origin !== 'http://127.0.0.1:4173') external.push(r.url()); });
+  await page.setViewportSize({ width: 320, height: 900 }); await page.goto('/#/takim');
   await page.locator('#slot-7').click();
   for (const coach of raw.roster.coaches) {
     const option = page.locator('.coach-option').filter({ hasText: coach.name });
