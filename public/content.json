@@ -1,9 +1,9 @@
 {
-  "schema": 3,
+  "schema": 4,
   "demo": false,
-  "revision": 3,
+  "revision": 5,
   "rightsRevision": 3,
-  "publishedAt": "2026-10-22T19:34:18.198Z",
+  "publishedAt": "2026-10-23T17:08:03.000Z",
   "validUntil": "2026-10-29T19:34:18.198Z",
   "rights": {
     "expiresAt": "2026-10-29T19:34:18.198Z",
@@ -64,8 +64,9 @@
     }
   ],
   "roster": {
-    "version": "real-20261022-v1",
-    "asOf": "2026-10-22T19:34:18.198Z",
+    "version": "world-20261023-v2",
+    "asOf": "2026-10-23T12:45:00.000Z",
+    "budget": 65,
     "players": [
       {
         "id": "real-wd-q16535532",
@@ -73,7 +74,9 @@
         "role": "setter",
         "clubId": "vakifbank",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205745/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205745/",
+        "cost": 7,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q65949766",
@@ -81,7 +84,9 @@
         "role": "setter",
         "clubId": "eczacibasi",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205863/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205863/",
+        "cost": 5,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q20853404",
@@ -89,7 +94,9 @@
         "role": "opposite",
         "clubId": "fenerbahce",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206094/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206094/",
+        "cost": 12,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q99387328",
@@ -97,7 +104,9 @@
         "role": "opposite",
         "clubId": "galatasaray",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205623/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205623/",
+        "cost": 5,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q55384174",
@@ -105,7 +114,9 @@
         "role": "outside",
         "clubId": "eczacibasi",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205483/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205483/",
+        "cost": 9,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q16146392",
@@ -113,7 +124,9 @@
         "role": "outside",
         "clubId": "fenerbahce",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204934/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204934/",
+        "cost": 7,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q96902355",
@@ -121,7 +134,9 @@
         "role": "outside",
         "clubId": "thy",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205057/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205057/",
+        "cost": 5,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q65950006",
@@ -129,7 +144,9 @@
         "role": "outside",
         "clubId": "fenerbahce",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205866/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205866/",
+        "cost": 5,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q2610534",
@@ -137,7 +154,9 @@
         "role": "middle",
         "clubId": "fenerbahce",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205240/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205240/",
+        "cost": 9,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q48977782",
@@ -145,7 +164,9 @@
         "role": "middle",
         "clubId": "vakifbank",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205362/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205362/",
+        "cost": 7,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q2866702",
@@ -153,7 +174,9 @@
         "role": "middle",
         "clubId": "eczacibasi",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205457/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205457/",
+        "cost": 5,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q125696642",
@@ -161,7 +184,9 @@
         "role": "middle",
         "clubId": "vakifbank",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206079/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206079/",
+        "cost": 3,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q3108218",
@@ -169,7 +194,9 @@
         "role": "libero",
         "clubId": "fenerbahce",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205733/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205733/",
+        "cost": 7,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
       },
       {
         "id": "real-wd-q41806462",
@@ -177,13 +204,948 @@
         "role": "libero",
         "clubId": "eczacibasi",
         "countryCode": "TR",
-        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204823/"
+        "sourceUrl": "https://sultanlar.volleystation.com/en/players/2204823/",
+        "cost": 5,
+        "sourceLabel": "2026–27 Sultanlar Ligi kaydı"
+      },
+      {
+        "id": "real-br-macris",
+        "name": "Macris",
+        "role": "setter",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-roberta",
+        "name": "Roberta",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-rosamaria",
+        "name": "Rosamaria",
+        "role": "opposite",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-kisy",
+        "name": "Kisy",
+        "role": "opposite",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-tainara",
+        "name": "Tainara",
+        "role": "opposite",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-gabi",
+        "name": "Gabi Guimarães",
+        "role": "outside",
+        "cost": 12,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-ana-cristina",
+        "name": "Ana Cristina",
+        "role": "outside",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-julia-bergmann",
+        "name": "Julia Bergmann",
+        "role": "outside",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-helena",
+        "name": "Helena",
+        "role": "outside",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-diana",
+        "name": "Diana",
+        "role": "middle",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-julia-kudiess",
+        "name": "Julia Kudiess",
+        "role": "middle",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-lorena",
+        "name": "Lorena",
+        "role": "middle",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-lais",
+        "name": "Laís",
+        "role": "libero",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-br-marcelle",
+        "name": "Marcelle",
+        "role": "libero",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "BR",
+        "sourceUrl": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-seki",
+        "name": "Nanami Seki",
+        "role": "setter",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-matsui",
+        "name": "Tamaki Matsui",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-wada",
+        "name": "Yukiko Wada",
+        "role": "opposite",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-nonaka",
+        "name": "Rui Nonaka",
+        "role": "opposite",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-ishikawa",
+        "name": "Mayu Ishikawa",
+        "role": "outside",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-sato",
+        "name": "Yoshino Sato",
+        "role": "outside",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-kurogo",
+        "name": "Ai Kurogo",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-osanai",
+        "name": "Miwako Osanai",
+        "role": "outside",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-araki",
+        "name": "Ayaka Araki",
+        "role": "middle",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-yamada",
+        "name": "Nichika Yamada",
+        "role": "middle",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-miyabe",
+        "name": "Airi Miyabe",
+        "role": "middle",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-shimamura",
+        "name": "Haruyo Shimamura",
+        "role": "middle",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-kojima",
+        "name": "Manami Kojima",
+        "role": "libero",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-jp-fukudome",
+        "name": "Satomi Fukudome",
+        "role": "libero",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "JP",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-it-orro",
+        "name": "Alessia Orro",
+        "role": "setter",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-cambi",
+        "name": "Carlotta Cambi",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-egonu",
+        "name": "Paola Egonu",
+        "role": "opposite",
+        "cost": 12,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-antropova",
+        "name": "Ekaterina Antropova",
+        "role": "opposite",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-sylla",
+        "name": "Myriam Sylla",
+        "role": "outside",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-giovannini",
+        "name": "Gaia Giovannini",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-omoruyi",
+        "name": "Loveth Omoruyi",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-nervini",
+        "name": "Stella Nervini",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-danesi",
+        "name": "Anna Danesi",
+        "role": "middle",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-fahr",
+        "name": "Sarah Fahr",
+        "role": "middle",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-sartori",
+        "name": "Benedetta Sartori",
+        "role": "middle",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-akrari",
+        "name": "Yasmina Akrari",
+        "role": "middle",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-de-gennaro",
+        "name": "Monica De Gennaro",
+        "role": "libero",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-it-fersino",
+        "name": "Eleonora Fersino",
+        "role": "libero",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "IT",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-rs-perovic",
+        "name": "Rada Perović",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-mirkovic",
+        "name": "Slađana Mirković",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-boskovic",
+        "name": "Tijana Bošković",
+        "role": "opposite",
+        "cost": 12,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-bukilic",
+        "name": "Vanja Bukilić",
+        "role": "opposite",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-uzelac",
+        "name": "Aleksandra Uzelac",
+        "role": "outside",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-milenkovic",
+        "name": "Bojana Milenković",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-dangubic",
+        "name": "Katarina Dangubić",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-tica",
+        "name": "Branka Tica",
+        "role": "outside",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-kurtagic",
+        "name": "Hena Kurtagić",
+        "role": "middle",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-aleksic",
+        "name": "Maja Aleksić",
+        "role": "middle",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-kocic",
+        "name": "Jovana Kocić",
+        "role": "middle",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-milojevic",
+        "name": "Ljubica Milojević",
+        "role": "middle",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-pusic",
+        "name": "Teodora Pušić",
+        "role": "libero",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-rs-jegdic",
+        "name": "Aleksandra Jegdić",
+        "role": "libero",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "RS",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-wenerska",
+        "name": "Katarzyna Wenerska",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-kowalewska",
+        "name": "Marlena Kowalewska",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-stysiak",
+        "name": "Magdalena Stysiak",
+        "role": "opposite",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-smarzek",
+        "name": "Malwina Smarzek",
+        "role": "opposite",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-lukasik",
+        "name": "Martyna Łukasik",
+        "role": "outside",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-czyrnianska",
+        "name": "Martyna Czyrniańska",
+        "role": "outside",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-rozanski",
+        "name": "Olivia Różański",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-korneluk",
+        "name": "Agnieszka Korneluk",
+        "role": "middle",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-jurczyk",
+        "name": "Magdalena Jurczyk",
+        "role": "middle",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-pl-szczyglowska",
+        "name": "Aleksandra Szczygłowska",
+        "role": "libero",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "PL",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-us-poulter",
+        "name": "Jordyn Poulter",
+        "role": "setter",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-kaahaaina-torres",
+        "name": "Saige Ka’aha’aina-Torres",
+        "role": "setter",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-madisen-skinner",
+        "name": "Madisen Skinner",
+        "role": "opposite",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-samedy",
+        "name": "Stephanie Samedy",
+        "role": "opposite",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-avery-skinner",
+        "name": "Avery Skinner",
+        "role": "outside",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-franklin",
+        "name": "Sarah Franklin",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-frantti",
+        "name": "Ali Frantti",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-ogbogu",
+        "name": "Chiaka Ogbogu",
+        "role": "middle",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-rettke",
+        "name": "Dana Rettke",
+        "role": "middle",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-us-hentz",
+        "name": "Morgan Hentz",
+        "role": "libero",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "US",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+        "sourceLabel": "2025 Dünya Şampiyonası kadrosu"
+      },
+      {
+        "id": "real-cn-zhang-zixuan",
+        "name": "Zhang Zixuan",
+        "role": "setter",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-yin-xiaolan",
+        "name": "Yin Xiaolan",
+        "role": "setter",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-gong-xiangyu",
+        "name": "Gong Xiangyu",
+        "role": "opposite",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-yang-shuming",
+        "name": "Yang Shuming",
+        "role": "opposite",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-li-yingying",
+        "name": "Li Yingying",
+        "role": "outside",
+        "cost": 9,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-wu-mengjie",
+        "name": "Wu Mengjie",
+        "role": "outside",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-zhuang-yushan",
+        "name": "Zhuang Yushan",
+        "role": "outside",
+        "cost": 5,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-wang-yuanyuan",
+        "name": "Wang Yuanyuan",
+        "role": "middle",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-wang-aoqian",
+        "name": "Wang Aoqian",
+        "role": "middle",
+        "cost": 3,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      },
+      {
+        "id": "real-cn-wang-mengjie",
+        "name": "Wang Mengjie",
+        "role": "libero",
+        "cost": 7,
+        "clubId": "",
+        "countryCode": "CN",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+        "sourceLabel": "2025 millî takım çağrısı"
+      }
+    ],
+    "coaches": [
+      {
+        "id": "coach-santarelli",
+        "name": "Daniele Santarelli",
+        "cost": 6,
+        "reference": "Conegliano · 2024 Avrupa şampiyonu teknik ekibi",
+        "sourceUrl": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/"
+      },
+      {
+        "id": "coach-velasco",
+        "name": "Julio Velasco",
+        "cost": 6,
+        "reference": "İtalya · 2025 millî takım başantrenörü",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia"
+      },
+      {
+        "id": "coach-guimaraes",
+        "name": "José Roberto Guimarães",
+        "cost": 5,
+        "reference": "Brezilya · 2025 millî takım başantrenörü",
+        "sourceUrl": "https://cbv.com.br/noticias/volei-de-quadra/2025-07-31/jose-roberto-guimaraes-convoca-15-jogadoras-para-os-treinos-visando-o-campeonato-mundial"
+      },
+      {
+        "id": "coach-guidetti",
+        "name": "Giovanni Guidetti",
+        "cost": 5,
+        "reference": "VakıfBank · 2025–28 sözleşme duyurusu",
+        "sourceUrl": "https://www.vakifbanksporkulubu.com/tr/haber-detay/giovanni-guidetti-ile-20-yila---n2677"
+      },
+      {
+        "id": "coach-terzic",
+        "name": "Zoran Terzić",
+        "cost": 5,
+        "reference": "Sırbistan · 2025 millî takım başantrenörü",
+        "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025"
+      },
+      {
+        "id": "coach-lavarini",
+        "name": "Stefano Lavarini",
+        "cost": 4,
+        "reference": "Polonya · 2025 millî takım başantrenörü",
+        "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters"
+      },
+      {
+        "id": "coach-akbas",
+        "name": "Ferhat Akbaş",
+        "cost": 3,
+        "reference": "Japonya · 2025 millî takım başantrenörü",
+        "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan"
+      },
+      {
+        "id": "coach-barbolini",
+        "name": "Massimo Barbolini",
+        "cost": 3,
+        "reference": "İtalya · 2025 millî takım yardımcı antrenörü",
+        "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia"
+      },
+      {
+        "id": "coach-sullivan",
+        "name": "Erik Sullivan",
+        "cost": 3,
+        "reference": "ABD · 2025 başantrenörlük duyurusu",
+        "sourceUrl": "https://usavolleyball.org/story/usa-volleyball-names-erik-sullivan-as-new-head-coach-of-the-u-s-womens-national-team/"
+      },
+      {
+        "id": "coach-zhao",
+        "name": "Zhao Yong",
+        "cost": 2,
+        "reference": "Çin · 2025 millî takım başantrenörü",
+        "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025"
       }
     ]
   },
   "quiz": {
-    "id": "sultanlar-2024-2026",
+    "id": "international-100-v1",
     "revision": 1,
+    "roundSize": 10,
     "questions": [
       {
         "id": "sultanlar-q01",
@@ -214,7 +1176,8 @@
           "title": "TVF · 2023–24 final ödülleri",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q02",
@@ -245,7 +1208,8 @@
           "title": "TVF · 2023–24 final ödülleri",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q03",
@@ -276,7 +1240,8 @@
           "title": "TVF · 2023–24 final ödülleri",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q04",
@@ -307,7 +1272,8 @@
           "title": "TVF · 2024–25 şampiyonluk serisi",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-sampiyon-vakifbank",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q05",
@@ -338,7 +1304,8 @@
           "title": "TVF · 2024–25 final ödülleri",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q06",
@@ -369,7 +1336,8 @@
           "title": "TVF · 2024–25 final ödülleri",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q07",
@@ -400,7 +1368,8 @@
           "title": "TVF · 2025–26 final ödülleri",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu-1",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q08",
@@ -431,7 +1400,8 @@
           "title": "TVF · 2025–26 final ödülleri",
           "url": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu-1",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q09",
@@ -462,7 +1432,8 @@
           "title": "VakıfBank · 2025–26 şampiyonluk değerlendirmesi",
           "url": "https://www.vakifbanksporkulubu.com/tr/haber-detay/vakifbank-son-13-sezonun-9unda-zirveye-cikti-n2821",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
       },
       {
         "id": "sultanlar-q10",
@@ -493,7 +1464,2888 @@
           "title": "VakıfBank · 2025–26 şampiyonluk değerlendirmesi",
           "url": "https://www.vakifbanksporkulubu.com/tr/haber-detay/vakifbank-son-13-sezonun-9unda-zirveye-cikti-n2821",
           "checkedAt": "2026-10-22T19:34:18.198Z"
-        }
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-011",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydında Cansu Özbay hangi pozisyonda yer alır?",
+        "choices": [
+          {
+            "id": "iq-011-0",
+            "text": "Pasör"
+          },
+          {
+            "id": "iq-011-1",
+            "text": "Pasör çaprazı"
+          },
+          {
+            "id": "iq-011-2",
+            "text": "Smaçör"
+          },
+          {
+            "id": "iq-011-3",
+            "text": "Orta oyuncu"
+          }
+        ],
+        "correctId": "iq-011-0",
+        "explanation": "Lig kaydında Cansu Özbay, pasör olarak listelenir.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2205745/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-012",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydında Melissa Vargas hangi pozisyonda yer alır?",
+        "choices": [
+          {
+            "id": "iq-012-0",
+            "text": "Pasör"
+          },
+          {
+            "id": "iq-012-1",
+            "text": "Smaçör"
+          },
+          {
+            "id": "iq-012-2",
+            "text": "Orta oyuncu"
+          },
+          {
+            "id": "iq-012-3",
+            "text": "Pasör çaprazı"
+          }
+        ],
+        "correctId": "iq-012-3",
+        "explanation": "Lig kaydında Melissa Vargas, pasör çaprazı olarak listelenir.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2206094/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-013",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydında Hande Baladın hangi pozisyonda yer alır?",
+        "choices": [
+          {
+            "id": "iq-013-0",
+            "text": "Pasör çaprazı"
+          },
+          {
+            "id": "iq-013-1",
+            "text": "Orta oyuncu"
+          },
+          {
+            "id": "iq-013-2",
+            "text": "Smaçör"
+          },
+          {
+            "id": "iq-013-3",
+            "text": "Pasör"
+          }
+        ],
+        "correctId": "iq-013-2",
+        "explanation": "Lig kaydında Hande Baladın, smaçör olarak listelenir.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2204934/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-014",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydında Eda Erdem Dündar hangi pozisyonda yer alır?",
+        "choices": [
+          {
+            "id": "iq-014-0",
+            "text": "Smaçör"
+          },
+          {
+            "id": "iq-014-1",
+            "text": "Orta oyuncu"
+          },
+          {
+            "id": "iq-014-2",
+            "text": "Pasör"
+          },
+          {
+            "id": "iq-014-3",
+            "text": "Pasör çaprazı"
+          }
+        ],
+        "correctId": "iq-014-1",
+        "explanation": "Lig kaydında Eda Erdem Dündar, orta oyuncu olarak listelenir.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2205240/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-015",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydında Gizem Örge hangi pozisyonda yer alır?",
+        "choices": [
+          {
+            "id": "iq-015-0",
+            "text": "Libero"
+          },
+          {
+            "id": "iq-015-1",
+            "text": "Pasör"
+          },
+          {
+            "id": "iq-015-2",
+            "text": "Pasör çaprazı"
+          },
+          {
+            "id": "iq-015-3",
+            "text": "Smaçör"
+          }
+        ],
+        "correctId": "iq-015-0",
+        "explanation": "Lig kaydında Gizem Örge, libero olarak listelenir.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2205733/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-016",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydına göre Cansu Özbay hangi kulüptedir?",
+        "choices": [
+          {
+            "id": "iq-016-0",
+            "text": "Fenerbahçe Medicana"
+          },
+          {
+            "id": "iq-016-1",
+            "text": "Türk Hava Yolları"
+          },
+          {
+            "id": "iq-016-2",
+            "text": "Eczacıbaşı Peron İstanbul"
+          },
+          {
+            "id": "iq-016-3",
+            "text": "VakıfBank"
+          }
+        ],
+        "correctId": "iq-016-3",
+        "explanation": "Cansu Özbay, bu sezonun lig kaydında VakıfBank kadrosundadır.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2205745/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-017",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydına göre Elif Şahin hangi kulüptedir?",
+        "choices": [
+          {
+            "id": "iq-017-0",
+            "text": "Fenerbahçe Medicana"
+          },
+          {
+            "id": "iq-017-1",
+            "text": "Türk Hava Yolları"
+          },
+          {
+            "id": "iq-017-2",
+            "text": "Eczacıbaşı Peron İstanbul"
+          },
+          {
+            "id": "iq-017-3",
+            "text": "VakıfBank"
+          }
+        ],
+        "correctId": "iq-017-2",
+        "explanation": "Elif Şahin, bu sezonun lig kaydında Eczacıbaşı Peron İstanbul kadrosundadır.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2205863/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-018",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydına göre Derya Cebecioğlu hangi kulüptedir?",
+        "choices": [
+          {
+            "id": "iq-018-0",
+            "text": "Eczacıbaşı Peron İstanbul"
+          },
+          {
+            "id": "iq-018-1",
+            "text": "Türk Hava Yolları"
+          },
+          {
+            "id": "iq-018-2",
+            "text": "VakıfBank"
+          },
+          {
+            "id": "iq-018-3",
+            "text": "Fenerbahçe Medicana"
+          }
+        ],
+        "correctId": "iq-018-1",
+        "explanation": "Derya Cebecioğlu, bu sezonun lig kaydında Türk Hava Yolları kadrosundadır.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2205057/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-019",
+        "revision": 1,
+        "text": "2026–27 Sultanlar Ligi kaydına göre Saliha Şahin hangi kulüptedir?",
+        "choices": [
+          {
+            "id": "iq-019-0",
+            "text": "Fenerbahçe Medicana"
+          },
+          {
+            "id": "iq-019-1",
+            "text": "VakıfBank"
+          },
+          {
+            "id": "iq-019-2",
+            "text": "Türk Hava Yolları"
+          },
+          {
+            "id": "iq-019-3",
+            "text": "Eczacıbaşı Peron İstanbul"
+          }
+        ],
+        "correctId": "iq-019-0",
+        "explanation": "Saliha Şahin, bu sezonun lig kaydında Fenerbahçe Medicana kadrosundadır.",
+        "season": "2026–27 Sultanlar Ligi",
+        "source": {
+          "title": "Resmî lig oyuncu kaydı",
+          "url": "https://sultanlar.volleystation.com/en/players/2205866/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-020",
+        "revision": 1,
+        "text": "Giovanni Guidetti ile 2025–28 dönemini kapsayan yeni sözleşme duyuran kulüp hangisidir?",
+        "choices": [
+          {
+            "id": "iq-020-0",
+            "text": "Fenerbahçe"
+          },
+          {
+            "id": "iq-020-1",
+            "text": "Eczacıbaşı"
+          },
+          {
+            "id": "iq-020-2",
+            "text": "Galatasaray"
+          },
+          {
+            "id": "iq-020-3",
+            "text": "VakıfBank"
+          }
+        ],
+        "correctId": "iq-020-3",
+        "explanation": "VakıfBank, Guidetti ile üç sezonluk sözleşme uzatmasını duyurdu.",
+        "season": "2025–28 sözleşme duyurusu",
+        "source": {
+          "title": "VakıfBank resmî duyurusu",
+          "url": "https://www.vakifbanksporkulubu.com/tr/haber-detay/giovanni-guidetti-ile-20-yila---n2677",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "league"
+      },
+      {
+        "id": "iq-021",
+        "revision": 1,
+        "text": "2021 kadınlar VNL şampiyonu hangi ülkeydi?",
+        "choices": [
+          {
+            "id": "iq-021-0",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-021-1",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-021-2",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-021-3",
+            "text": "Brezilya"
+          }
+        ],
+        "correctId": "iq-021-2",
+        "explanation": "ABD, 2021 finalinde Brezilya’yı yenerek kupayı kazandı.",
+        "season": "VNL 2021",
+        "source": {
+          "title": "USA Volleyball · VNL 2021",
+          "url": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-022",
+        "revision": 1,
+        "text": "ABD, 2021 kadınlar VNL finalinde hangi ülkeyi yendi?",
+        "choices": [
+          {
+            "id": "iq-022-0",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-022-1",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-022-2",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-022-3",
+            "text": "Çin"
+          }
+        ],
+        "correctId": "iq-022-1",
+        "explanation": "2021 finalinin iki takımı ABD ve Brezilya’ydı.",
+        "season": "VNL 2021",
+        "source": {
+          "title": "USA Volleyball · VNL 2021",
+          "url": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-023",
+        "revision": 1,
+        "text": "2021 kadınlar VNL turnuvasının MVP’si kimdi?",
+        "choices": [
+          {
+            "id": "iq-023-0",
+            "text": "Michelle Bartsch-Hackley"
+          },
+          {
+            "id": "iq-023-1",
+            "text": "Jordan Larson"
+          },
+          {
+            "id": "iq-023-2",
+            "text": "Gabi Guimarães"
+          },
+          {
+            "id": "iq-023-3",
+            "text": "Tijana Bošković"
+          }
+        ],
+        "correctId": "iq-023-0",
+        "explanation": "MVP ödülü ABD’li smaçör Michelle Bartsch-Hackley’ye verildi.",
+        "season": "VNL 2021",
+        "source": {
+          "title": "USA Volleyball · VNL 2021",
+          "url": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-024",
+        "revision": 1,
+        "text": "2021 kadınlar VNL en iyi pasör ödülünü kim aldı?",
+        "choices": [
+          {
+            "id": "iq-024-0",
+            "text": "Cansu Özbay"
+          },
+          {
+            "id": "iq-024-1",
+            "text": "Alessia Orro"
+          },
+          {
+            "id": "iq-024-2",
+            "text": "Macris"
+          },
+          {
+            "id": "iq-024-3",
+            "text": "Jordyn Poulter"
+          }
+        ],
+        "correctId": "iq-024-3",
+        "explanation": "ABD’li Jordyn Poulter en iyi pasör seçildi.",
+        "season": "VNL 2021",
+        "source": {
+          "title": "USA Volleyball · VNL 2021",
+          "url": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-025",
+        "revision": 1,
+        "text": "2022’de ilk kadınlar VNL şampiyonluğunu kazanan ülke hangisiydi?",
+        "choices": [
+          {
+            "id": "iq-025-0",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-025-1",
+            "text": "Polonya"
+          },
+          {
+            "id": "iq-025-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-025-3",
+            "text": "Sırbistan"
+          }
+        ],
+        "correctId": "iq-025-2",
+        "explanation": "İtalya, finalde Brezilya’yı yenerek ilk VNL kupasını aldı.",
+        "season": "VNL 2022",
+        "source": {
+          "title": "Volleyball World · VNL 2022",
+          "url": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-026",
+        "revision": 1,
+        "text": "2022 kadınlar VNL finali hangi şehirde oynandı?",
+        "choices": [
+          {
+            "id": "iq-026-0",
+            "text": "Roma"
+          },
+          {
+            "id": "iq-026-1",
+            "text": "Ankara"
+          },
+          {
+            "id": "iq-026-2",
+            "text": "İstanbul"
+          },
+          {
+            "id": "iq-026-3",
+            "text": "Bangkok"
+          }
+        ],
+        "correctId": "iq-026-1",
+        "explanation": "2022 VNL final etabının ev sahibi Ankara’ydı.",
+        "season": "VNL 2022",
+        "source": {
+          "title": "Volleyball World · VNL 2022",
+          "url": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-027",
+        "revision": 1,
+        "text": "2022 kadınlar VNL bronz madalyasını hangi ülke aldı?",
+        "choices": [
+          {
+            "id": "iq-027-0",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-027-1",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-027-2",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-027-3",
+            "text": "ABD"
+          }
+        ],
+        "correctId": "iq-027-0",
+        "explanation": "Sırbistan, üçüncülük maçında Türkiye’yi yenerek bronz aldı.",
+        "season": "VNL 2022",
+        "source": {
+          "title": "Volleyball World · VNL 2022",
+          "url": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-028",
+        "revision": 1,
+        "text": "İtalya, 2022 kadınlar VNL finalinde Brezilya’yı kaç kaç yendi?",
+        "choices": [
+          {
+            "id": "iq-028-0",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-028-1",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-028-2",
+            "text": "2-3"
+          },
+          {
+            "id": "iq-028-3",
+            "text": "3-0"
+          }
+        ],
+        "correctId": "iq-028-3",
+        "explanation": "İtalya finalde set vermedi ve 3-0 kazandı.",
+        "season": "VNL 2022",
+        "source": {
+          "title": "Volleyball World · VNL 2022",
+          "url": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-029",
+        "revision": 1,
+        "text": "2023’te ilk kadınlar VNL şampiyonluğuna ulaşan ülke hangisiydi?",
+        "choices": [
+          {
+            "id": "iq-029-0",
+            "text": "Polonya"
+          },
+          {
+            "id": "iq-029-1",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-029-2",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-029-3",
+            "text": "Japonya"
+          }
+        ],
+        "correctId": "iq-029-2",
+        "explanation": "Türkiye, 2023 VNL’de tarihinin ilk şampiyonluğunu kazandı.",
+        "season": "VNL 2023",
+        "source": {
+          "title": "Volleyball World · VNL 2023 ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-030",
+        "revision": 1,
+        "text": "2023 kadınlar VNL MVP ödülünü kim kazandı?",
+        "choices": [
+          {
+            "id": "iq-030-0",
+            "text": "Li Yingying"
+          },
+          {
+            "id": "iq-030-1",
+            "text": "Melissa Vargas"
+          },
+          {
+            "id": "iq-030-2",
+            "text": "Ebrar Karakurt"
+          },
+          {
+            "id": "iq-030-3",
+            "text": "Paola Egonu"
+          }
+        ],
+        "correctId": "iq-030-1",
+        "explanation": "Melissa Vargas turnuvanın en değerli oyuncusu seçildi.",
+        "season": "VNL 2023",
+        "source": {
+          "title": "Volleyball World · VNL 2023 ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-031",
+        "revision": 1,
+        "text": "2023 kadınlar VNL en iyi libero ödülü kime gitti?",
+        "choices": [
+          {
+            "id": "iq-031-0",
+            "text": "Gizem Örge"
+          },
+          {
+            "id": "iq-031-1",
+            "text": "Simge Aköz"
+          },
+          {
+            "id": "iq-031-2",
+            "text": "Monica De Gennaro"
+          },
+          {
+            "id": "iq-031-3",
+            "text": "Manami Kojima"
+          }
+        ],
+        "correctId": "iq-031-0",
+        "explanation": "Gizem Örge, 2023 VNL’nin en iyi liberosu seçildi.",
+        "season": "VNL 2023",
+        "source": {
+          "title": "Volleyball World · VNL 2023 ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-032",
+        "revision": 1,
+        "text": "2023 kadınlar VNL rüya takımının pasörü kimdi?",
+        "choices": [
+          {
+            "id": "iq-032-0",
+            "text": "Cansu Özbay"
+          },
+          {
+            "id": "iq-032-1",
+            "text": "Alessia Orro"
+          },
+          {
+            "id": "iq-032-2",
+            "text": "Jordyn Poulter"
+          },
+          {
+            "id": "iq-032-3",
+            "text": "Diao Linyu"
+          }
+        ],
+        "correctId": "iq-032-3",
+        "explanation": "Çinli Diao Linyu en iyi pasör ödülünü aldı.",
+        "season": "VNL 2023",
+        "source": {
+          "title": "Volleyball World · VNL 2023 ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-033",
+        "revision": 1,
+        "text": "2024 kadınlar VNL’de tarihî gümüş madalya kazanan Asya takımı hangisiydi?",
+        "choices": [
+          {
+            "id": "iq-033-0",
+            "text": "Tayland"
+          },
+          {
+            "id": "iq-033-1",
+            "text": "Güney Kore"
+          },
+          {
+            "id": "iq-033-2",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-033-3",
+            "text": "Çin"
+          }
+        ],
+        "correctId": "iq-033-2",
+        "explanation": "Japonya, İtalya ile oynadığı finalin ardından gümüş madalya aldı.",
+        "season": "VNL 2024",
+        "source": {
+          "title": "FIVB · VNL 2024",
+          "url": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-034",
+        "revision": 1,
+        "text": "2024 kadınlar VNL bronz madalyasını hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-034-0",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-034-1",
+            "text": "Polonya"
+          },
+          {
+            "id": "iq-034-2",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-034-3",
+            "text": "Brezilya"
+          }
+        ],
+        "correctId": "iq-034-1",
+        "explanation": "Polonya, Brezilya’yı beş sette yenerek üçüncü oldu.",
+        "season": "VNL 2024",
+        "source": {
+          "title": "FIVB · VNL 2024",
+          "url": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-035",
+        "revision": 1,
+        "text": "2024 kadınlar VNL MVP’si hangi İtalyan oyuncuydu?",
+        "choices": [
+          {
+            "id": "iq-035-0",
+            "text": "Paola Egonu"
+          },
+          {
+            "id": "iq-035-1",
+            "text": "Alessia Orro"
+          },
+          {
+            "id": "iq-035-2",
+            "text": "Myriam Sylla"
+          },
+          {
+            "id": "iq-035-3",
+            "text": "Anna Danesi"
+          }
+        ],
+        "correctId": "iq-035-0",
+        "explanation": "Paola Egonu, şampiyon İtalya’nın MVP ödülünü kazanan oyuncusuydu.",
+        "season": "VNL 2024",
+        "source": {
+          "title": "FIVB · VNL 2024",
+          "url": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-036",
+        "revision": 1,
+        "text": "2024 kadınlar VNL en iyi libero ödülünü kim kazandı?",
+        "choices": [
+          {
+            "id": "iq-036-0",
+            "text": "Gizem Örge"
+          },
+          {
+            "id": "iq-036-1",
+            "text": "Monica De Gennaro"
+          },
+          {
+            "id": "iq-036-2",
+            "text": "Wang Mengjie"
+          },
+          {
+            "id": "iq-036-3",
+            "text": "Manami Kojima"
+          }
+        ],
+        "correctId": "iq-036-3",
+        "explanation": "Japonya’dan Manami Kojima en iyi libero seçildi.",
+        "season": "VNL 2024",
+        "source": {
+          "title": "FIVB · VNL 2024",
+          "url": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-037",
+        "revision": 1,
+        "text": "2025 kadınlar VNL kupasını hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-037-0",
+            "text": "Polonya"
+          },
+          {
+            "id": "iq-037-1",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-037-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-037-3",
+            "text": "Brezilya"
+          }
+        ],
+        "correctId": "iq-037-2",
+        "explanation": "İtalya, 2025 VNL’yi şampiyon tamamladı.",
+        "season": "VNL 2025",
+        "source": {
+          "title": "Volleyball World · VNL 2025",
+          "url": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-038",
+        "revision": 1,
+        "text": "2025 kadınlar VNL’nin MVP seçilen liberosu kimdi?",
+        "choices": [
+          {
+            "id": "iq-038-0",
+            "text": "Wang Mengjie"
+          },
+          {
+            "id": "iq-038-1",
+            "text": "Monica De Gennaro"
+          },
+          {
+            "id": "iq-038-2",
+            "text": "Gizem Örge"
+          },
+          {
+            "id": "iq-038-3",
+            "text": "Manami Kojima"
+          }
+        ],
+        "correctId": "iq-038-1",
+        "explanation": "Monica De Gennaro hem en iyi libero hem MVP seçildi.",
+        "season": "VNL 2025",
+        "source": {
+          "title": "Volleyball World · VNL 2025",
+          "url": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-039",
+        "revision": 1,
+        "text": "İtalya’nın 2025 kadınlar VNL finalindeki rakibi hangi ülkeydi?",
+        "choices": [
+          {
+            "id": "iq-039-0",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-039-1",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-039-2",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-039-3",
+            "text": "ABD"
+          }
+        ],
+        "correctId": "iq-039-0",
+        "explanation": "İtalya finalde Brezilya’yı 3-1 yendi.",
+        "season": "VNL 2025",
+        "source": {
+          "title": "Volleyball World · VNL 2025",
+          "url": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-040",
+        "revision": 1,
+        "text": "2025 kadınlar VNL rüya takımının pasör çaprazı kimdi?",
+        "choices": [
+          {
+            "id": "iq-040-0",
+            "text": "Melissa Vargas"
+          },
+          {
+            "id": "iq-040-1",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "iq-040-2",
+            "text": "Magdalena Stysiak"
+          },
+          {
+            "id": "iq-040-3",
+            "text": "Paola Egonu"
+          }
+        ],
+        "correctId": "iq-040-3",
+        "explanation": "En iyi pasör çaprazı ödülünü Paola Egonu aldı.",
+        "season": "VNL 2025",
+        "source": {
+          "title": "Volleyball World · VNL 2025",
+          "url": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "vnl"
+      },
+      {
+        "id": "iq-041",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar salon voleybolunda altın madalyayı hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-041-0",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-041-1",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-041-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-041-3",
+            "text": "ABD"
+          }
+        ],
+        "correctId": "iq-041-2",
+        "explanation": "İtalya, Paris’te ilk olimpiyat şampiyonluğuna ulaştı.",
+        "season": "Paris 2024",
+        "source": {
+          "title": "FIVB · Paris 2024 finali",
+          "url": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-042",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar voleybol finalinde İtalya’nın rakibi kimdi?",
+        "choices": [
+          {
+            "id": "iq-042-0",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-042-1",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-042-2",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-042-3",
+            "text": "Sırbistan"
+          }
+        ],
+        "correctId": "iq-042-1",
+        "explanation": "Finalde İtalya ile ABD karşılaştı.",
+        "season": "Paris 2024",
+        "source": {
+          "title": "FIVB · Paris 2024 finali",
+          "url": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-043",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar voleybol finalini İtalya hangi skorla kazandı?",
+        "choices": [
+          {
+            "id": "iq-043-0",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-043-1",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-043-2",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-043-3",
+            "text": "2-3"
+          }
+        ],
+        "correctId": "iq-043-0",
+        "explanation": "İtalya finali set vermeden 3-0 kazandı.",
+        "season": "Paris 2024",
+        "source": {
+          "title": "FIVB · Paris 2024 finali",
+          "url": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-044",
+        "revision": 1,
+        "text": "Şampiyon İtalya, Paris 2024 kadınlar voleybol turnuvasının tamamında kaç set kaybetti?",
+        "choices": [
+          {
+            "id": "iq-044-0",
+            "text": "0"
+          },
+          {
+            "id": "iq-044-1",
+            "text": "3"
+          },
+          {
+            "id": "iq-044-2",
+            "text": "5"
+          },
+          {
+            "id": "iq-044-3",
+            "text": "1"
+          }
+        ],
+        "correctId": "iq-044-3",
+        "explanation": "İtalya altı galibiyet alırken yalnızca bir set kaybetti.",
+        "season": "Paris 2024",
+        "source": {
+          "title": "FIVB · Paris 2024 finali",
+          "url": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-045",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar voleybol turnuvasının MVP’si kimdi?",
+        "choices": [
+          {
+            "id": "iq-045-0",
+            "text": "Gabi Guimarães"
+          },
+          {
+            "id": "iq-045-1",
+            "text": "Jordan Larson"
+          },
+          {
+            "id": "iq-045-2",
+            "text": "Paola Egonu"
+          },
+          {
+            "id": "iq-045-3",
+            "text": "Melissa Vargas"
+          }
+        ],
+        "correctId": "iq-045-2",
+        "explanation": "Paola Egonu olimpiyat turnuvasının MVP’si seçildi.",
+        "season": "Paris 2024 ödülleri",
+        "source": {
+          "title": "Volleyball World · Paris ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-046",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar voleybolunda en iyi pasör kim seçildi?",
+        "choices": [
+          {
+            "id": "iq-046-0",
+            "text": "Roberta"
+          },
+          {
+            "id": "iq-046-1",
+            "text": "Alessia Orro"
+          },
+          {
+            "id": "iq-046-2",
+            "text": "Jordyn Poulter"
+          },
+          {
+            "id": "iq-046-3",
+            "text": "Cansu Özbay"
+          }
+        ],
+        "correctId": "iq-046-1",
+        "explanation": "Alessia Orro en iyi pasör ödülünü aldı.",
+        "season": "Paris 2024 ödülleri",
+        "source": {
+          "title": "Volleyball World · Paris ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-047",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar voleybolunda en iyi libero ödülünü kim aldı?",
+        "choices": [
+          {
+            "id": "iq-047-0",
+            "text": "Monica De Gennaro"
+          },
+          {
+            "id": "iq-047-1",
+            "text": "Gizem Örge"
+          },
+          {
+            "id": "iq-047-2",
+            "text": "Justine Wong-Orantes"
+          },
+          {
+            "id": "iq-047-3",
+            "text": "Manami Kojima"
+          }
+        ],
+        "correctId": "iq-047-0",
+        "explanation": "İtalya’dan Monica De Gennaro en iyi libero seçildi.",
+        "season": "Paris 2024 ödülleri",
+        "source": {
+          "title": "Volleyball World · Paris ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-048",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar rüya takımında yer alan ABD’li orta oyuncu kimdi?",
+        "choices": [
+          {
+            "id": "iq-048-0",
+            "text": "Dana Rettke"
+          },
+          {
+            "id": "iq-048-1",
+            "text": "Haleigh Washington"
+          },
+          {
+            "id": "iq-048-2",
+            "text": "Brionne Butler"
+          },
+          {
+            "id": "iq-048-3",
+            "text": "Chiaka Ogbogu"
+          }
+        ],
+        "correctId": "iq-048-3",
+        "explanation": "Chiaka Ogbogu, rüya takımın iki orta oyuncusundan biriydi.",
+        "season": "Paris 2024 ödülleri",
+        "source": {
+          "title": "Volleyball World · Paris ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-049",
+        "revision": 1,
+        "text": "Paris 2024 kadınlar voleybolunda bronz madalyayı hangi ülke aldı?",
+        "choices": [
+          {
+            "id": "iq-049-0",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-049-1",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-049-2",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-049-3",
+            "text": "Türkiye"
+          }
+        ],
+        "correctId": "iq-049-2",
+        "explanation": "Brezilya üçüncülük maçını kazanarak bronz madalya aldı.",
+        "season": "Paris 2024 bronz maçı",
+        "source": {
+          "title": "FIVB · Paris bronz maçı",
+          "url": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-050",
+        "revision": 1,
+        "text": "Brezilya, Paris 2024 kadınlar voleybol bronz maçında kimi yendi?",
+        "choices": [
+          {
+            "id": "iq-050-0",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-050-1",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-050-2",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-050-3",
+            "text": "ABD"
+          }
+        ],
+        "correctId": "iq-050-1",
+        "explanation": "Bronz maçında Brezilya ile Türkiye karşılaştı.",
+        "season": "Paris 2024 bronz maçı",
+        "source": {
+          "title": "FIVB · Paris bronz maçı",
+          "url": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-051",
+        "revision": 1,
+        "text": "Paris 2024’te Brezilya kadın voleybol takımı bronz maçını kaç kaç kazandı?",
+        "choices": [
+          {
+            "id": "iq-051-0",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-051-1",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-051-2",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-051-3",
+            "text": "2-3"
+          }
+        ],
+        "correctId": "iq-051-0",
+        "explanation": "Brezilya, Türkiye’yi 3-1 yenerek üçüncü oldu.",
+        "season": "Paris 2024 bronz maçı",
+        "source": {
+          "title": "FIVB · Paris bronz maçı",
+          "url": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-052",
+        "revision": 1,
+        "text": "Paris’ten önceki Tokyo 2020’de Brezilya kadın voleybol takımı hangi madalyayı almıştı?",
+        "choices": [
+          {
+            "id": "iq-052-0",
+            "text": "Altın"
+          },
+          {
+            "id": "iq-052-1",
+            "text": "Bronz"
+          },
+          {
+            "id": "iq-052-2",
+            "text": "Madalya alamadı"
+          },
+          {
+            "id": "iq-052-3",
+            "text": "Gümüş"
+          }
+        ],
+        "correctId": "iq-052-3",
+        "explanation": "Brezilya, Tokyo’da gümüş; Paris’te bronz madalya kazandı.",
+        "season": "Paris 2024 bronz maçı",
+        "source": {
+          "title": "FIVB · Paris bronz maçı",
+          "url": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-053",
+        "revision": 1,
+        "text": "Tokyo 2020 kadınlar salon voleybolunda şampiyon hangi ülkeydi?",
+        "choices": [
+          {
+            "id": "iq-053-0",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-053-1",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-053-2",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-053-3",
+            "text": "Brezilya"
+          }
+        ],
+        "correctId": "iq-053-2",
+        "explanation": "ABD kadın takımı Tokyo’da ilk olimpiyat altınını kazandı.",
+        "season": "Tokyo 2020 · 2021’de oynandı",
+        "source": {
+          "title": "USA Volleyball · Tokyo finali",
+          "url": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-054",
+        "revision": 1,
+        "text": "ABD, Tokyo 2020 kadınlar voleybol finalinde hangi ülkeyi yendi?",
+        "choices": [
+          {
+            "id": "iq-054-0",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-054-1",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-054-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-054-3",
+            "text": "Sırbistan"
+          }
+        ],
+        "correctId": "iq-054-1",
+        "explanation": "Finalde ABD’nin karşısında Brezilya vardı.",
+        "season": "Tokyo 2020 · 2021’de oynandı",
+        "source": {
+          "title": "USA Volleyball · Tokyo finali",
+          "url": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-055",
+        "revision": 1,
+        "text": "ABD, Tokyo 2020 kadınlar voleybol finalini hangi skorla kazandı?",
+        "choices": [
+          {
+            "id": "iq-055-0",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-055-1",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-055-2",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-055-3",
+            "text": "1-3"
+          }
+        ],
+        "correctId": "iq-055-0",
+        "explanation": "ABD, Brezilya’yı üç sette yendi.",
+        "season": "Tokyo 2020 · 2021’de oynandı",
+        "source": {
+          "title": "USA Volleyball · Tokyo finali",
+          "url": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-056",
+        "revision": 1,
+        "text": "Tokyo 2020 kadınlar voleybol finali hangi salonda oynandı?",
+        "choices": [
+          {
+            "id": "iq-056-0",
+            "text": "Huamark Salonu"
+          },
+          {
+            "id": "iq-056-1",
+            "text": "Stark Arena"
+          },
+          {
+            "id": "iq-056-2",
+            "text": "Ankara Spor Salonu"
+          },
+          {
+            "id": "iq-056-3",
+            "text": "Ariake Arena"
+          }
+        ],
+        "correctId": "iq-056-3",
+        "explanation": "Tokyo’daki finalin salonu Ariake Arena’ydı.",
+        "season": "Tokyo 2020 · 2021’de oynandı",
+        "source": {
+          "title": "USA Volleyball · Tokyo finali",
+          "url": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-057",
+        "revision": 1,
+        "text": "Tokyo 2020 kadınlar voleybol turnuvasının MVP’si kimdi?",
+        "choices": [
+          {
+            "id": "iq-057-0",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "iq-057-1",
+            "text": "Gabi Guimarães"
+          },
+          {
+            "id": "iq-057-2",
+            "text": "Jordan Larson"
+          },
+          {
+            "id": "iq-057-3",
+            "text": "Paola Egonu"
+          }
+        ],
+        "correctId": "iq-057-2",
+        "explanation": "ABD kaptanı Jordan Larson MVP seçildi.",
+        "season": "Tokyo 2020 ödülleri",
+        "source": {
+          "title": "Volleyball World · Tokyo ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-058",
+        "revision": 1,
+        "text": "Tokyo 2020 kadınlar voleybolunda en iyi libero kim seçildi?",
+        "choices": [
+          {
+            "id": "iq-058-0",
+            "text": "Simge Aköz"
+          },
+          {
+            "id": "iq-058-1",
+            "text": "Justine Wong-Orantes"
+          },
+          {
+            "id": "iq-058-2",
+            "text": "Monica De Gennaro"
+          },
+          {
+            "id": "iq-058-3",
+            "text": "Gizem Örge"
+          }
+        ],
+        "correctId": "iq-058-1",
+        "explanation": "En iyi libero ödülü Justine Wong-Orantes’a verildi.",
+        "season": "Tokyo 2020 ödülleri",
+        "source": {
+          "title": "Volleyball World · Tokyo ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-059",
+        "revision": 1,
+        "text": "Tokyo 2020 kadınlar rüya takımının pasörü kimdi?",
+        "choices": [
+          {
+            "id": "iq-059-0",
+            "text": "Jordyn Poulter"
+          },
+          {
+            "id": "iq-059-1",
+            "text": "Alessia Orro"
+          },
+          {
+            "id": "iq-059-2",
+            "text": "Cansu Özbay"
+          },
+          {
+            "id": "iq-059-3",
+            "text": "Maja Ognjenović"
+          }
+        ],
+        "correctId": "iq-059-0",
+        "explanation": "Jordyn Poulter en iyi pasör olarak rüya takıma seçildi.",
+        "season": "Tokyo 2020 ödülleri",
+        "source": {
+          "title": "Volleyball World · Tokyo ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-060",
+        "revision": 1,
+        "text": "Tokyo 2020 kadınlar rüya takımına pasör çaprazı olarak kim seçildi?",
+        "choices": [
+          {
+            "id": "iq-060-0",
+            "text": "Paola Egonu"
+          },
+          {
+            "id": "iq-060-1",
+            "text": "Annie Drews"
+          },
+          {
+            "id": "iq-060-2",
+            "text": "Rosamaria"
+          },
+          {
+            "id": "iq-060-3",
+            "text": "Tijana Bošković"
+          }
+        ],
+        "correctId": "iq-060-3",
+        "explanation": "Sırbistan’dan Tijana Bošković en iyi pasör çaprazı seçildi.",
+        "season": "Tokyo 2020 ödülleri",
+        "source": {
+          "title": "Volleyball World · Tokyo ödülleri",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "olympics"
+      },
+      {
+        "id": "iq-061",
+        "revision": 1,
+        "text": "2023 kadınlar Avrupa şampiyonluğunu hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-061-0",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-061-1",
+            "text": "Hollanda"
+          },
+          {
+            "id": "iq-061-2",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-061-3",
+            "text": "Sırbistan"
+          }
+        ],
+        "correctId": "iq-061-2",
+        "explanation": "Türkiye ilk Avrupa şampiyonluğunu 2023’te kazandı.",
+        "season": "EuroVolley 2023",
+        "source": {
+          "title": "FIVB · EuroVolley 2023",
+          "url": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-062",
+        "revision": 1,
+        "text": "Türkiye, 2023 kadınlar Avrupa finalinde hangi ülkeyi yendi?",
+        "choices": [
+          {
+            "id": "iq-062-0",
+            "text": "Hollanda"
+          },
+          {
+            "id": "iq-062-1",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-062-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-062-3",
+            "text": "Polonya"
+          }
+        ],
+        "correctId": "iq-062-1",
+        "explanation": "Finalde Türkiye ile Sırbistan karşılaştı.",
+        "season": "EuroVolley 2023",
+        "source": {
+          "title": "FIVB · EuroVolley 2023",
+          "url": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-063",
+        "revision": 1,
+        "text": "2023 kadınlar Avrupa finalini Türkiye hangi skorla kazandı?",
+        "choices": [
+          {
+            "id": "iq-063-0",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-063-1",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-063-2",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-063-3",
+            "text": "2-3"
+          }
+        ],
+        "correctId": "iq-063-0",
+        "explanation": "Türkiye beş setlik finalde 3-2 galip geldi.",
+        "season": "EuroVolley 2023",
+        "source": {
+          "title": "FIVB · EuroVolley 2023",
+          "url": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-064",
+        "revision": 1,
+        "text": "2023 kadınlar Avrupa finalinde 41 sayı üreten MVP kimdi?",
+        "choices": [
+          {
+            "id": "iq-064-0",
+            "text": "Ebrar Karakurt"
+          },
+          {
+            "id": "iq-064-1",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "iq-064-2",
+            "text": "Paola Egonu"
+          },
+          {
+            "id": "iq-064-3",
+            "text": "Melissa Vargas"
+          }
+        ],
+        "correctId": "iq-064-3",
+        "explanation": "Vargas finalde 41 sayı üretti ve MVP ödülünü aldı.",
+        "season": "EuroVolley 2023",
+        "source": {
+          "title": "FIVB · EuroVolley 2023",
+          "url": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-065",
+        "revision": 1,
+        "text": "2021 kadınlar Avrupa şampiyonu hangi ülkeydi?",
+        "choices": [
+          {
+            "id": "iq-065-0",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-065-1",
+            "text": "Hollanda"
+          },
+          {
+            "id": "iq-065-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-065-3",
+            "text": "Sırbistan"
+          }
+        ],
+        "correctId": "iq-065-2",
+        "explanation": "İtalya, 2021 Avrupa finalinde Sırbistan’ı yendi.",
+        "season": "EuroVolley 2021",
+        "source": {
+          "title": "FIVB · EuroVolley 2021",
+          "url": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-066",
+        "revision": 1,
+        "text": "2021 kadınlar Avrupa Şampiyonası finali hangi şehirde oynandı?",
+        "choices": [
+          {
+            "id": "iq-066-0",
+            "text": "Roma"
+          },
+          {
+            "id": "iq-066-1",
+            "text": "Belgrad"
+          },
+          {
+            "id": "iq-066-2",
+            "text": "Ankara"
+          },
+          {
+            "id": "iq-066-3",
+            "text": "Brüksel"
+          }
+        ],
+        "correctId": "iq-066-1",
+        "explanation": "Final Sırbistan’ın başkenti Belgrad’da oynandı.",
+        "season": "EuroVolley 2021",
+        "source": {
+          "title": "FIVB · EuroVolley 2021",
+          "url": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-067",
+        "revision": 1,
+        "text": "2021 kadınlar Avrupa Şampiyonası’nın MVP’si kimdi?",
+        "choices": [
+          {
+            "id": "iq-067-0",
+            "text": "Paola Egonu"
+          },
+          {
+            "id": "iq-067-1",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "iq-067-2",
+            "text": "Ebrar Karakurt"
+          },
+          {
+            "id": "iq-067-3",
+            "text": "Myriam Sylla"
+          }
+        ],
+        "correctId": "iq-067-0",
+        "explanation": "Paola Egonu turnuvanın MVP’si seçildi.",
+        "season": "EuroVolley 2021",
+        "source": {
+          "title": "FIVB · EuroVolley 2021",
+          "url": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-068",
+        "revision": 1,
+        "text": "2021 kadınlar Avrupa Şampiyonası bronz madalyasını hangi ülke aldı?",
+        "choices": [
+          {
+            "id": "iq-068-0",
+            "text": "Hollanda"
+          },
+          {
+            "id": "iq-068-1",
+            "text": "Polonya"
+          },
+          {
+            "id": "iq-068-2",
+            "text": "Almanya"
+          },
+          {
+            "id": "iq-068-3",
+            "text": "Türkiye"
+          }
+        ],
+        "correctId": "iq-068-3",
+        "explanation": "Türkiye üçüncülük maçında Hollanda’yı yenerek bronz aldı.",
+        "season": "EuroVolley 2021",
+        "source": {
+          "title": "FIVB · EuroVolley 2021",
+          "url": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-069",
+        "revision": 1,
+        "text": "2019 kadınlar Avrupa Şampiyonası kupasını hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-069-0",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-069-1",
+            "text": "Polonya"
+          },
+          {
+            "id": "iq-069-2",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-069-3",
+            "text": "Türkiye"
+          }
+        ],
+        "correctId": "iq-069-2",
+        "explanation": "Sırbistan finalde ev sahibi Türkiye’yi yendi.",
+        "season": "EuroVolley 2019",
+        "source": {
+          "title": "CEV · EuroVolley 2019",
+          "url": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-070",
+        "revision": 1,
+        "text": "2019 kadınlar Avrupa finali hangi şehirde oynandı?",
+        "choices": [
+          {
+            "id": "iq-070-0",
+            "text": "Bükreş"
+          },
+          {
+            "id": "iq-070-1",
+            "text": "Ankara"
+          },
+          {
+            "id": "iq-070-2",
+            "text": "İstanbul"
+          },
+          {
+            "id": "iq-070-3",
+            "text": "Belgrad"
+          }
+        ],
+        "correctId": "iq-070-1",
+        "explanation": "2019 finali Ankara’da oynandı.",
+        "season": "EuroVolley 2019",
+        "source": {
+          "title": "CEV · EuroVolley 2019",
+          "url": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-071",
+        "revision": 1,
+        "text": "Sırbistan, 2019 kadınlar Avrupa finalinde Türkiye’yi kaç kaç yendi?",
+        "choices": [
+          {
+            "id": "iq-071-0",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-071-1",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-071-2",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-071-3",
+            "text": "1-3"
+          }
+        ],
+        "correctId": "iq-071-0",
+        "explanation": "Final beş set sürdü ve Sırbistan 3-2 kazandı.",
+        "season": "EuroVolley 2019",
+        "source": {
+          "title": "CEV · EuroVolley 2019",
+          "url": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-072",
+        "revision": 1,
+        "text": "2019 kadınlar Avrupa Şampiyonası’nda bronz madalyayı kim aldı?",
+        "choices": [
+          {
+            "id": "iq-072-0",
+            "text": "Polonya"
+          },
+          {
+            "id": "iq-072-1",
+            "text": "Hollanda"
+          },
+          {
+            "id": "iq-072-2",
+            "text": "Almanya"
+          },
+          {
+            "id": "iq-072-3",
+            "text": "İtalya"
+          }
+        ],
+        "correctId": "iq-072-3",
+        "explanation": "İtalya üçüncülük maçında Polonya’yı yendi.",
+        "season": "EuroVolley 2019",
+        "source": {
+          "title": "CEV · EuroVolley 2019",
+          "url": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-073",
+        "revision": 1,
+        "text": "2024 kadınlar CEV Şampiyonlar Ligi şampiyonu hangi kulüptü?",
+        "choices": [
+          {
+            "id": "iq-073-0",
+            "text": "VakıfBank"
+          },
+          {
+            "id": "iq-073-1",
+            "text": "Eczacıbaşı"
+          },
+          {
+            "id": "iq-073-2",
+            "text": "Conegliano"
+          },
+          {
+            "id": "iq-073-3",
+            "text": "Milano"
+          }
+        ],
+        "correctId": "iq-073-2",
+        "explanation": "Conegliano, 2024 Avrupa kulüpler finalini kazandı.",
+        "season": "CEV Şampiyonlar Ligi 2024",
+        "source": {
+          "title": "CEV · 2024 kadınlar finali",
+          "url": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-074",
+        "revision": 1,
+        "text": "Conegliano’nun 2024 kadınlar CEV Şampiyonlar Ligi finalindeki rakibi kimdi?",
+        "choices": [
+          {
+            "id": "iq-074-0",
+            "text": "Fenerbahçe"
+          },
+          {
+            "id": "iq-074-1",
+            "text": "Milano"
+          },
+          {
+            "id": "iq-074-2",
+            "text": "Scandicci"
+          },
+          {
+            "id": "iq-074-3",
+            "text": "VakıfBank"
+          }
+        ],
+        "correctId": "iq-074-1",
+        "explanation": "Final iki İtalyan kulübü Conegliano ve Milano arasındaydı.",
+        "season": "CEV Şampiyonlar Ligi 2024",
+        "source": {
+          "title": "CEV · 2024 kadınlar finali",
+          "url": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-075",
+        "revision": 1,
+        "text": "2024 kadınlar CEV Şampiyonlar Ligi finali hangi skorla bitti?",
+        "choices": [
+          {
+            "id": "iq-075-0",
+            "text": "Conegliano 3-2 Milano"
+          },
+          {
+            "id": "iq-075-1",
+            "text": "Conegliano 3-0 Milano"
+          },
+          {
+            "id": "iq-075-2",
+            "text": "Milano 3-1 Conegliano"
+          },
+          {
+            "id": "iq-075-3",
+            "text": "Milano 3-2 Conegliano"
+          }
+        ],
+        "correctId": "iq-075-0",
+        "explanation": "Conegliano, beş setlik finalde Milano’yu 3-2 yendi.",
+        "season": "CEV Şampiyonlar Ligi 2024",
+        "source": {
+          "title": "CEV · 2024 kadınlar finali",
+          "url": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-076",
+        "revision": 1,
+        "text": "2024 kadınlar CEV Şampiyonlar Ligi şampiyonu Conegliano’nun koçu kimdi?",
+        "choices": [
+          {
+            "id": "iq-076-0",
+            "text": "Giovanni Guidetti"
+          },
+          {
+            "id": "iq-076-1",
+            "text": "Ferhat Akbaş"
+          },
+          {
+            "id": "iq-076-2",
+            "text": "Julio Velasco"
+          },
+          {
+            "id": "iq-076-3",
+            "text": "Daniele Santarelli"
+          }
+        ],
+        "correctId": "iq-076-3",
+        "explanation": "Conegliano şampiyonluğu Daniele Santarelli yönetiminde kazandı.",
+        "season": "CEV Şampiyonlar Ligi 2024",
+        "source": {
+          "title": "CEV · 2024 kadınlar finali",
+          "url": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-077",
+        "revision": 1,
+        "text": "2023 kadınlar CEV Şampiyonlar Ligi şampiyonu hangi Türk kulübüydü?",
+        "choices": [
+          {
+            "id": "iq-077-0",
+            "text": "Fenerbahçe"
+          },
+          {
+            "id": "iq-077-1",
+            "text": "Galatasaray"
+          },
+          {
+            "id": "iq-077-2",
+            "text": "VakıfBank"
+          },
+          {
+            "id": "iq-077-3",
+            "text": "Eczacıbaşı"
+          }
+        ],
+        "correctId": "iq-077-2",
+        "explanation": "VakıfBank, Eczacıbaşı ile oynadığı finali kazandı.",
+        "season": "CEV Şampiyonlar Ligi 2023",
+        "source": {
+          "title": "FIVB · CEV 2023 finali",
+          "url": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-078",
+        "revision": 1,
+        "text": "2023 kadınlar CEV Şampiyonlar Ligi finalinin iki takımı hangi ülkedendi?",
+        "choices": [
+          {
+            "id": "iq-078-0",
+            "text": "Fransa"
+          },
+          {
+            "id": "iq-078-1",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-078-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-078-3",
+            "text": "Polonya"
+          }
+        ],
+        "correctId": "iq-078-1",
+        "explanation": "Finalde iki Türk kulübü, VakıfBank ve Eczacıbaşı karşılaştı.",
+        "season": "CEV Şampiyonlar Ligi 2023",
+        "source": {
+          "title": "FIVB · CEV 2023 finali",
+          "url": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-079",
+        "revision": 1,
+        "text": "2023 kadınlar CEV Şampiyonlar Ligi finalinin MVP’si kimdi?",
+        "choices": [
+          {
+            "id": "iq-079-0",
+            "text": "Paola Egonu"
+          },
+          {
+            "id": "iq-079-1",
+            "text": "Tijana Bošković"
+          },
+          {
+            "id": "iq-079-2",
+            "text": "Gabi Guimarães"
+          },
+          {
+            "id": "iq-079-3",
+            "text": "Zehra Güneş"
+          }
+        ],
+        "correctId": "iq-079-0",
+        "explanation": "VakıfBank’ın pasör çaprazı Paola Egonu MVP seçildi.",
+        "season": "CEV Şampiyonlar Ligi 2023",
+        "source": {
+          "title": "FIVB · CEV 2023 finali",
+          "url": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-080",
+        "revision": 1,
+        "text": "2023 CEV Süper Finalleri hangi İtalyan şehrinde düzenlendi?",
+        "choices": [
+          {
+            "id": "iq-080-0",
+            "text": "Milano"
+          },
+          {
+            "id": "iq-080-1",
+            "text": "Roma"
+          },
+          {
+            "id": "iq-080-2",
+            "text": "Bologna"
+          },
+          {
+            "id": "iq-080-3",
+            "text": "Torino"
+          }
+        ],
+        "correctId": "iq-080-3",
+        "explanation": "2023 Süper Finalleri Torino’da oynandı.",
+        "season": "CEV Şampiyonlar Ligi 2023",
+        "source": {
+          "title": "FIVB · CEV 2023 finali",
+          "url": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "europe"
+      },
+      {
+        "id": "iq-081",
+        "revision": 1,
+        "text": "2025 kadınlar Dünya Şampiyonası’nı hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-081-0",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-081-1",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-081-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-081-3",
+            "text": "Türkiye"
+          }
+        ],
+        "correctId": "iq-081-2",
+        "explanation": "İtalya, finalde Türkiye’yi yenerek dünya şampiyonu oldu.",
+        "season": "Dünya Şampiyonası 2025",
+        "source": {
+          "title": "FIVB · 2025 dünya finali",
+          "url": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-082",
+        "revision": 1,
+        "text": "2025 kadınlar Dünya Şampiyonası’nda gümüş madalyayı hangi ülke aldı?",
+        "choices": [
+          {
+            "id": "iq-082-0",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-082-1",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-082-2",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-082-3",
+            "text": "Japonya"
+          }
+        ],
+        "correctId": "iq-082-1",
+        "explanation": "Türkiye final oynayarak gümüş madalya kazandı.",
+        "season": "Dünya Şampiyonası 2025",
+        "source": {
+          "title": "FIVB · 2025 dünya finali",
+          "url": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-083",
+        "revision": 1,
+        "text": "İtalya, 2025 kadınlar Dünya Şampiyonası finalini hangi skorla kazandı?",
+        "choices": [
+          {
+            "id": "iq-083-0",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-083-1",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-083-2",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-083-3",
+            "text": "1-3"
+          }
+        ],
+        "correctId": "iq-083-0",
+        "explanation": "İtalya ile Türkiye arasındaki final beş sette tamamlandı.",
+        "season": "Dünya Şampiyonası 2025",
+        "source": {
+          "title": "FIVB · 2025 dünya finali",
+          "url": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-084",
+        "revision": 1,
+        "text": "2025 kadınlar Dünya Şampiyonası finali hangi şehirde oynandı?",
+        "choices": [
+          {
+            "id": "iq-084-0",
+            "text": "Tokyo"
+          },
+          {
+            "id": "iq-084-1",
+            "text": "Roma"
+          },
+          {
+            "id": "iq-084-2",
+            "text": "Ankara"
+          },
+          {
+            "id": "iq-084-3",
+            "text": "Bangkok"
+          }
+        ],
+        "correctId": "iq-084-3",
+        "explanation": "Final Tayland’ın başkenti Bangkok’ta oynandı.",
+        "season": "Dünya Şampiyonası 2025",
+        "source": {
+          "title": "FIVB · 2025 dünya finali",
+          "url": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-085",
+        "revision": 1,
+        "text": "2025 kadınlar Dünya Şampiyonası’nın MVP seçilen pasörü kimdi?",
+        "choices": [
+          {
+            "id": "iq-085-0",
+            "text": "Jordyn Poulter"
+          },
+          {
+            "id": "iq-085-1",
+            "text": "Nanami Seki"
+          },
+          {
+            "id": "iq-085-2",
+            "text": "Alessia Orro"
+          },
+          {
+            "id": "iq-085-3",
+            "text": "Cansu Özbay"
+          }
+        ],
+        "correctId": "iq-085-2",
+        "explanation": "Alessia Orro hem MVP hem en iyi pasör ödülünü aldı.",
+        "season": "Dünya Şampiyonası 2025 ödülleri",
+        "source": {
+          "title": "FIVB · 2025 dünya ödülleri",
+          "url": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-086",
+        "revision": 1,
+        "text": "2025 kadınlar Dünya Şampiyonası rüya takımının pasör çaprazı kimdi?",
+        "choices": [
+          {
+            "id": "iq-086-0",
+            "text": "Gong Xiangyu"
+          },
+          {
+            "id": "iq-086-1",
+            "text": "Melissa Vargas"
+          },
+          {
+            "id": "iq-086-2",
+            "text": "Paola Egonu"
+          },
+          {
+            "id": "iq-086-3",
+            "text": "Tijana Bošković"
+          }
+        ],
+        "correctId": "iq-086-1",
+        "explanation": "Melissa Vargas en iyi pasör çaprazı seçildi.",
+        "season": "Dünya Şampiyonası 2025 ödülleri",
+        "source": {
+          "title": "FIVB · 2025 dünya ödülleri",
+          "url": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-087",
+        "revision": 1,
+        "text": "2025 kadınlar Dünya Şampiyonası rüya takımına giren Türk orta oyuncu kimdi?",
+        "choices": [
+          {
+            "id": "iq-087-0",
+            "text": "Eda Erdem"
+          },
+          {
+            "id": "iq-087-1",
+            "text": "Zehra Güneş"
+          },
+          {
+            "id": "iq-087-2",
+            "text": "Aslı Kalaç"
+          },
+          {
+            "id": "iq-087-3",
+            "text": "Beyza Arıcı"
+          }
+        ],
+        "correctId": "iq-087-0",
+        "explanation": "Türkiye kaptanı Eda Erdem rüya takıma seçildi.",
+        "season": "Dünya Şampiyonası 2025 ödülleri",
+        "source": {
+          "title": "FIVB · 2025 dünya ödülleri",
+          "url": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-088",
+        "revision": 1,
+        "text": "2025 kadınlar Dünya Şampiyonası rüya takımındaki Japon smaçör kimdi?",
+        "choices": [
+          {
+            "id": "iq-088-0",
+            "text": "Yoshino Sato"
+          },
+          {
+            "id": "iq-088-1",
+            "text": "Ai Kurogo"
+          },
+          {
+            "id": "iq-088-2",
+            "text": "Yukiko Wada"
+          },
+          {
+            "id": "iq-088-3",
+            "text": "Mayu Ishikawa"
+          }
+        ],
+        "correctId": "iq-088-3",
+        "explanation": "Mayu Ishikawa iki en iyi smaçörden biri seçildi.",
+        "season": "Dünya Şampiyonası 2025 ödülleri",
+        "source": {
+          "title": "FIVB · 2025 dünya ödülleri",
+          "url": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-089",
+        "revision": 1,
+        "text": "2022 kadınlar Dünya Şampiyonası’nı hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-089-0",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-089-1",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-089-2",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-089-3",
+            "text": "Brezilya"
+          }
+        ],
+        "correctId": "iq-089-2",
+        "explanation": "Sırbistan 2022’de dünya şampiyonluğunu korudu.",
+        "season": "Dünya Şampiyonası 2022",
+        "source": {
+          "title": "Volleyball World · 2022 dünya finali",
+          "url": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-090",
+        "revision": 1,
+        "text": "Sırbistan’ın 2022 kadınlar dünya finalindeki rakibi kimdi?",
+        "choices": [
+          {
+            "id": "iq-090-0",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-090-1",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-090-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-090-3",
+            "text": "ABD"
+          }
+        ],
+        "correctId": "iq-090-1",
+        "explanation": "Finalde Sırbistan ile Brezilya karşılaştı.",
+        "season": "Dünya Şampiyonası 2022",
+        "source": {
+          "title": "Volleyball World · 2022 dünya finali",
+          "url": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-091",
+        "revision": 1,
+        "text": "Sırbistan, 2022 kadınlar dünya finalini hangi skorla kazandı?",
+        "choices": [
+          {
+            "id": "iq-091-0",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-091-1",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-091-2",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-091-3",
+            "text": "2-3"
+          }
+        ],
+        "correctId": "iq-091-0",
+        "explanation": "Sırbistan finalde Brezilya’ya set vermedi.",
+        "season": "Dünya Şampiyonası 2022",
+        "source": {
+          "title": "Volleyball World · 2022 dünya finali",
+          "url": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-092",
+        "revision": 1,
+        "text": "Şampiyon Sırbistan, 2022 kadınlar Dünya Şampiyonası boyunca kaç maç kaybetti?",
+        "choices": [
+          {
+            "id": "iq-092-0",
+            "text": "1"
+          },
+          {
+            "id": "iq-092-1",
+            "text": "2"
+          },
+          {
+            "id": "iq-092-2",
+            "text": "3"
+          },
+          {
+            "id": "iq-092-3",
+            "text": "0"
+          }
+        ],
+        "correctId": "iq-092-3",
+        "explanation": "Sırbistan turnuvayı 12 maçta 12 galibiyetle bitirdi.",
+        "season": "Dünya Şampiyonası 2022",
+        "source": {
+          "title": "Volleyball World · 2022 dünya finali",
+          "url": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-093",
+        "revision": 1,
+        "text": "2018’de ilk kadınlar dünya şampiyonluğunu kazanan ülke hangisiydi?",
+        "choices": [
+          {
+            "id": "iq-093-0",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-093-1",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-093-2",
+            "text": "Sırbistan"
+          },
+          {
+            "id": "iq-093-3",
+            "text": "İtalya"
+          }
+        ],
+        "correctId": "iq-093-2",
+        "explanation": "Sırbistan ilk dünya şampiyonluğunu 2018’de kazandı.",
+        "season": "Dünya Şampiyonası 2018",
+        "source": {
+          "title": "Volleyball World · 2018 dünya özeti",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-094",
+        "revision": 1,
+        "text": "2018 kadınlar Dünya Şampiyonası’na hangi ülke ev sahipliği yaptı?",
+        "choices": [
+          {
+            "id": "iq-094-0",
+            "text": "Hollanda"
+          },
+          {
+            "id": "iq-094-1",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-094-2",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-094-3",
+            "text": "Tayland"
+          }
+        ],
+        "correctId": "iq-094-1",
+        "explanation": "2018 turnuvası Japonya’da düzenlendi.",
+        "season": "Dünya Şampiyonası 2018",
+        "source": {
+          "title": "Volleyball World · 2018 dünya özeti",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-095",
+        "revision": 1,
+        "text": "2018 kadınlar dünya finalinde Sırbistan hangi ülkeyi yendi?",
+        "choices": [
+          {
+            "id": "iq-095-0",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-095-1",
+            "text": "Çin"
+          },
+          {
+            "id": "iq-095-2",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-095-3",
+            "text": "Brezilya"
+          }
+        ],
+        "correctId": "iq-095-0",
+        "explanation": "Sırbistan, İtalya’yı 3-2 yenerek şampiyon oldu.",
+        "season": "Dünya Şampiyonası 2018",
+        "source": {
+          "title": "Volleyball World · 2018 dünya özeti",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-096",
+        "revision": 1,
+        "text": "2018 kadınlar Dünya Şampiyonası bronz madalyasını hangi ülke aldı?",
+        "choices": [
+          {
+            "id": "iq-096-0",
+            "text": "Hollanda"
+          },
+          {
+            "id": "iq-096-1",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-096-2",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-096-3",
+            "text": "Çin"
+          }
+        ],
+        "correctId": "iq-096-3",
+        "explanation": "Çin, üçüncülük maçında Hollanda’yı yenerek bronz kazandı.",
+        "season": "Dünya Şampiyonası 2018",
+        "source": {
+          "title": "Volleyball World · 2018 dünya özeti",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-097",
+        "revision": 1,
+        "text": "2022 kadınlar Dünya Şampiyonası bronz madalyasını hangi ülke kazandı?",
+        "choices": [
+          {
+            "id": "iq-097-0",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-097-1",
+            "text": "Japonya"
+          },
+          {
+            "id": "iq-097-2",
+            "text": "İtalya"
+          },
+          {
+            "id": "iq-097-3",
+            "text": "ABD"
+          }
+        ],
+        "correctId": "iq-097-2",
+        "explanation": "İtalya üçüncülük maçında ABD’yi yendi.",
+        "season": "Dünya Şampiyonası 2022 bronz maçı",
+        "source": {
+          "title": "Volleyball World · 2022 bronz maçı",
+          "url": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-098",
+        "revision": 1,
+        "text": "İtalya, 2022 kadınlar dünya bronz maçında hangi ülkeyi yendi?",
+        "choices": [
+          {
+            "id": "iq-098-0",
+            "text": "Türkiye"
+          },
+          {
+            "id": "iq-098-1",
+            "text": "ABD"
+          },
+          {
+            "id": "iq-098-2",
+            "text": "Brezilya"
+          },
+          {
+            "id": "iq-098-3",
+            "text": "Çin"
+          }
+        ],
+        "correctId": "iq-098-1",
+        "explanation": "İtalya ile ABD bronz madalya için karşılaştı.",
+        "season": "Dünya Şampiyonası 2022 bronz maçı",
+        "source": {
+          "title": "Volleyball World · 2022 bronz maçı",
+          "url": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-099",
+        "revision": 1,
+        "text": "2022 kadınlar dünya bronz maçını İtalya hangi skorla kazandı?",
+        "choices": [
+          {
+            "id": "iq-099-0",
+            "text": "3-0"
+          },
+          {
+            "id": "iq-099-1",
+            "text": "3-1"
+          },
+          {
+            "id": "iq-099-2",
+            "text": "3-2"
+          },
+          {
+            "id": "iq-099-3",
+            "text": "2-3"
+          }
+        ],
+        "correctId": "iq-099-0",
+        "explanation": "İtalya, ABD karşısında 3-0 galip geldi.",
+        "season": "Dünya Şampiyonası 2022 bronz maçı",
+        "source": {
+          "title": "Volleyball World · 2022 bronz maçı",
+          "url": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
+      },
+      {
+        "id": "iq-100",
+        "revision": 1,
+        "text": "İtalya’nın 2022 dünya bronz maçında 25 sayı üreten oyuncusu kimdi?",
+        "choices": [
+          {
+            "id": "iq-100-0",
+            "text": "Myriam Sylla"
+          },
+          {
+            "id": "iq-100-1",
+            "text": "Anna Danesi"
+          },
+          {
+            "id": "iq-100-2",
+            "text": "Alessia Orro"
+          },
+          {
+            "id": "iq-100-3",
+            "text": "Paola Egonu"
+          }
+        ],
+        "correctId": "iq-100-3",
+        "explanation": "Paola Egonu 25 sayıyla galibiyete katkı verdi.",
+        "season": "Dünya Şampiyonası 2022 bronz maçı",
+        "source": {
+          "title": "Volleyball World · 2022 bronz maçı",
+          "url": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+          "checkedAt": "2026-10-23T12:45:00.000Z"
+        },
+        "category": "world"
       }
     ]
   },

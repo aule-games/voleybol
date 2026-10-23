@@ -1,9 +1,11 @@
+import { TEAM_BUDGET } from './domain/types.ts';
+import { budgetBuilder } from './ui/budget-builder.ts';
+import { validateBudgetTeam } from './domain/budget.ts';
 import { playerIdentity, questionSource } from './ui/player.ts';
-import './style.css';
 import { ContentCoordinator } from './data/coordinator.ts';
 import { currentPolicy } from './data/validate.ts';
 import { SLOT_LABELS, SLOT_ROLES, SCORES } from './domain/types.ts';
-import type { Attempt, Content, Fixture, Score } from './domain/types.ts';
+import type { Attempt, BudgetTeam, Content, Fixture, Roster, Score } from './domain/types.ts';
 import { eligibleFixtures, feedback, predictionBlock, PredictionSubmitter } from './domain/prediction.ts';
 import { validateLineup } from './domain/lineup.ts';
 import { attemptState, beginAttempt, confirmAnswer, scoreAttempt } from './domain/quiz.ts';
@@ -32,6 +34,12 @@ const picks = new Map<string, Selection>();
 let draft: string[] = Array(7).fill('');
 let draftParents: string[] = [];
 let draftSavedId: string | undefined;
+let coachDraft = '';
+let savedBudget: BudgetTeam | null = null;
+let budgetParents: string[] = [];
+let budgetRecord: string | undefined;
+let budgetVersionChanged = false;
+let budgetDraftVersion: string | null = null;
 let picker: number | null = null;
 let overwrite = false;
 let prepared: PreparedTeam | null = null;
@@ -60,6 +68,11 @@ function savedLabel(id: string | undefined): string {
   const view = store.read();
   return view.records.some(r => r.id === id) ? view.memoryOnly ? COPY.STORAGE_MEMORY : 'Bu cihazda kayıtlı' : 'Kaydedilmedi · kayıt başka bir sekmede silinmiş olabilir';
 }
+function sanitizeBudgetDraft(roster: Roster) {
+  draft = draft.map((id, i) => roster.players.some(p => p.id === id && p.role === SLOT_ROLES[i]) ? id : '');
+  if (!roster.coaches?.some(c => c.id === coachDraft)) coachDraft = '';
+  budgetDraftVersion = roster.version;
+}
 function loadSavedState() {
   if (stateLoaded || !content()) return; stateLoaded = true;
   const records = store.read().records;
@@ -70,12 +83,41 @@ function loadSavedState() {
   const lineup = heads(records, 'lineup:own'); const last = lineup[0];
   draftParents = lineup.map(r => r.id);
   if (lineup.length === 1 && last?.value.kind === 'lineup' && content()!.roster?.version === last.value.data.roster) { draft = [...last.value.data.ids]; draftSavedId = last.id; }
+  const budget = heads(records, 'lineup:budget'); budgetParents = budget.map(r => r.id);
+  if (budget.length === 1 && budget[0]?.value.kind === 'budget-team' && validateBudgetTeam(budget[0].value.data, content()!, Date.now()).ok) {
+    savedBudget = budget[0].value.data; draft = [...savedBudget.ids]; coachDraft = savedBudget.coachId; budgetRecord = budget[0].id;
+  } else if (budget.length === 1 && budget[0]?.value.kind === 'budget-team' && content()!.schema === 4 && content()!.roster && budget[0].value.data.roster !== content()!.roster!.version) {
+    const old = budget[0].value.data;
+    draft = [...old.ids]; coachDraft = old.coachId; sanitizeBudgetDraft(content()!.roster!);
+    budgetVersionChanged = true;
+  }
   const attempts = records.filter(r => r.value.kind === 'quiz').sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-  const record = attempts[0];
+  // Same-millisecond records can tie. Preserve this tab's explicitly started round
+  // across reloads rather than reopening a different completed attempt.
+  const record = attempts.find(r => r.value.kind === 'quiz' && r.value.data.id === history.state?.attemptId) ?? attempts[0];
   if (record?.value.kind === 'quiz') {
     const versions = heads(records, record.entity);
     if (versions.length === 1 && versions[0]?.value.kind === 'quiz') { attempt = versions[0].value.data; attemptParents = [versions[0].id]; quizIndex = Math.min(attempt.answers.length, attempt.questions.length); }
   }
+  // Legacy fixed packs resume at the next unanswered question on reload.
+  // Randomized rounds preserve the historical attempt and question together.
+  if (content()?.quiz?.roundSize) restoreQuizHistory();
+}
+function restoreQuizHistory() {
+  const attemptId: unknown = history.state?.attemptId;
+  if (typeof attemptId === 'string' && attemptId !== attempt?.id) {
+    const versions = heads(store.read().records, `quiz:${attemptId}`);
+    if (versions.length === 1 && versions[0]?.value.kind === 'quiz') {
+      attempt = versions[0].value.data; attemptParents = [versions[0].id]; quizConflict = false;
+    } else {
+      attempt = null; attemptParents = []; quizConflict = false;
+      say('Bu quiz denemesinin kaydı kullanılamıyor. Yeni bir deneme başlatabilirsin.');
+    }
+    quizIndex = attempt ? Math.min(attempt.answers.length, attempt.questions.length) : 0;
+  }
+  const index: unknown = history.state?.questionIndex;
+  if (typeof index === 'number' && Number.isInteger(index) && index >= 0 && index <= (attempt?.answers.length ?? 0)) quizIndex = index;
+  tentative = null;
 }
 async function refresh() {
   loading = true; changed(); render();
@@ -89,7 +131,7 @@ function modeFallback(text: string): HTMLElement {
 function render() {
   const snapshot = content();
   const banner = document.querySelector<HTMLElement>('.demo-banner')!;
-  banner.replaceChildren(el('strong', (snapshot && snapshot.schema !== 1) ? (snapshot.schema === 3 ? 'Herkese açık test sürümü' : 'Yerel test sürümü') : snapshot ? 'Kurgusal demo' : 'Test sürümü'),
+  banner.replaceChildren(el('strong', (snapshot && snapshot.schema !== 1) ? (snapshot.schema >= 3 ? 'Herkese açık test sürümü' : 'Yerel test sürümü') : snapshot ? 'Kurgusal demo' : 'Test sürümü'),
     el('span', (snapshot && snapshot.schema !== 1) ? 'Gerçek oyuncular ve kaynaklı quiz. Tahmin maçları kurgusaldır. Resmî bir uygulama değildir.' : snapshot ? 'Gerçek sporcu, kulüp veya maç verisi içermez.' : 'İçerik doğrulanıyor.'));
   document.title = (snapshot && snapshot.schema !== 1) ? 'Filedeyiz · Test sürümü' : 'Filedeyiz · Kurgusal demo';
   if (snapshot) lastBlockSignature = blockSignature(snapshot);
@@ -136,8 +178,8 @@ function renderHome() {
     main.append(match);
   } else main.append(modeFallback('Şu an tahmine açık maç yok. Süresi dolmuş, ertelenmiş veya doğrulanamayan maçlara tahmin alınmaz.'));
   const paths = el('div', undefined, 'home-paths');
-  const team = link('', '#/takim', 'path-link team-path'); team.append(el('span', 'TAKIMINI KUR', 'eyebrow'), el('h2', 'Senin yedilin kim?'), el('p', 'Altı saha yeri, bir libero. Bütçe yok, transfer yok. Sadece senin seçimin.'), el('span', 'Takımını kur →', 'action-text'));
-  const quiz = link('', '#/quiz', 'path-link quiz-path'); quiz.append(el('span', `QUIZ · ${c.quiz?.questions.length ?? 0} SORU`, 'eyebrow'), el('h2', 'Biraz oyun, biraz mola.'), el('p', c.schema !== 1 ? 'Son üç tamamlanmış Sultanlar Ligi sezonundan on soru. Cevabın ardından kaynağını keşfet.' : 'Acele etmeden, beş kısa soru. Bu demo paketinde oyunun kurallarını keşfet.'), el('span', 'Quiz’i aç →', 'action-text'));
+  const team = link('', '#/takim', 'path-link team-path'); team.append(el('span', 'TAKIMINI KUR', 'eyebrow'), el('h2', 'Senin yedilin kim?'), el('p', c.schema === 4 ? `100 oyuncu, 10 koç, ${c.roster?.budget ?? TEAM_BUDGET} puan. Takımını kur; bağlantısıyla fikrini sor.` : 'Altı saha yeri, bir libero. Sadece senin seçimin.'), el('span', 'Takımını kur →', 'action-text'));
+  const quiz = link('', '#/quiz', 'path-link quiz-path'); quiz.append(el('span', `QUIZ · ${c.quiz?.roundSize ?? c.quiz?.questions.length ?? 0} SORU`, 'eyebrow'), el('h2', 'Biraz oyun, biraz mola.'), el('p', c.schema === 4 ? '100 soruluk havuzdan 10 soru. Sultanlar, VNL, Olimpiyatlar ve dünya sahnesi.' : c.schema !== 1 ? 'Son üç tamamlanmış Sultanlar Ligi sezonundan on soru. Cevabın ardından kaynağını keşfet.' : 'Acele etmeden, beş kısa soru. Bu demo paketinde oyunun kurallarını keşfet.'), el('span', 'Quiz’i aç →', 'action-text'));
   paths.append(team, quiz); main.append(paths);
 }
 async function savePick(match: Fixture) {
@@ -217,17 +259,21 @@ function renderHistory() {
   }
 }
 function renderBuilder() {
+  const snapshot = usable();
+  const imported = route.ok ? route.value.team : undefined;
+  if (snapshot?.schema === 4 && snapshot.roster && (!imported || imported.coachId)) { renderBudgetBuilder(snapshot); return; }
   main.append(heading('Senin yedilin kim?', 'TAKIMINI KUR · SEN SEÇ, SEN PAYLAŞ'));
   const c = usable(); if (!c?.roster) { main.append(modeFallback('Kadro şu an kullanılamıyor. Güncel içerik için Yenile’ye bas.'), button('Yenile', () => void refresh())); return; }
-  const imported = route.ok ? route.value.team : undefined; const ids = imported?.ids ?? draft;
+  const ids = imported?.ids ?? draft;
   const team = validateLineup(ids, imported?.roster ?? c.roster.version, c, Date.now());
   if (imported) {
+    if (c.schema === 4) main.append(notice(`Eski sürümden takım bağlantısı. Bütçe ve koç içermez; yeni takımlar yalnızca ${c.roster.budget} puanla kurulur.`));
     main.append(notice('Paylaşılan takım · Salt okunur. Kendi taslağın değişmedi.'));
     if (!team.ok) main.append(notice('Bazı oyuncular artık kullanılamıyor. Eksik rolleri kendi kopyanda tamamlayabilirsin.', true));
     if (overwrite) {
       main.append(notice('Bu işlem mevcut taslağının yerini alır. Kaydedilmiş geçmiş kayıtları silmez.', true), button('Bu takımla değiştir', () => {
         draft = ids.map((id, i) => c.roster!.players.some(p => p.id === id && p.role === SLOT_ROLES[i]) ? id : ''); draftParents = parentIds('lineup:own'); draftSavedId = undefined;
-        overwrite = false; changed(); location.hash = '#/takim';
+        coachDraft = ''; savedBudget = null; budgetRecord = undefined; overwrite = false; changed(); location.hash = '#/takim';
       }), button('Mevcut taslağıma dön', () => { overwrite = false; location.hash = '#/takim'; }, 'button secondary'));
     } else main.append(button('Kendi takımını kur', () => { overwrite = true; render(); }));
   }
@@ -288,17 +334,55 @@ function renderBuilder() {
   }
   if (prepared) renderPrepared();
 }
-async function prepareShare(ids: string[], roster: string) {
+function renderBudgetBuilder(c: Content) {
+  if ((savedBudget && savedBudget.roster !== c.roster!.version) || (budgetDraftVersion && budgetDraftVersion !== c.roster!.version)) {
+    sanitizeBudgetDraft(c.roster!);
+    savedBudget = null; budgetRecord = undefined; budgetVersionChanged = true;
+  }
+  budgetDraftVersion = c.roster!.version;
+  const imported = route.ok && route.value.team?.coachId && route.value.team.teamId ? route.value.team as BudgetTeam : null;
+  if (!imported && budgetVersionChanged) main.append(notice('Puan sürümü değişti. Kullanılabilen seçimlerin taslak olarak korundu; yeni puanları kontrol edip yeniden kaydet. Eski kaydın değiştirilmedi.', true));
+  const selected = imported ?? { ids: draft, coachId: coachDraft };
+  main.append(budgetBuilder({ content: c, base, ids: selected.ids, coachId: selected.coachId, picker, saved: savedBudget, imported,
+    preparing, savedLabel: savedLabel(budgetRecord),
+    onPicker(index) { const previous = picker; picker = index; render(); focus(index === null ? `slot-${previous}` : `picker-${index}`); },
+    onPick(ids, coachId) { const previous = picker; draft = ids; coachDraft = coachId; savedBudget = null; budgetRecord = undefined; picker = null; changed(); message = ''; render(); focus(`slot-${previous}`); },
+    onSave() {
+      const current = usable(); const team: BudgetTeam = { roster: c.roster!.version, ids: [...draft], coachId: coachDraft, teamId: savedBudget?.teamId ?? crypto.randomUUID() };
+      if (!current || !validateBudgetTeam(team, current, Date.now()).ok) { error('LINEUP_INVALID'); render(); return; }
+      const result = store.save('lineup:budget', { kind: 'budget-team', data: team }, budgetParents);
+      if (result.ok) { savedBudget = team; budgetRecord = result.value.record.id; budgetParents = [budgetRecord]; budgetVersionChanged = false; say(result.value.persisted ? 'Takımın kaydedildi. Benzersiz bağlantın hazır.' : COPY.STORAGE_MEMORY); }
+      else { error(result.error.code); budgetParents = parentIds('lineup:budget'); }
+      render(); document.querySelector('.saved-team-link')?.scrollIntoView({ block: 'nearest' });
+    },
+    onPrepare() { const team = imported ?? savedBudget; if (team) void prepareShare([...team.ids], team.roster, team); },
+    onCopy() { overwrite = true; render(); },
+  }));
+  if (overwrite && imported) {
+    const panel = el('section', undefined, 'notice warning'); panel.setAttribute('role', 'region'); panel.setAttribute('aria-label', 'Taslağı değiştirme onayı');
+    panel.append(el('p', 'Bu kadro mevcut taslağının yerini alsın mı? Kaydedilmiş geçmişin silinmez.'), button('Bu takımla değiştir', () => {
+      const current = usable(); if (!current || !validateBudgetTeam(imported, current, Date.now()).ok) { error('LINEUP_INVALID'); render(); return; }
+      draft = [...imported.ids]; coachDraft = imported.coachId; savedBudget = null; budgetRecord = undefined; budgetParents = parentIds('lineup:budget');
+      overwrite = false; changed(); location.hash = '#/takim';
+    }), button('Vazgeç', () => { overwrite = false; render(); }, 'button secondary'));
+    main.append(panel); panel.scrollIntoView({ block: 'nearest' });
+  }
+  if (prepared) renderPrepared();
+}
+async function prepareShare(ids: string[], roster: string, budget?: BudgetTeam) {
   if (preparing) return; releasePreview(); preparing = true; const token = generation; const hash = location.hash;
   const operation = new AbortController(); preparation = operation;
   render(); const fresh = await coordinator.refresh();
   if (preparation !== operation) return;
   if (location.hash !== hash) { preparation = null; preparing = false; render(); return; }
   if (!fresh.ok || token !== generation || !navigator.onLine || !visible()) { preparation = null; preparing = false; error(fresh.ok ? 'SHARE_EXPIRED' : fresh.error.code); render(); return; }
-  const team = validateLineup(ids, roster, fresh.value, Date.now()); const url = teamUrl(base, roster, ids);
+  const team = validateLineup(ids, roster, fresh.value, Date.now()); const url = teamUrl(base, roster, ids, budget);
+  const budgetResult = budget ? validateBudgetTeam(budget, fresh.value, Date.now()) : null;
+  if (fresh.value.schema === 4 && (!budgetResult?.ok)) { preparation = null; preparing = false; error('LINEUP_INVALID'); render(); return; }
+  const details = budgetResult?.ok ? { coach: budgetResult.value.coach, spent: budgetResult.value.spent, cap: budgetResult.value.cap, version: roster } : undefined;
   if (!team.ok || !url.ok) { preparation = null; preparing = false; error('LINEUP_INVALID'); render(); return; }
   const policyAt = Date.now();
-  const png = await renderTeamPng(team.value, fresh.value.roster!.asOf, operation.signal, fresh.value.schema !== 1);
+  const png = await renderTeamPng(team.value, fresh.value.roster!.asOf, operation.signal, fresh.value.schema !== 1, details);
   // A cancelled native callback must never clear a newer request's busy state.
   if (preparation !== operation) return;
   preparation = null; preparing = false;
@@ -306,11 +390,11 @@ async function prepareShare(ids: string[], roster: string) {
   if (location.hash !== hash) { render(); return; }
   if (token !== generation || content() !== fresh.value || !currentPolicy(fresh.value, Date.now()) || Date.now() >= policyAt + 60_000 || !navigator.onLine || !visible()) { error('SHARE_EXPIRED'); render(); return; }
   const file = png.ok ? png.value : null;
-  prepared = { url: url.value, text: lineupText(team.value, fresh.value.schema !== 1), file, blobUrl: file ? URL.createObjectURL(file) : null,
-    expiresAt: Math.min(policyAt + 60_000, Date.parse(fresh.value.validUntil), Date.parse(fresh.value.rights.expiresAt)), revision: fresh.value.revision, rightsRevision: fresh.value.rightsRevision, selection: ids.join(','), pngError: png.ok ? null : png.error.code };
+  prepared = { url: url.value, text: lineupText(team.value, fresh.value.schema !== 1, details), file, blobUrl: file ? URL.createObjectURL(file) : null,
+    expiresAt: Math.min(policyAt + 60_000, Date.parse(fresh.value.validUntil), Date.parse(fresh.value.rights.expiresAt)), revision: fresh.value.revision, rightsRevision: fresh.value.rightsRevision, selection: budget ? `${ids.join(',')}:${budget.coachId}:${budget.teamId}` : ids.join(','), pngError: png.ok ? null : png.error.code };
   say('Önizleme hazır. Henüz hiçbir yere gönderilmedi. Doğrulama 60 saniye geçerlidir.'); render(); document.getElementById('share-preview')?.scrollIntoView({ block: 'nearest' });
 }
-function currentSelection() { return (route.ok && route.value.team ? route.value.team.ids : draft).join(','); }
+function currentSelection() { const imported = route.ok ? route.value.team : undefined; const team = imported?.coachId ? imported : savedBudget; return team ? `${team.ids.join(',')}:${team.coachId}:${team.teamId}` : (imported?.ids ?? draft).join(','); }
 function validPrepared(): boolean {
   if (!prepared || !preparedValid(prepared, content(), currentSelection(), Date.now(), navigator.onLine) || document.visibilityState === 'hidden') { releasePreview(); error('SHARE_EXPIRED'); render(); return false; } return true;
 }
@@ -361,21 +445,23 @@ function renderPrepared() {
 }
 function startQuiz(practice: boolean) {
   const pack = usable()?.quiz; if (!pack) return;
-  attempt = beginAttempt(pack, crypto.randomUUID(), practice); attemptParents = []; quizIndex = 0; tentative = null; quizConflict = false; message = ''; changed();
-  history.replaceState({ questionIndex: 0 }, '', '#/quiz'); render(); focusHeading();
+  const seen = new Set(store.read().records.flatMap(r => r.value.kind === 'quiz' && r.value.data.packId === pack.id ? r.value.data.answers.map(a => a.questionId) : []));
+  attempt = beginAttempt(pack, crypto.randomUUID(), practice, seen); attemptParents = []; quizIndex = 0; tentative = null; quizConflict = false; message = ''; changed();
+  if (pack.roundSize) { const saved = store.save(`quiz:${attempt.id}`, { kind: 'quiz', data: attempt }, []); if (saved.ok) { attemptParents = [saved.value.record.id]; if (!saved.value.persisted) say(COPY.STORAGE_MEMORY); } else error(saved.error.code); }
+  history.replaceState({ questionIndex: 0, attemptId: attempt.id }, '', '#/quiz'); render(); focusHeading();
 }
 function renderQuiz() {
-  main.append(heading('Bir quiz molası.', `QUIZ · ${content()?.quiz?.questions.length ?? 0} SORU · SÜRE SINIRI YOK`));
+  main.append(heading('Bir quiz molası.', `QUIZ · ${content()?.quiz?.roundSize ?? content()?.quiz?.questions.length ?? 0} SORU · SÜRE SINIRI YOK`));
   const c = usable(); if (!c?.quiz) { main.append(modeFallback('Quiz paketi şu an kullanılamıyor.'), button('Yenile', () => void refresh())); return; }
-  const pack = c.quiz; const count = pack.questions.length;
-  main.append(el('p', c.schema !== 1 ? 'Sultanlar Ligi: 2023–24, 2024–25 ve 2025–26. Üç tamamlanmış sezon; her cevabın açıklaması ve kaynağı var.' : 'İlk demo paketi: bu oyunun kuralları. Gerçek voleybol bilgi bankası değildir.', 'muted'));
+  const pack = c.quiz; const count = pack.roundSize ?? pack.questions.length;
+  main.append(el('p', c.schema === 4 ? '100 soruluk havuzdan 10 soru: Sultanlar Ligi, VNL, Olimpiyatlar, Avrupa ve Dünya Şampiyonaları. Her cevabın açıklaması ve kaynağı var.' : c.schema !== 1 ? 'Sultanlar Ligi: 2023–24, 2024–25 ve 2025–26. Üç tamamlanmış sezon; her cevabın açıklaması ve kaynağı var.' : 'İlk demo paketi: bu oyunun kuralları. Gerçek voleybol bilgi bankası değildir.', 'muted'));
   if (!attempt) {
     const welcome = el('section', undefined, 'quiz-welcome');
     const number = el('span', String(count).padStart(2, '0'), 'quiz-number'); number.setAttribute('aria-hidden', 'true');
     const copy = el('div'); copy.append(el('p', 'KÜÇÜK BİR MOLA', 'eyebrow'), el('h2', `${count === 10 ? 'On' : 'Beş'} soru. Sıfır acele.`), el('p', 'Bir şık seç, cevabını onayla. Her sorunun ardından açıklamasını gör.', 'intro'), button('Quiz’e başla', () => startQuiz(false)));
     welcome.append(number, copy); main.append(welcome);
     const guide = el('details', undefined, 'guide'); guide.append(el('summary', 'Mini oyun rehberi'));
-    guide.append(el('p', 'Bir pasör, bir pasör çaprazı, iki smaçör, iki orta oyuncu ve bir libero seçilir. Her oyuncu tek yerde kullanılabilir. Libero görselde ayrı durur. Skorun ilk sayısı ev sahibine aittir. Kayıtlar bu tarayıcıdadır; depolama kapalıysa sadece oturumda kalır.'));
+    guide.append(el('p', c.schema === 4 ? 'Her oyunda beş kategoriden ikişer soru gelir. Daha önce yanıtlamadığın sorulara öncelik verilir. Şıkkını onayladıktan sonra değiştiremezsin; önceki soruları tekrar okuyabilirsin. On sorunun sonunda sonucunu görürsün. İlerleme bu tarayıcıda saklanır; depolama kapalıysa yalnızca oturumda kalır.' : 'Bir pasör, bir pasör çaprazı, iki smaçör, iki orta oyuncu ve bir libero seçilir. Her oyuncu tek yerde kullanılabilir. Libero görselde ayrı durur. Skorun ilk sayısı ev sahibine aittir. Kayıtlar bu tarayıcıdadır; depolama kapalıysa sadece oturumda kalır.'));
     main.append(guide); return;
   }
   const state = attemptState(attempt, pack);
@@ -407,13 +493,22 @@ function renderQuiz() {
   for (const choice of question.choices) {
     const label = el('label', undefined, 'answer-choice'); const input = el('input'); input.type = 'radio'; input.name = 'quiz-answer'; input.value = choice.id;
     input.checked = (committed?.choiceId ?? tentative) === choice.id; input.disabled = !!committed;
-    input.addEventListener('change', () => { tentative = choice.id; render(); document.querySelector<HTMLInputElement>(`input[value="${choice.id}"]`)?.focus(); }); label.append(input, el('span', choice.text)); fieldset.append(label);
+    if (input.checked) label.classList.add('is-selected');
+    if (committed && choice.id === question.correctId) label.classList.add('is-correct');
+    if (committed && choice.id === committed.choiceId && choice.id !== question.correctId) label.classList.add('is-incorrect');
+    input.addEventListener('change', () => { tentative = choice.id; render(); document.querySelector<HTMLInputElement>(`input[value="${choice.id}"]`)?.focus(); }); label.append(input, el('span', choice.text));
+    if (committed && choice.id === question.correctId) label.append(el('span', '✓ Doğru cevap', 'answer-state'));
+    else if (committed && choice.id === committed.choiceId) label.append(el('span', '✕ Yanlış', 'answer-state'));
+    else if (!committed && input.checked) label.append(el('span', 'Seçildi', 'answer-state'));
+    fieldset.append(label);
   }
   panel.append(fieldset);
   if (committed) {
-    panel.append(notice(committed.choiceId === question.correctId ? 'Doğru! ' + question.explanation : 'Bu kez olmadı. ' + question.explanation));
+    const correct = committed.choiceId === question.correctId;
+    const feedback = el('div', undefined, `quiz-feedback ${correct ? 'correct' : 'incorrect'}`);
+    feedback.append(el('strong', correct ? '✓ Doğru!' : '✕ Bu kez olmadı.'), el('p', question.explanation)); panel.append(feedback);
     panel.append(questionSource(question));
-    panel.append(button(quizIndex === count - 1 ? 'Sonucumu gör' : 'Sonraki soru', () => { quizIndex++; tentative = null; history.pushState({ questionIndex: quizIndex }, '', '#/quiz'); render(); focusHeading(); }));
+    panel.append(button(quizIndex === count - 1 ? 'Sonucumu gör' : 'Sonraki soru', () => { quizIndex++; tentative = null; history.pushState({ questionIndex: quizIndex, attemptId: attempt?.id }, '', '#/quiz'); render(); focusHeading(); }));
   } else {
     const confirm = button('Cevabımı onayla', () => {
       const latest = usable()?.quiz; if (!latest || !attempt || !tentative) return;
@@ -423,19 +518,19 @@ function renderQuiz() {
       const saved = store.save(`quiz:${attempt.id}`, { kind: 'quiz', data: attempt }, attemptParents);
       if (saved.ok) { attemptParents = [saved.value.record.id]; if (!saved.value.persisted) say(COPY.STORAGE_MEMORY); }
       else { quizConflict = saved.error.code === 'STORAGE_CONFLICT'; error(saved.error.code); }
-      tentative = null; render(); announce('Yanıtın onaylandı.');
+      tentative = null; render(); announce(`${result.value.answers.at(-1)?.choiceId === question.correctId ? 'Doğru!' : 'Yanlış.'} Doğru cevap: ${question.choices.find(c => c.id === question.correctId)?.text}. ${question.explanation}`);
     }); confirm.disabled = !tentative; panel.append(confirm);
   }
-  if (quizIndex > 0) panel.append(button('Önceki soru', () => { quizIndex--; tentative = null; history.pushState({ questionIndex: quizIndex }, '', '#/quiz'); render(); focusHeading(); }, 'text-button'));
+  if (quizIndex > 0) panel.append(button('Önceki soru', () => { quizIndex--; tentative = null; history.pushState({ questionIndex: quizIndex, attemptId: attempt?.id }, '', '#/quiz'); render(); focusHeading(); }, 'text-button'));
   main.append(panel, el('p', c.schema !== 1 ? 'Onaylanan yanıt değiştirilemez. Kaynak bağlantısı cevabın ardından görünür.' : 'Kaynak: bu demonun özgün oyun rehberi. Onaylanan yanıt değiştirilemez.', 'source'));
 }
 function routeChanged() {
   changed(); route = parseFragment(location.hash); picker = null; message = '';
-  if (route.ok && route.value.mode === 'quiz') { const index = history.state?.questionIndex; if (Number.isInteger(index) && index >= 0 && index <= (attempt?.answers.length ?? 0)) quizIndex = index; }
+  if (route.ok && route.value.mode === 'quiz') restoreQuizHistory();
   if (route.ok && route.value.mode === 'tahmin') void refresh().then(() => { if (route.ok && route.value.mode === 'tahmin') focusHeading(); }); else { render(); focusHeading(); }
 }
 window.addEventListener('hashchange', routeChanged);
-window.addEventListener('popstate', () => { if (route.ok && route.value.mode === 'quiz' && location.hash === '#/quiz') { const index = history.state?.questionIndex; if (Number.isInteger(index) && index >= 0 && index <= (attempt?.answers.length ?? 0)) { quizIndex = index; tentative = null; render(); focusHeading(); } } });
+window.addEventListener('popstate', () => { if (route.ok && route.value.mode === 'quiz' && location.hash === '#/quiz') { changed(); restoreQuizHistory(); render(); focusHeading(); } });
 window.addEventListener('offline', () => { changed(); coordinator.invalidate(); error('OFFLINE'); render(); });
 window.addEventListener('online', () => { say('Bağlantı geri geldi. Tahmin göndermek için Yenile’ye basıp açıkça kaydet.'); render(); });
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') { changed(); coordinator.invalidate(); } else void refresh(); });
@@ -446,7 +541,7 @@ window.addEventListener('storage', e => {
 });
 document.getElementById('clear-data')!.addEventListener('click', () => {
   const panel = document.getElementById('clear-panel')!; panel.replaceChildren(notice('Bu tarayıcıdaki tahmin, takım ve quiz kayıtları silinsin mi? Açık taslağın kaydedilmemiş olarak kalır.', true), button('Evet, oyun kayıtlarını sil', () => {
-    const result = store.clear(); draftSavedId = undefined; draftParents = []; attemptParents = [];
+    const result = store.clear(); draftSavedId = undefined; draftParents = []; budgetParents = []; budgetRecord = undefined; savedBudget = null; budgetVersionChanged = false; attemptParents = [];
     for (const pick of picks.values()) { pick.savedId = undefined; pick.parents = []; }
     changed(); panel.replaceChildren(); say(result.ok ? `${result.value} cihaz kaydı silindi. Açık seçimler kaydedilmemiş durumda; test ayarı korunur.` : COPY.STORAGE_CLEAR_INCOMPLETE); render();
   }, 'button secondary'), button('Vazgeç', () => { panel.replaceChildren(); focus('clear-data'); }, 'text-button'));

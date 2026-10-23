@@ -6,7 +6,12 @@ export const CLUBS = {
   galatasaray: { name: 'Galatasaray Daikin', mark: 'marks/clubs/galatasaray.png' },
   thy: { name: 'Türk Hava Yolları', mark: 'marks/clubs/thy.png' },
 } as const;
-export const COUNTRIES = { TR: { name: 'Türkiye', mark: 'marks/countries/tr.svg' } } as const;
+export const COUNTRIES = {
+  TR: { name: 'Türkiye', mark: 'marks/countries/tr.svg' }, BR: { name: 'Brezilya', mark: 'marks/countries/br.svg' },
+  JP: { name: 'Japonya', mark: 'marks/countries/jp.svg' }, IT: { name: 'İtalya', mark: 'marks/countries/it.svg' },
+  RS: { name: 'Sırbistan', mark: 'marks/countries/rs.svg' }, PL: { name: 'Polonya', mark: 'marks/countries/pl.svg' },
+  US: { name: 'ABD', mark: 'marks/countries/us.svg' }, CN: { name: 'Çin', mark: 'marks/countries/cn.svg' },
+} as const;
 export function isLoopback(url: URL): boolean {
   return ['http:', 'https:'].includes(url.protocol) && ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
 }
@@ -14,11 +19,17 @@ export function isLoopback(url: URL): boolean {
 export function isPublicPreviewTarget(url: URL): boolean {
   return isLoopback(url) || url.href === 'https://aule-games.github.io/voleybol/content.json';
 }
-export function officialSource(value: unknown, kind: 'player' | 'quiz'): value is string {
+export function officialSource(value: unknown, kind: 'player' | 'quiz' | 'international'): value is string {
   if (typeof value !== 'string' || value.length > 500) return false;
   try {
     const url = new URL(value);
     if (url.protocol !== 'https:' || url.username || url.password || url.port || url.search || url.hash) return false;
+    if (kind === 'international') return [
+      'en.volleyballworld.com', 'br.volleyballworld.com', 'it.volleyballworld.com', 'www.fivb.com',
+      'www.cev.eu', 'eurovolley.cev.eu', 'championsleague.cev.eu', 'www.olympics.com', 'olympics.com',
+      'usavolleyball.org', 'www.federvolley.it', 'cbv.com.br', 'www.jva.or.jp',
+      'tvf.org.tr', 'www.vakifbanksporkulubu.com', 'sultanlar.volleystation.com',
+    ].includes(url.hostname) && url.pathname !== '/';
     return kind === 'player'
       ? url.hostname === 'sultanlar.volleystation.com' && /^\/en\/players\/\d+\/$/.test(url.pathname)
       : (url.hostname === 'tvf.org.tr' && url.pathname.startsWith('/icerik/'))

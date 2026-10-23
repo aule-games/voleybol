@@ -1,20 +1,22 @@
-import type { Attempt, Pick } from '../domain/types.ts';
-import { isScore } from '../domain/types.ts';
+import type { Attempt, BudgetTeam, Pick } from '../domain/types.ts';
+import { isScore, TEAM_ID } from '../domain/types.ts';
 import { exact, id, integer, isObject, utc } from '../data/validate.ts';
 import { fail, ok } from './result.ts';
 import type { Result } from './result.ts';
 
 export const PREFIX = 'voleybol:v1:record:';
 export const TEST_KEY = 'voleybol:test';
-export type SavedValue = { kind: 'prediction'; data: Pick } | { kind: 'lineup'; data: { roster: string; ids: string[] } } | { kind: 'quiz'; data: Attempt };
+export type SavedValue = { kind: 'prediction'; data: Pick } | { kind: 'lineup'; data: { roster: string; ids: string[] } } | { kind: 'budget-team'; data: BudgetTeam } | { kind: 'quiz'; data: Attempt };
 export interface SaveRecord { schema: 1; id: string; entity: string; parents: string[]; createdAt: string; value: SavedValue }
 export interface StoreView { records: SaveRecord[]; quarantined: number; count: number; memoryOnly: boolean }
-const entityValid = (s: unknown): s is string => typeof s === 'string' && /^(prediction:[a-z0-9_-]{1,40}|lineup:own|quiz:[a-z0-9_-]{1,40})$/.test(s);
+const entityValid = (s: unknown): s is string => typeof s === 'string' && /^(prediction:[a-z0-9_-]{1,40}|lineup:(own|budget)|quiz:[a-z0-9_-]{1,40})$/.test(s);
 function validValue(v: unknown): v is SavedValue {
   if (!isObject(v) || !exact(v, ['kind', 'data']) || !isObject(v.data)) return false;
   const d = v.data;
   if (v.kind === 'prediction') return exact(d, ['fixtureId', 'score', 'scheduleRevision', 'contentRevision', 'savedAt']) && id(d.fixtureId) && isScore(d.score) && integer(d.scheduleRevision) && integer(d.contentRevision) && utc(d.savedAt);
   if (v.kind === 'lineup') return exact(d, ['roster', 'ids']) && id(d.roster) && Array.isArray(d.ids) && d.ids.length === 7 && d.ids.every(id) && new Set(d.ids).size === 7;
+  if (v.kind === 'budget-team') return exact(d, ['roster', 'ids', 'coachId', 'teamId']) && id(d.roster) && id(d.coachId) && typeof d.teamId === 'string' && TEAM_ID.test(d.teamId)
+    && Array.isArray(d.ids) && d.ids.length === 7 && d.ids.every(id) && new Set(d.ids).size === 7;
   if (v.kind !== 'quiz' || !exact(d, ['id', 'packId', 'packRevision', 'practice', 'questions', 'answers', 'originalScore']) || !id(d.id) || !id(d.packId) || !integer(d.packRevision) || typeof d.practice !== 'boolean'
     || !Array.isArray(d.questions) || ![5, 10].includes(d.questions.length) || !Array.isArray(d.answers) || d.answers.length > d.questions.length) return false;
   if (!d.questions.every(q => isObject(q) && exact(q, ['id', 'revision']) && id(q.id) && integer(q.revision)) || new Set(d.questions.map(q => q.id)).size !== d.questions.length) return false;
@@ -24,7 +26,7 @@ function validValue(v: unknown): v is SavedValue {
 function validRecord(v: unknown): v is SaveRecord {
   if (!isObject(v) || !exact(v, ['schema', 'id', 'entity', 'parents', 'createdAt', 'value']) || v.schema !== 1 || !id(v.id) || !entityValid(v.entity) || !utc(v.createdAt) || !Array.isArray(v.parents)
     || v.parents.length > 500 || !v.parents.every(id) || new Set(v.parents).size !== v.parents.length || v.parents.includes(v.id) || !validValue(v.value)) return false;
-  return v.entity === (v.value.kind === 'prediction' ? `prediction:${v.value.data.fixtureId}` : v.value.kind === 'lineup' ? 'lineup:own' : `quiz:${v.value.data.id}`);
+  return v.entity === (v.value.kind === 'prediction' ? `prediction:${v.value.data.fixtureId}` : v.value.kind === 'lineup' ? 'lineup:own' : v.value.kind === 'budget-team' ? 'lineup:budget' : `quiz:${v.value.data.id}`);
 }
 export function heads(records: SaveRecord[], entity: string): SaveRecord[] {
   const group = records.filter(r => r.entity === entity); const parents = new Set(group.flatMap(r => r.parents));

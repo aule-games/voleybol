@@ -16,7 +16,11 @@ The workflow pins official actions to commit hashes, reads Node from `.nvmrc`, i
 
 Vite's relative `base: './'` and hash routes preserve the `/voleybol/` project path, including assets, content fetches, refresh and shared-team URLs. Browser tests also exercise nested static hosting without root-asset or SPA fallbacks. A rehosted-byte test covers the exact approved HTTPS origin; live CDN/HTTPS verification is a separate post-deploy check.
 
-## Test boundaries
+## Current local amendment — 2026-10-23
+
+Schema 4 adds a 100-player / 10-coach / 65-point builder and 100-question bank with 10-question rounds. It uses the same approved-host guard and unchanged expiry. These local source changes do not establish a new deployment. The earlier 14-player / ten-question checkpoint below is historical. Publication of the accumulated changes was authorized on 2026-10-23 with the 65-point policy. Use the PR/CI/main procedure above; authorization is not deployment evidence. See [the budget amendment](budget-65-2026-10-23.md).
+
+## Earlier published test boundaries
 
 - Schema 3 explicitly enables a mixed-content preview at the approved Pages content URL; old schema 2 stays loopback-only. Neither host guard protects asset access.
 - Fourteen real players, represented-country flags and ten sourced questions coexist with **fictional** prediction fixtures. Original fixture dates are not silently renewed; expired/locked predictions can be unavailable.

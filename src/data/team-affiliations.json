@@ -1,0 +1,1353 @@
+{
+  "checkedAt": "2026-10-23",
+  "teams": {
+    "kuzeyboru": {
+      "name": "Kuzeyboru",
+      "mark": "marks/teams/kuzeyboru.png",
+      "kind": "club",
+      "assetSource": "https://assets.volleystation.com/website/teams/2247899/badge.png",
+      "sourcePage": "https://sultanlar.volleystation.com/en/players/2205123/",
+      "dark": false,
+      "sha256": "0e5dc72ad9faa57546af2921d18f9399a91d9e9bd4684f0eaac2dc196348f26d",
+      "bytes": 54183
+    },
+    "zeren": {
+      "name": "Zeren Spor",
+      "mark": "marks/teams/zeren.png",
+      "kind": "club",
+      "assetSource": "https://assets.volleystation.com/website/teams/2247905/badge.png",
+      "sourcePage": "https://sultanlar.volleystation.com/en/players/3245282/",
+      "dark": false,
+      "sha256": "26c15e583dffead7f292289641b83ca36d2b282eba33a113f0a9760ad8877ab1",
+      "bytes": 46924
+    },
+    "afyon": {
+      "name": "Afyon Bld. Yüntaş",
+      "mark": "marks/teams/afyon.png",
+      "kind": "club",
+      "assetSource": "https://assets.volleystation.com/website/teams/2247911/badge.png",
+      "sourcePage": "https://sultanlar.volleystation.com/en/players/2498485/",
+      "dark": false,
+      "sha256": "f38ca366893ae34268c6369e6140667c90d65280593ac8a228423cfb5367e837",
+      "bytes": 144466
+    },
+    "ilbank": {
+      "name": "İlbank",
+      "mark": "marks/teams/ilbank.png",
+      "kind": "club",
+      "assetSource": "https://assets.volleystation.com/website/teams/2247897/badge.png",
+      "sourcePage": "https://sultanlar.volleystation.com/en/players/2498492/",
+      "dark": false,
+      "sha256": "4850d7a22542b047c841983eabc8ce53d9c25b044ccb546b044ad32fbefc34d2",
+      "bytes": 81509
+    },
+    "goztepe": {
+      "name": "Göztepe Yuppo",
+      "mark": "marks/teams/goztepe.png",
+      "kind": "club",
+      "assetSource": "https://assets.volleystation.com/website/teams/2247898/badge.png",
+      "sourcePage": "https://sultanlar.volleystation.com/en/players/3245302/",
+      "dark": false,
+      "sha256": "040dfdc77f6a29997705b96a739df87302b5aaab604b1bf178a190e89dfb30a2",
+      "bytes": 48624
+    },
+    "novara": {
+      "name": "Igor Gorgonzola Novara",
+      "mark": "marks/teams/novara.png",
+      "kind": "club",
+      "assetSource": "https://ww5.legavolleyfemminile.it/imgSocietaSquadra.aspx?idImg=710948",
+      "sourcePage": "https://www.legavolleyfemminile.it/club/igor-gorgonzola-novara/710948/",
+      "dark": false,
+      "sha256": "9f38ead70f728a61c345d8b19211ceddb0d9d8e6181132093db2023ea2f36eed",
+      "bytes": 17161
+    },
+    "uyba": {
+      "name": "UYBA Busto Arsizio",
+      "mark": "marks/teams/uyba.png",
+      "kind": "club",
+      "assetSource": "https://ww5.legavolleyfemminile.it/imgSocietaSquadra.aspx?idImg=710946",
+      "sourcePage": "https://www.legavolleyfemminile.it/club/laica-cioccolato-uyba/710946/",
+      "dark": false,
+      "sha256": "67dd46be35738b76c1924f9e2efaf9813fed817f6fb82d75d743951569b9a3c5",
+      "bytes": 14431
+    },
+    "vallefoglia": {
+      "name": "Megabox Vallefoglia",
+      "mark": "marks/teams/vallefoglia.png",
+      "kind": "club",
+      "assetSource": "https://ww5.legavolleyfemminile.it/imgSocietaSquadra.aspx?idImg=710950",
+      "sourcePage": "https://www.legavolleyfemminile.it/club/megabox-ond-savio-vallefoglia/710950/",
+      "dark": false,
+      "sha256": "84348f9f19a6267a7a79c08125431b95cc6a3ba9c472d88ba9140f97da355660",
+      "bytes": 22723
+    },
+    "milano": {
+      "name": "Vero Volley Milano",
+      "mark": "marks/teams/milano.png",
+      "kind": "club",
+      "assetSource": "https://ww5.legavolleyfemminile.it/imgSocietaSquadra.aspx?idImg=710951",
+      "sourcePage": "https://www.legavolleyfemminile.it/club/numia-vero-volley-milano/710951/",
+      "dark": false,
+      "sha256": "63fd5f2a270bffc482fa461996cd25bf91b73cd7fc6ff0deb7a21e95f0f66867",
+      "bytes": 13092
+    },
+    "conegliano": {
+      "name": "Imoco Conegliano",
+      "mark": "marks/teams/conegliano.png",
+      "kind": "club",
+      "assetSource": "https://ww5.legavolleyfemminile.it/imgSocietaSquadra.aspx?idImg=710953",
+      "sourcePage": "https://www.legavolleyfemminile.it/club/prosecco-doc-a-carraro-imoco-conegliano/710953/",
+      "dark": false,
+      "sha256": "ed8160e685092d638f9d4e9301a35d8ff0a3f490e8bf2bb9a9c26abfe3635338",
+      "bytes": 11141
+    },
+    "chieri": {
+      "name": "Chieri ’76",
+      "mark": "marks/teams/chieri.png",
+      "kind": "club",
+      "assetSource": "https://ww5.legavolleyfemminile.it/imgSocietaSquadra.aspx?idImg=710954",
+      "sourcePage": "https://www.legavolleyfemminile.it/club/reale-mutua-fenera-chieri-76/710954/",
+      "dark": false,
+      "sha256": "ce218eb80ee10187d8eb6458736c54afb5070f48693cae67d2ae6c8d2466fb65",
+      "bytes": 19024
+    },
+    "scandicci": {
+      "name": "Savino Del Bene Scandicci",
+      "mark": "marks/teams/scandicci.png",
+      "kind": "club",
+      "assetSource": "https://ww5.legavolleyfemminile.it/imgSocietaSquadra.aspx?idImg=710955",
+      "sourcePage": "https://www.legavolleyfemminile.it/club/savino-del-bene-scandicci/710955/",
+      "dark": false,
+      "sha256": "d2f0b4d5a984e4151c84540640820ea2bec5003a3d3e6dbb966aab1be73e6bb5",
+      "bytes": 16538
+    },
+    "denso": {
+      "name": "Denso Airybees",
+      "mark": "marks/teams/denso.png",
+      "kind": "club",
+      "assetSource": "https://www.jsports.co.jp/img/svleague/team/icon_w-team-logo09@2x.png",
+      "sourcePage": "https://www.jsports.co.jp/volleyball/svleague_women/team/denso/",
+      "dark": false,
+      "sha256": "9e01d5e5f960146e2151e8a638c10aebf1dc9e5f54743b5ba8d065a0f61bb133",
+      "bytes": 7800
+    },
+    "saga": {
+      "name": "SAGA Hisamitsu Springs",
+      "mark": "marks/teams/saga.png",
+      "kind": "club",
+      "assetSource": "https://www.jsports.co.jp/img/svleague/team/icon_w-team-logo05@2x.png",
+      "sourcePage": "https://www.jsports.co.jp/volleyball/svleague_women/team/saga_hm/",
+      "dark": false,
+      "sha256": "5418149ae6b07f60770cd1d7e5e223b16e1fbabddb07d218cc300a30ca11dba1",
+      "bytes": 5617
+    },
+    "nec": {
+      "name": "NEC Red Rockets Kawasaki",
+      "mark": "marks/teams/nec.png",
+      "kind": "club",
+      "assetSource": "https://www.jsports.co.jp/img/svleague/team/icon_w-team-logo03@2x.png",
+      "sourcePage": "https://www.jsports.co.jp/volleyball/svleague_women/team/nec/",
+      "dark": false,
+      "sha256": "a6bb54a3946971eb91c778389786c405c648f9766c8076d437d04558410570a6",
+      "bytes": 4636
+    },
+    "pfu": {
+      "name": "PFU BlueCats",
+      "mark": "marks/teams/pfu.png",
+      "kind": "club",
+      "assetSource": "https://www.jsports.co.jp/img/svleague/team/icon_w-team-logo04@2x.png",
+      "sourcePage": "https://www.jsports.co.jp/volleyball/svleague_women/team/pfu/",
+      "dark": false,
+      "sha256": "b55ad0214de9f09dc5e10e2b08e4009c5da7a1905fb71d451e889083e0f0e4b8",
+      "bytes": 8250
+    },
+    "gunma": {
+      "name": "Gunma Green Wings",
+      "mark": "marks/teams/gunma.png",
+      "kind": "club",
+      "assetSource": "https://www.jsports.co.jp/img/svleague/team/icon_w-team-logo11@2x.png",
+      "sourcePage": "https://www.jsports.co.jp/volleyball/svleague_women/team/gunma/",
+      "dark": false,
+      "sha256": "133634bfb951fb4250fb0d10d87a08575c86edbc4bb0169c40d93de28c73d5bd",
+      "bytes": 9795
+    },
+    "himeji": {
+      "name": "Victorina Himeji",
+      "mark": "marks/teams/himeji.png",
+      "kind": "club",
+      "assetSource": "https://www.jsports.co.jp/img/svleague/team/icon_w-team-logo07@2x.png",
+      "sourcePage": "https://www.jsports.co.jp/volleyball/svleague_women/team/himeji/",
+      "dark": false,
+      "sha256": "5f21a22b8dc3f5d796fcaf6850b3e57e681a8e069fd6bc1d960c95b2f865f78b",
+      "bytes": 45720
+    },
+    "lovb-salt-lake": {
+      "name": "LOVB Salt Lake",
+      "mark": "marks/teams/lovb-salt-lake.svg",
+      "kind": "club",
+      "assetSource": "https://www.lovb.com/api/media/file/team-salt-lake-1.svg",
+      "sourcePage": "https://www.lovb.com/pro-101",
+      "dark": false,
+      "sha256": "881447ef94ab91234e8391bca2553a25006b0a978b802b68c16b453d16978cb4",
+      "bytes": 2761
+    },
+    "lovb-atlanta": {
+      "name": "LOVB Atlanta",
+      "mark": "marks/teams/lovb-atlanta.svg",
+      "kind": "club",
+      "assetSource": "https://www.lovb.com/api/media/file/team-atlanta.svg?2026-05-17T23%3A43%3A27.267Z",
+      "sourcePage": "https://www.lovb.com/pro-101",
+      "dark": false,
+      "sha256": "2dd0f00b887596acc16552ddb86fb08c600ede843f6eee458efe2aee4d791ca3",
+      "bytes": 1476
+    },
+    "lovb-austin": {
+      "name": "LOVB Austin",
+      "mark": "marks/teams/lovb-austin.svg",
+      "kind": "club",
+      "assetSource": "https://www.lovb.com/api/media/file/team-austin.svg?2026-05-17T23%3A43%3A27.844Z",
+      "sourcePage": "https://www.lovb.com/pro-101",
+      "dark": false,
+      "sha256": "dc495c9058b5609a0f4ae3051706c431e7f100e8679d50d630d0b254bc753e3b",
+      "bytes": 1687
+    },
+    "lovb-minnesota": {
+      "name": "LOVB Minnesota",
+      "mark": "marks/teams/lovb-minnesota.svg",
+      "kind": "club",
+      "assetSource": "https://www.lovb.com/api/media/file/minnesota-wide-currentcolor.svg?2026-06-11T18%3A30%3A59.002Z",
+      "sourcePage": "https://www.lovb.com/pro-101",
+      "dark": false,
+      "sha256": "3c8b353ee87a732aac567057b44f2749c2abfe2a6a40b342adaf4303dd144f82",
+      "bytes": 5676
+    },
+    "national-it": {
+      "name": "İtalya Millî Takımı",
+      "mark": "marks/teams/national-it.png",
+      "kind": "national",
+      "assetSource": "https://www.federvolley.it/logo-fipav.png",
+      "sourcePage": "https://www.federvolley.it/ufficializzati-gli-staff-delle-nazionali",
+      "dark": true,
+      "sha256": "7789efc892add79903f5416971523cf7f52410e23a29926094bd521a564223d4",
+      "bytes": 29951
+    },
+    "national-br": {
+      "name": "Brezilya Millî Takımı",
+      "mark": "marks/teams/national-br.png",
+      "kind": "national",
+      "assetSource": "https://cbv.com.br/logo-cbv-branco-amarelo-gradiente.png",
+      "sourcePage": "https://cbv.com.br/noticias/volei-de-quadra/2026-05-13/lista-de-jogadoras-inscritas-na-liga-das-nacoes-feminina-2026",
+      "dark": true,
+      "sha256": "2a96b2d876147aa6c1cd50b36af871ce73755851ec7e1c65c65f1567bc2faa82",
+      "bytes": 13964
+    },
+    "national-rs": {
+      "name": "Sırbistan Millî Takımı",
+      "mark": "marks/teams/national-rs.png",
+      "kind": "national",
+      "assetSource": "https://www.ossrb.org/wp-content/uploads/2026/07/Ossrb_logo1.png",
+      "sourcePage": "https://www.ossrb.org/seniorke-sutra-putuju-u-brno-terzic-saopstio-spisak/",
+      "dark": false,
+      "sha256": "0ac03190e8eec0fad919f5e43c01a781ff6124e03ccd133c5eb10993ab188420",
+      "bytes": 85001
+    },
+    "national-pl": {
+      "name": "Polonya Millî Takımı",
+      "mark": "marks/teams/national-pl.svg",
+      "kind": "national",
+      "assetSource": "https://www.pzps.pl/strapi/uploads/Logo_polska_siatkowka_f2ac3d58e2.svg",
+      "sourcePage": "https://www.pzps.pl/pl/aktualnosci/4322/pzps-zaprasza-na-staz-u-trenera-zenskiej-reprezentacji-polski-stefano-lavariniego",
+      "dark": false,
+      "sha256": "21096979a0cf74e8f8c24205ca17cf630a647ac63744b6afb1e2778c93be8ceb",
+      "bytes": 13408
+    },
+    "national-us": {
+      "name": "ABD Millî Takımı",
+      "mark": "marks/teams/national-us.svg",
+      "kind": "national",
+      "assetSource": "https://usavolleyball.org/wp-content/themes/usav-theme/dist/images/logo.svg",
+      "sourcePage": "https://usavolleyball.org/story/u-s-women-take-silver-at-2026-norceca-continental-champs/",
+      "dark": false,
+      "sha256": "fc722958ea7276a4c21786dbf9abbf884e1e72271a683f7ec60c60b94789cc03",
+      "bytes": 19251
+    },
+    "national-jp": {
+      "name": "Japonya Millî Takımı",
+      "mark": "marks/teams/national-jp.jpg",
+      "kind": "national",
+      "assetSource": "https://pbs.twimg.com/profile_images/1775039377586200576/i5G4EazM.jpg",
+      "sourcePage": "https://x.com/JVA_Volleyball/status/2071851228330697102",
+      "dark": false,
+      "sha256": "aafd43567ebe2a94b43c4fa7522693b1a089586fd81669f5ae45590497da4b42",
+      "bytes": 18136
+    },
+    "national-cn": {
+      "name": "Çin Millî Takımı",
+      "mark": "marks/teams/national-cn.jpg",
+      "kind": "national",
+      "assetSource": "https://n.sinaimg.cn/sports/8ee96216/20171221/cva_logo.JPG",
+      "sourcePage": "https://cva.sports.sina.com.cn/report/show?dpc=1&id=1522",
+      "dark": false,
+      "sha256": "b20bfb8b1ca9b2fe921b39bf39e5f2d52d3b2860a6aa3f3b8ba29b198d16b5cf",
+      "bytes": 144096
+    },
+    "budowlani": {
+      "name": "PGE Budowlani Łódź",
+      "mark": "marks/teams/budowlani.png",
+      "kind": "club",
+      "assetSource": "https://www.tauronligakobiet.pl/dl/731996/inline/scalecrop=250x250/d9980c/pge_budowlani-2.png",
+      "sourcePage": "https://www.tauronligakobiet.pl/news%2Ctauron-liga-20262027-transfery-i-zmiany-w-kadrach-klubowych/nocookies/www.kupbilet.pl",
+      "dark": false,
+      "sha256": "c691931c2e800af0871c97e39f95802945b3ce744f82c551eb43f131e63a0650",
+      "bytes": 23059
+    },
+    "wroclaw": {
+      "name": "#VolleyWrocław",
+      "mark": "marks/teams/wroclaw.png",
+      "kind": "club",
+      "assetSource": "https://www.tauronligakobiet.pl/dl/725009/inline/scalecrop=250x250/aae7d9/volley_wroclaw.png",
+      "sourcePage": "https://www.tauronligakobiet.pl/news%2Ctauron-liga-20262027-transfery-i-zmiany-w-kadrach-klubowych/nocookies/www.kupbilet.pl",
+      "dark": false,
+      "sha256": "5ffa38e7dcd8b17e20e7329962b2651f57eb9cd9d41af27908ee57cbc5ffde6f",
+      "bytes": 16672
+    },
+    "lks": {
+      "name": "ŁKS Commercecon Łódź",
+      "mark": "marks/teams/lks.png",
+      "kind": "club",
+      "assetSource": "https://www.tauronligakobiet.pl/dl/725014/inline/scalecrop=250x250/91cb67/lks_commercecon_lodz.png",
+      "sourcePage": "https://www.tauronligakobiet.pl/news%2Ctauron-liga-20262027-transfery-i-zmiany-w-kadrach-klubowych/nocookies/www.kupbilet.pl",
+      "dark": false,
+      "sha256": "56eb0014360fc1911b489172efa96b9c9b7db9fc2a9560674df90b7a63d94292",
+      "bytes": 32178
+    },
+    "minnesota-forge": {
+      "name": "Minnesota Forge",
+      "mark": "marks/teams/minnesota-forge.png",
+      "kind": "club",
+      "assetSource": "https://mlvb.com/imgproxy/kldS0TrWBETzSu-eJ3dKEONknBZpqdMkF-E9zqSg3uc/rs:fit:300:100:0/g:ce/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3Byb3ZvbGxleWJhbGwtcHJvZC91cGxvYWQvMjAyNi8wOC8xMi82ZTllZWEzYS0wNzQwLTQ3MTgtODM1Yi1hODQ5MmY3NTQxZmMucG5n.png",
+      "sourcePage": "https://mlvb.com/teams/minnesota",
+      "dark": false,
+      "sha256": "df590d763a2a95db6e10b6db14bbf07dd185e4686626e03d589905d27a2fdf8e",
+      "bytes": 9012
+    },
+    "grand-rapids": {
+      "name": "Grand Rapids Rise",
+      "mark": "marks/teams/grand-rapids.webp",
+      "kind": "club",
+      "assetSource": "https://mlvb.com/imgproxy/wPcFAObtGyp5N1BA2I3n4ZKGZID4hMC6rY-bCvKVUuU/rs:fit:300:100:0/g:ce/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3Byb3ZvbGxleWJhbGwtcHJvZC91cGxvYWQvMjAyMy8xMS8xMS9lZGI2YWI3My1kOTgyLTRhZjAtOThjZi1jNzc0ZmY0YTM3NDgud2VicA.webp",
+      "sourcePage": "https://mlvb.com/teams/grand-rapids-rise",
+      "dark": false,
+      "sha256": "aed305abda96fe8d4bf970362e42bc2d439ca88b07e94ca4a3ac6d7f26b2c672",
+      "bytes": 7320
+    },
+    "omaha": {
+      "name": "Omaha Supernovas",
+      "mark": "marks/teams/omaha.png",
+      "kind": "club",
+      "assetSource": "https://mlvb.com/imgproxy/4o43OngSa7b_9dKbUcYWMfKrlHG1Tm24pXFDGyDNqpU/rs:fit:300:100:0/g:ce/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3Byb3ZvbGxleWJhbGwtcHJvZC91cGxvYWQvMjAyMy8xMC8xNi8wZDFhNTNlYy1jMjlmLTRkOTMtOGJlMi0wOWRjZWU3ZWZiZmYucG5n.png",
+      "sourcePage": "https://mlvb.com/teams/omaha-supernovas",
+      "dark": false,
+      "sha256": "483cc532e4404d0475cf413f7b2b02a7af187923c5542aef77aefaf3b012271a",
+      "bytes": 20129
+    },
+    "uralochka": {
+      "name": "Uralochka-NTMK",
+      "kind": "club",
+      "mark": "marks/teams/uralochka.svg",
+      "assetSource": "https://www.junior.volley.ru/assets/images/uploads/VLClub/01G79GT0P3RF2B0X66KRPZ1JSJ/upload-1787157477863-01G79GT0P3RF2B0X66KRPZ1JSJ--1850827785.svg",
+      "sourcePage": "https://www.junior.volley.ru/teams/01KWBQ5SM38HE01VNKR89A1QPB?hl=en",
+      "dark": false,
+      "sha256": "bd6ed450c30b9ae6bd578b2962fb8daad3f3d87eb775d18a6f08eafdd5854001",
+      "bytes": 75308
+    },
+    "tulitsa": {
+      "name": "Tulitsa",
+      "kind": "club",
+      "mark": "marks/teams/tulitsa.svg",
+      "assetSource": "https://www.junior.volley.ru/assets/images/uploads/VLClub/01G3VS6EPGX8BM1QFR9G0Z1E1V/upload-1760790243830-01G3VS6EPGX8BM1QFR9G0Z1E1V--1794086184.svg",
+      "sourcePage": "https://www.junior.volley.ru/teams/01KWBQ5SM38HE01VNKR89A1QPB?hl=en",
+      "dark": false,
+      "sha256": "ceff7207cb9cb27704961d87464d81cbf48d25d41d0a1ea02dd76a325e09b19c",
+      "bytes": 42498
+    },
+    "korabelka": {
+      "name": "Korabelka",
+      "kind": "club",
+      "mark": "marks/teams/korabelka.svg",
+      "assetSource": "https://www.junior.volley.ru/assets/images/uploads/VLClub/01H5VS8Q2K7G1V02A6PBQ006F4/upload-1760789563181-01H5VS8Q2K7G1V02A6PBQ006F4--1794086184.svg",
+      "sourcePage": "https://www.junior.volley.ru/teams/01KWBQ5SM38HE01VNKR89A1QPB?hl=en",
+      "dark": false,
+      "sha256": "4f4b350ff30b5e218dc64e08c5dc3a77cb7b394b68b947cb53cf6268812f4207",
+      "bytes": 28696
+    },
+    "lokomotiv": {
+      "name": "Lokomotiv Kaliningrad",
+      "kind": "club",
+      "mark": "marks/teams/lokomotiv.svg",
+      "assetSource": "https://vc-lokomotiv.ru/theme/src/logo-loko-new.svg",
+      "sourcePage": "https://vc-lokomotiv.ru/team/main-team/players/338",
+      "dark": false,
+      "sha256": "7b399073c81cabe3a9db63218ba9962e3bf883244aa74d23ff0ab7a2849a48ff",
+      "bytes": 8266
+    },
+    "lovb-miami": {
+      "name": "LOVB Miami",
+      "kind": "club",
+      "mark": "marks/teams/lovb-miami.svg",
+      "assetSource": "https://www.lovb.com/api/media/file/miami_nav_text_white-currentcolor.svg?2026-06-11T18%3A31%3A08.471Z",
+      "sourcePage": "https://www.lovb.com/teams/lovb-miami-volleyball/athletes/helena-wenk-hoengen",
+      "dark": false,
+      "sha256": "d1e89bbf0bf4a409a4d64c7fa58a7ddd591bfe80eda14f5cf1d2db4f08aaba83",
+      "bytes": 4283
+    },
+    "sf-signal": {
+      "name": "San Francisco Signal",
+      "kind": "club",
+      "mark": "marks/teams/sf-signal.svg",
+      "assetSource": "https://www.lovb.com/api/media/file/san-francisco-corrected.svg?2026-09-25T11%3A56%3A30.938Z",
+      "sourcePage": "https://www.lovb.com/teams/sanfranciscosignal/athletes/mengjie-wang",
+      "dark": false,
+      "sha256": "6b648f6e2ea9829ee0f26da0b8221a6ad5f568d3704d92e5e5c4a06b4a0bf4c5",
+      "bytes": 7641
+    },
+    "kurobe": {
+      "name": "Kurobe AquaFairies Toyama",
+      "kind": "club",
+      "mark": "marks/teams/kurobe.svg",
+      "assetSource": "https://kurobe-aqua.jp/wp-content/themes/kurobeaqua-Theme_2026/images/common/logo_header.svg",
+      "sourcePage": "https://kurobe-aqua.jp/news/9326/",
+      "dark": false,
+      "sha256": "d593bb90a631d7f50d46fcd2f7343e85a219104dde3a37ab5e46957a832aee43",
+      "bytes": 7847
+    },
+    "dinamo-ak-bars": {
+      "name": "Dinamo-Ak Bars Kazan",
+      "kind": "club",
+      "mark": "marks/teams/dinamo-ak-bars.svg",
+      "assetSource": "https://dinamo-kazan.com/local/templates/sport/images/logo.svg",
+      "sourcePage": "https://dinamo-kazan.com/",
+      "dark": false,
+      "sha256": "ece1f5e72081c50af3f41f210461477524f933264edae868a265e2cdf0799af6",
+      "bytes": 18349
+    },
+    "la-orbit": {
+      "name": "Los Angeles Orbit",
+      "kind": "club",
+      "mark": "marks/teams/la-orbit.png",
+      "assetSource": "https://images.squarespace-cdn.com/content/v1/6aada0b1297d1679964b14f0/8da76da4-b877-43eb-85b3-0a7f1b64abfc/LA_Orbit_Wordmark_Stone.png?format=1500w",
+      "sourcePage": "https://www.laorbit.com/",
+      "dark": true,
+      "sha256": "b5b5e52a5f954ba0a448b4c3b2903feafa02d47173e0b46bd3528ffdc03107f3",
+      "bytes": 24226
+    },
+    "praia": {
+      "name": "Dentil Praia Clube",
+      "kind": "club",
+      "mark": "marks/teams/praia.png",
+      "assetSource": "https://assets.volleystation.com/website/teams/2253036/badge.png",
+      "sourcePage": "https://cbv.com.br/",
+      "sha256": "5fa108d27206ff17e9ea89cce822793f5d7b8d292c0cf6bc018b24224ccf6c2b",
+      "bytes": 36112
+    },
+    "flamengo": {
+      "name": "Sesc RJ Flamengo",
+      "kind": "club",
+      "mark": "marks/teams/flamengo.png",
+      "assetSource": "https://assets.volleystation.com/website/teams/2253032/badge.png",
+      "sourcePage": "https://cbv.com.br/",
+      "sha256": "14d66cb705ee43ec0c45c3298878313a789f847287bb055cf519588b33fb680c",
+      "bytes": 21799
+    },
+    "sesi-bauru": {
+      "name": "Sesi Vôlei Bauru",
+      "kind": "club",
+      "mark": "marks/teams/sesi-bauru.png",
+      "assetSource": "https://assets.volleystation.com/website/teams/2253037/badge.png",
+      "sourcePage": "https://cbv.com.br/",
+      "sha256": "17d27137d2d1740660595150477d05dd90f0d7965c00ca4fc0ad547463aa9ea9",
+      "bytes": 43366
+    },
+    "osasco": {
+      "name": "Osasco São Cristóvão Saúde",
+      "kind": "club",
+      "mark": "marks/teams/osasco.png",
+      "assetSource": "https://assets.volleystation.com/website/teams/2253029/badge.png",
+      "sourcePage": "https://cbv.com.br/",
+      "sha256": "9c34bb86a56c60bf9e981602360534f4c8a8c7b1a32c81ddf96367f038b220c5",
+      "bytes": 44798
+    },
+    "aek": {
+      "name": "AEK Atina",
+      "kind": "club",
+      "mark": "marks/teams/aek.jpg",
+      "assetSource": "https://volleyball.gr/wp-content/uploads/2025/11/AEK-128x128.jpg",
+      "sourcePage": "https://volleyball.gr/team/aek-women/",
+      "sha256": "644e0ded15bf31d9c614ef9921aa27d8d36fe5f7cb787618c1f87eeee2b3246a",
+      "bytes": 5381
+    },
+    "ibk-altos": {
+      "name": "IBK Altos",
+      "kind": "club",
+      "mark": "marks/teams/ibk-altos.svg",
+      "assetSource": "https://cdn.kovo.co.kr/emblems/altos.svg",
+      "sourcePage": "https://redsparks.kovo.co.kr/",
+      "sha256": "6cb1bf04227cd2b2c6087457f8c71aa6c6da07a653f98c32fd86462b16b25969",
+      "bytes": 27570
+    },
+    "red-sparks": {
+      "name": "Daejeon Red Sparks",
+      "kind": "club",
+      "mark": "marks/teams/red-sparks.svg",
+      "assetSource": "https://cdn.kovo.co.kr/emblems/redsparks.svg",
+      "sourcePage": "https://redsparks.kovo.co.kr/",
+      "sha256": "bcb06ba64580366ad79970050ac100734a57a7f0157b0b967a2be47b851bf11b",
+      "bytes": 15351
+    },
+    "dinamo-bucuresti": {
+      "name": "Dinamo București",
+      "kind": "club",
+      "mark": "marks/teams/dinamo-bucuresti.jpg",
+      "assetSource": "https://images.dataproject.com/frv/TeamLogo/100/40/TeamLogo_327.jpg",
+      "sourcePage": "https://frv-web.dataproject.com/CompetitionTeamSearch.aspx?ID=80",
+      "sha256": "255f06795064effa5a5e62c74e08c36f5a09ab9f9ce5042015b93ab33bba35e5",
+      "bytes": 2723
+    },
+    "jiangsu": {
+      "name": "Jiangsu Zhongtian Steel",
+      "kind": "club",
+      "mark": "marks/teams/jiangsu.png",
+      "assetSource": "https://volleyball-tournament.oss-cn-beijing.aliyuncs.com/teamLogo/1.png",
+      "sourcePage": "https://league20252026.volleyballchina.com/teamDetail?teamId=1",
+      "sha256": "985ad9b3ba4c3f39d90959b0d99e7a2c878f62f594ea4feabed196004b6bee7a",
+      "bytes": 230362
+    },
+    "shanghai": {
+      "name": "Shanghai Bright Ubest",
+      "kind": "club",
+      "mark": "marks/teams/shanghai.png",
+      "assetSource": "https://volleyball-tournament.oss-cn-beijing.aliyuncs.com/teamLogo/2.png",
+      "sourcePage": "https://league20252026.volleyballchina.com/teamDetail?teamId=2",
+      "sha256": "060e3ad3fe8cd37757715d5fcf167eeb899e833575664295d3bccbfb5a1ceb91",
+      "bytes": 153020
+    },
+    "fujian": {
+      "name": "Fujian Anxi Tieguanyin",
+      "kind": "club",
+      "mark": "marks/teams/fujian.png",
+      "assetSource": "https://volleyball-tournament.oss-cn-beijing.aliyuncs.com/teamLogo/7.png",
+      "sourcePage": "https://league20252026.volleyballchina.com/teamDetail?teamId=7",
+      "sha256": "8bed89d89eb0520c838a5ee8f8b1180eafaf433c67abf6dbd1fcfd41ba17ffbc",
+      "bytes": 55618
+    },
+    "tianjin": {
+      "name": "Tianjin Bohai Bank",
+      "kind": "club",
+      "mark": "marks/teams/tianjin.png",
+      "assetSource": "https://volleyball-tournament.oss-cn-beijing.aliyuncs.com/teamLogo/4.png",
+      "sourcePage": "https://league20252026.volleyballchina.com/teamDetail?teamId=4",
+      "sha256": "a457fc030dc24999090205bed2c2ea8d264c87d82d165f9d1190a3dc98ffacdf",
+      "bytes": 48727
+    },
+    "national-tr": {
+      "name": "Türkiye Millî Takımı",
+      "kind": "national",
+      "mark": "marks/countries/tr.svg",
+      "markType": "flag"
+    },
+    "national-ca": {
+      "name": "Kanada Millî Takımı",
+      "kind": "national",
+      "mark": "marks/countries/ca.svg",
+      "markType": "flag"
+    }
+  },
+  "players": {
+    "real-it-antropova": {
+      "teamId": "eczacibasi",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/3245288/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-rs-boskovic": {
+      "teamId": "vakifbank",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205002/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-pl-czyrnianska": {
+      "teamId": "kuzeyboru",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205123/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-br-ana-cristina": {
+      "teamId": "fenerbahce",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205137/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-franklin": {
+      "teamId": "zeren",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/3245282/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-jp-ishikawa": {
+      "teamId": "eczacibasi",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/3245287/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-rs-jegdic": {
+      "teamId": "vakifbank",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2771315/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-rs-kocic": {
+      "teamId": "afyon",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2498485/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-rs-milenkovic": {
+      "teamId": "thy",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206469/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-ogbogu": {
+      "teamId": "fenerbahce",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2205716/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-orro": {
+      "teamId": "fenerbahce",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2498391/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-rettke": {
+      "teamId": "eczacibasi",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206721/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-pl-smarzek": {
+      "teamId": "ilbank",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2498492/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-sylla": {
+      "teamId": "galatasaray",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2498459/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-rs-uzelac": {
+      "teamId": "eczacibasi",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2206685/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-cn-wang-yuanyuan": {
+      "teamId": "galatasaray",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/2498456/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-cn-zhuang-yushan": {
+      "teamId": "goztepe",
+      "sourceUrl": "https://sultanlar.volleystation.com/en/players/3245302/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-cambi": {
+      "teamId": "novara",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/cambi-carlotta/CAM-CAR-96/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-br-julia-kudiess": {
+      "teamId": "novara",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/gambatto-kudiess-julia/GAM-JUL-03/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-jp-seki": {
+      "teamId": "uyba",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/seki-nanami/SEK-NAN-99/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-jp-wada": {
+      "teamId": "uyba",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/wada-yukiko/WAD-YUK-02/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-giovannini": {
+      "teamId": "vallefoglia",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/giovannini-gaia/GIO-GAI-01/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-frantti": {
+      "teamId": "vallefoglia",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/frantti-alexandra/FRA-ALE-96/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-omoruyi": {
+      "teamId": "vallefoglia",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/omoruyi-loveth-oghosasere/OMO-LOV-02/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-jp-sato": {
+      "teamId": "milano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/sato-yoshino/SAT-YOS-01/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-sartori": {
+      "teamId": "milano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/sartori-benedetta-maria/SAR-BEN-01/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-danesi": {
+      "teamId": "milano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/danesi-anna/DAN-ANN-96/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-rs-kurtagic": {
+      "teamId": "milano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/kurtagic-hena/KUR-HEN-00/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-egonu": {
+      "teamId": "milano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/egonu-paola/EGO-PAO-98/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-fersino": {
+      "teamId": "milano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/fersino-eleonora/FER-ELE-00/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-br-gabi": {
+      "teamId": "conegliano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/braga-guimaraes-gabriela/BRA-GAB-94/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-de-gennaro": {
+      "teamId": "conegliano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/de-gennaro-monica/DEG-MON-87/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-fahr": {
+      "teamId": "conegliano",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/fahr-sarah/FAH-SAR-01/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-nervini": {
+      "teamId": "chieri",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/nervini-stella/NER-STE-03/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-it-akrari": {
+      "teamId": "chieri",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/akrari-yasmina/AKR-YAS-93/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-avery-skinner": {
+      "teamId": "scandicci",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/skinner-avery/SKI-AVE-99/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-rs-aleksic": {
+      "teamId": "scandicci",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/aleksic-maja/ALE-MAJ-97/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-br-julia-bergmann": {
+      "teamId": "scandicci",
+      "sourceUrl": "https://www.legavolleyfemminile.it/player/bergmann-julia-isabelle/BER-JUL-01/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-jp-matsui": {
+      "teamId": "pfu",
+      "sourceUrl": "https://www.jva.or.jp/national_team/2026/women_member/",
+      "season": "2026 kadro kaydı",
+      "label": "Kulüp"
+    },
+    "real-jp-araki": {
+      "teamId": "saga",
+      "sourceUrl": "https://www.jva.or.jp/national_team/2026/women_member/",
+      "season": "2026 kadro kaydı",
+      "label": "Kulüp"
+    },
+    "real-jp-yamada": {
+      "teamId": "nec",
+      "sourceUrl": "https://www.jva.or.jp/national_team/2026/women_member/",
+      "season": "2026 kadro kaydı",
+      "label": "Kulüp"
+    },
+    "real-jp-shimamura": {
+      "teamId": "gunma",
+      "sourceUrl": "https://www.jva.or.jp/national_team/2026/women_member/",
+      "season": "2026 kadro kaydı",
+      "label": "Kulüp"
+    },
+    "real-jp-fukudome": {
+      "teamId": "himeji",
+      "sourceUrl": "https://www.jva.or.jp/national_team/2026/women_member/",
+      "season": "2026 kadro kaydı",
+      "label": "Kulüp"
+    },
+    "real-jp-nonaka": {
+      "teamId": "himeji",
+      "sourceUrl": "https://www.jsports.co.jp/volleyball/svleague_women/team/himeji/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-br-roberta": {
+      "teamId": "denso",
+      "sourceUrl": "https://www.jsports.co.jp/volleyball/svleague_women/team/denso/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-br-rosamaria": {
+      "teamId": "denso",
+      "sourceUrl": "https://www.jsports.co.jp/volleyball/svleague_women/team/denso/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-poulter": {
+      "teamId": "lovb-salt-lake",
+      "sourceUrl": "https://www.lovb.com/teams/lovb-salt-lake-volleyball/athletes/jordyn-poulter",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-jp-kojima": {
+      "teamId": "lovb-salt-lake",
+      "sourceUrl": "https://www.lovb.com/teams/lovb-salt-lake-volleyball/athletes/manami-kojima",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-kaahaaina-torres": {
+      "teamId": "lovb-atlanta",
+      "sourceUrl": "https://www.lovb.com/teams/lovb-atlanta-volleyball/athletes/saige-kaahaaina-torres",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-us-madisen-skinner": {
+      "teamId": "lovb-austin",
+      "sourceUrl": "https://www.lovb.com/teams/lovb-austin-volleyball/athletes/madisen-skinner",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-pl-szczyglowska": {
+      "teamId": "lovb-minnesota",
+      "sourceUrl": "https://auprosports.com/read/lovb-announces-new-signings-for-2027-season/",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-pl-wenerska": {
+      "teamId": "budowlani",
+      "sourceUrl": "https://www.tauronligakobiet.pl/news%2Ctauron-liga-20262027-transfery-i-zmiany-w-kadrach-klubowych/nocookies/www.kupbilet.pl",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-pl-kowalewska": {
+      "teamId": "wroclaw",
+      "sourceUrl": "https://www.tauronligakobiet.pl/news%2Ctauron-liga-20262027-transfery-i-zmiany-w-kadrach-klubowych/nocookies/www.kupbilet.pl",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-pl-jurczyk": {
+      "teamId": "lks",
+      "sourceUrl": "https://www.tauronligakobiet.pl/news%2Ctauron-liga-20262027-transfery-i-zmiany-w-kadrach-klubowych/nocookies/www.kupbilet.pl",
+      "season": "2026–27",
+      "label": "Kulüp"
+    },
+    "real-jp-miyabe": {
+      "teamId": "minnesota-forge",
+      "sourceUrl": "https://mlvb.com/league-transactions",
+      "season": "2027 sözleşmesi",
+      "label": "Kulüp"
+    },
+    "real-us-samedy": {
+      "teamId": "minnesota-forge",
+      "sourceUrl": "https://mlvb.com/league-transactions",
+      "season": "2027 sözleşmesi",
+      "label": "Kulüp"
+    },
+    "real-us-hentz": {
+      "teamId": "grand-rapids",
+      "sourceUrl": "https://mlvb.com/league-transactions",
+      "season": "2027 sözleşmesi",
+      "label": "Kulüp"
+    },
+    "real-rs-pusic": {
+      "teamId": "omaha",
+      "sourceUrl": "https://mlvb.com/league-transactions",
+      "season": "2027 sözleşmesi",
+      "label": "Kulüp"
+    },
+    "real-br-macris": {
+      "status": "confirmed",
+      "sourceUrl": "https://praiaclube.org.br/volei-feminino/",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "praia"
+    },
+    "real-br-kisy": {
+      "status": "confirmed",
+      "sourceUrl": "https://vc-lokomotiv.ru/team/main-team/players/338",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "lokomotiv"
+    },
+    "real-br-tainara": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.flamengo.com.br/noticias/volei/sesc-rj-flamengo-estreia-na-superliga-feminina-em-casa-diante-do-barueri",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "flamengo"
+    },
+    "real-br-lorena": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.flamengo.com.br/noticias/volei/sesc-rj-flamengo-estreia-na-superliga-feminina-em-casa-diante-do-barueri",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "flamengo"
+    },
+    "real-br-lais": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.flamengo.com.br/noticias/volei/sesc-rj-flamengo-estreia-na-superliga-feminina-em-casa-diante-do-barueri",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "flamengo"
+    },
+    "real-br-helena": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.lovb.com/teams/lovb-miami-volleyball/athletes/helena-wenk-hoengen",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "lovb-miami",
+      "note": "2026–27 kadrosuna katıldı"
+    },
+    "real-br-diana": {
+      "status": "confirmed",
+      "sourceUrl": "https://cbv.com.br/noticias/volei-de-quadra/2026-10-01/cbv-lanca-superliga-2026-2027-na-cob-expo-em-sao-paulo",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "sesi-bauru"
+    },
+    "real-br-marcelle": {
+      "status": "confirmed",
+      "sourceUrl": "https://cbv.com.br/noticias/volei-de-quadra/2026-10-01/cbv-lanca-superliga-2026-2027-na-cob-expo-em-sao-paulo",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "osasco"
+    },
+    "real-jp-kurogo": {
+      "status": "confirmed",
+      "sourceUrl": "https://volleyball.gr/list/aek-roster/",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "aek"
+    },
+    "real-jp-osanai": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.rivale.astemo.com/topics/topics20260415osanai/",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "ibk-altos",
+      "note": "Kiralık"
+    },
+    "real-rs-perovic": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.vc-lokomotiv.ru/news/2992-rezvyi-start--neveselyi-finish",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "tulitsa"
+    },
+    "real-rs-mirkovic": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.junior.volley.ru/players/01JWHBFV9EHE520GYYBPY40K0M?hl=en",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "korabelka"
+    },
+    "real-rs-bukilic": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20260510045400007",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "news-agency",
+      "teamId": "red-sparks"
+    },
+    "real-rs-dangubic": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.vakifbanksporkulubu.com/en/players",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "vakifbank"
+    },
+    "real-rs-tica": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.junior.volley.ru/teams/01KWBQ5SM38HE01VNKR89A1QPB?hl=en",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "uralochka"
+    },
+    "real-rs-milojevic": {
+      "status": "confirmed",
+      "sourceUrl": "https://frv-web.dataproject.com/CompetitionTeamDetails.aspx?TeamID=327&ID=80",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "dinamo-bucuresti"
+    },
+    "real-pl-stysiak": {
+      "status": "confirmed",
+      "sourceUrl": "https://zdl.pressroom.com.br/4707675fab/na-estreia-de-stysiak-osasco-sao-cristovao-saude-garante-vaga-na-final-da-brasil-cup.html",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "osasco"
+    },
+    "real-pl-lukasik": {
+      "status": "contract-ended",
+      "sourceUrl": "https://saga-springs.co.jp/news/2026/08/31/2377",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "note": "SAGA sözleşmesi sona erdi · Yeni kulüp doğrulanmadı"
+    },
+    "real-pl-rozanski": {
+      "status": "confirmed",
+      "sourceUrl": "https://gunmagreenwings.jp/members/",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "gunma"
+    },
+    "real-pl-korneluk": {
+      "status": "retired",
+      "sourceUrl": "https://api2.pzps.pl/pl/aktualnosci/4430/turniej-towarzyski-w-koszalinie-polska-%E2%80%93-wlochy-03",
+      "season": "2026",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "note": "Aktif kariyerini sonlandırdı · Oyun havuzunda korunuyor"
+    },
+    "real-cn-zhang-zixuan": {
+      "status": "last-confirmed",
+      "sourceUrl": "https://www.volleyballchina.com/newsinfo/11115230.html",
+      "season": "2025–26",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "jiangsu",
+      "note": "Son doğrulanan sezon: 2025–26 · Yeni sezon doğrulanmadı"
+    },
+    "real-cn-wu-mengjie": {
+      "status": "last-confirmed",
+      "sourceUrl": "https://www.volleyballchina.com/newsinfo/11115230.html",
+      "season": "2025–26",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "jiangsu",
+      "note": "Son doğrulanan sezon: 2025–26 · Yeni sezon doğrulanmadı"
+    },
+    "real-cn-yin-xiaolan": {
+      "status": "last-confirmed",
+      "sourceUrl": "https://www.volleyballchina.com/newsinfo/10913297.html",
+      "season": "2025–26",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "fujian",
+      "note": "Son doğrulanan sezon: 2025–26 · Yeni sezon doğrulanmadı"
+    },
+    "real-cn-yang-shuming": {
+      "status": "last-confirmed",
+      "sourceUrl": "https://volleyballchina.com/newsinfo/10943436.html",
+      "season": "2025–26",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "shanghai",
+      "note": "Son doğrulanan sezon: 2025–26 · Yeni sezon doğrulanmadı"
+    },
+    "real-cn-wang-aoqian": {
+      "status": "last-confirmed",
+      "sourceUrl": "https://volleyballchina.com/newsinfo/10943436.html",
+      "season": "2025–26",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "shanghai",
+      "note": "Son doğrulanan sezon: 2025–26 · Yeni sezon doğrulanmadı"
+    },
+    "real-cn-li-yingying": {
+      "status": "last-confirmed",
+      "sourceUrl": "https://sports.enorth.com.cn/system/2026/08/06/059634434.shtml",
+      "season": "2026-08-06 kaydı",
+      "checkedAt": "2026-10-23",
+      "sourceType": "local-press",
+      "teamId": "tianjin",
+      "note": "Son kulüp kaydı: Ağustos 2026 · Yeni sezon doğrulanmadı"
+    },
+    "real-cn-gong-xiangyu": {
+      "status": "confirmed",
+      "sourceUrl": "https://kurobe-aqua.jp/news/9326/",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "kurobe"
+    },
+    "real-cn-wang-mengjie": {
+      "status": "confirmed",
+      "sourceUrl": "https://www.lovb.com/teams/sanfranciscosignal/athletes/mengjie-wang",
+      "season": "2026–27",
+      "checkedAt": "2026-10-23",
+      "sourceType": "official",
+      "teamId": "sf-signal",
+      "note": "2026–27 kadrosuna katıldı"
+    }
+  },
+  "coaches": {
+    "coach-santarelli": {
+      "countryCode": "IT",
+      "originLabel": "İtalyan",
+      "originSourceUrl": "https://imocovolley.it/en/an-indissoluble-bond-that-goes-beyond-volleyball-daniele-santarelli-confirmed-a-decade-on-the-yellow-blue-bench/",
+      "club": {
+        "status": "confirmed",
+        "teamId": "conegliano",
+        "sourceUrl": "https://imocovolley.it/en/an-indissoluble-bond-that-goes-beyond-volleyball-daniele-santarelli-confirmed-a-decade-on-the-yellow-blue-bench/",
+        "season": "2026–27",
+        "role": "Başantrenör"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-tr",
+        "sourceUrl": "https://imocovolley.it/en/an-indissoluble-bond-that-goes-beyond-volleyball-daniele-santarelli-confirmed-a-decade-on-the-yellow-blue-bench/",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-velasco": {
+      "countryCode": "AR",
+      "originLabel": "Arjantin doğumlu",
+      "originSourceUrl": "https://en.volleyballworld.com/news/julio-velasco-to-head-coach-italy",
+      "club": {
+        "status": "not-verified",
+        "note": "Güncel kulüp görevi doğrulanmadı",
+        "sourceUrl": "https://www.federvolley.it/ufficializzati-gli-staff-delle-nazionali",
+        "season": "2026-10-23 araştırması"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-it",
+        "sourceUrl": "https://www.federvolley.it/ufficializzati-gli-staff-delle-nazionali",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-guimaraes": {
+      "countryCode": "BR",
+      "originLabel": "Brezilyalı",
+      "originSourceUrl": "https://www.lovb.com/news/lovb-names-ze-roberto-head-coach-lovb-la",
+      "club": {
+        "status": "confirmed",
+        "teamId": "la-orbit",
+        "sourceUrl": "https://www.lovb.com/news/lovb-names-ze-roberto-head-coach-lovb-la",
+        "season": "2026–27",
+        "role": "Başantrenör"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-br",
+        "sourceUrl": "https://cbv.com.br/noticias/volei-de-quadra/2026-05-13/lista-de-jogadoras-inscritas-na-liga-das-nacoes-feminina-2026",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-guidetti": {
+      "countryCode": "IT",
+      "originLabel": "İtalyan",
+      "originSourceUrl": "https://volleyball.ca/en/news/volleyball-canada-announces-giovanni-guidetti-as-women-s-coach",
+      "club": {
+        "status": "confirmed",
+        "teamId": "vakifbank",
+        "sourceUrl": "https://www.vakifbanksporkulubu.com/tr/haber-detay/giovanni-guidetti-ile-20-yila---n2677",
+        "season": "2025–28 sözleşmesi",
+        "role": "Başantrenör"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-ca",
+        "sourceUrl": "https://volleyball.ca/en/news/volleyball-canada-announces-giovanni-guidetti-as-women-s-coach",
+        "season": "2025–28 dönemi",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-terzic": {
+      "countryCode": "RS",
+      "originLabel": "Sırp",
+      "originSourceUrl": "https://old.dinamo-kazan.com/team/dinamo/coach/?id=216&season=2026",
+      "club": {
+        "status": "confirmed",
+        "teamId": "dinamo-ak-bars",
+        "sourceUrl": "https://dinamo-kazan.com/press-center/team-news/sre-an-ro-endan-zoran.html",
+        "season": "2026–27",
+        "role": "Başantrenör"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-rs",
+        "sourceUrl": "https://www.ossrb.org/seniorke-sutra-putuju-u-brno-terzic-saopstio-spisak/",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-lavarini": {
+      "countryCode": "IT",
+      "originLabel": "İtalyan",
+      "originSourceUrl": "https://fbiad.fenerbahcelilerdernegi.org/haberler/ailemize-yeniden-hos-geldin-stefano-lavarini",
+      "club": {
+        "status": "confirmed",
+        "teamId": "fenerbahce",
+        "sourceUrl": "https://fbiad.fenerbahcelilerdernegi.org/haberler/ailemize-yeniden-hos-geldin-stefano-lavarini",
+        "season": "2026–27",
+        "role": "Başantrenör"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-pl",
+        "sourceUrl": "https://www.pzps.pl/pl/aktualnosci/4322/pzps-zaprasza-na-staz-u-trenera-zenskiej-reprezentacji-polski-stefano-lavariniego",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-akbas": {
+      "countryCode": "TR",
+      "originLabel": "Türk",
+      "originSourceUrl": "https://tvf.org.tr/icerik/ferhat-akbas-avcde-yilin-voleybol-antrenoru-secildi",
+      "club": {
+        "status": "not-verified",
+        "note": "Güncel kulüp görevi doğrulanmadı",
+        "sourceUrl": "https://www.jva.or.jp/topics/20260511-4/",
+        "season": "2026-10-23 araştırması"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-jp",
+        "sourceUrl": "https://www.jva.or.jp/topics/20260511-4/",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-barbolini": {
+      "countryCode": "IT",
+      "originLabel": "İtalyan",
+      "originSourceUrl": "https://www.legavolleyfemminile.it/club/igor-gorgonzola-novara/710948/",
+      "club": {
+        "status": "confirmed",
+        "teamId": "novara",
+        "sourceUrl": "https://www.legavolleyfemminile.it/club/igor-gorgonzola-novara/710948/",
+        "season": "2026–27",
+        "role": "Başantrenör"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-it",
+        "sourceUrl": "https://www.federvolley.it/ufficializzati-gli-staff-delle-nazionali",
+        "season": "2026",
+        "role": "Yardımcı antrenör"
+      }
+    },
+    "coach-sullivan": {
+      "countryCode": "US",
+      "originLabel": "ABD’li",
+      "originSourceUrl": "https://www.lovb.com/press-releases/lovb-announces-olympian-national-team-coach-erik-sullivan-head-coach-lovb-austin",
+      "club": {
+        "status": "confirmed",
+        "teamId": "lovb-austin",
+        "sourceUrl": "https://www.lovb.com/pro-101",
+        "season": "2026–27",
+        "role": "Başantrenör"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-us",
+        "sourceUrl": "https://usavolleyball.org/story/u-s-women-take-silver-at-2026-norceca-continental-champs/",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    },
+    "coach-zhao": {
+      "countryCode": "CN",
+      "originLabel": "Çinli",
+      "originSourceUrl": "https://volleyballchina.com/2026gjnvzpqd",
+      "club": {
+        "status": "not-verified",
+        "note": "Güncel kulüp görevi doğrulanmadı",
+        "sourceUrl": "https://volleyballchina.com/2026gjnvzpqd",
+        "season": "2026-10-23 araştırması"
+      },
+      "nationalTeam": {
+        "status": "confirmed",
+        "teamId": "national-cn",
+        "sourceUrl": "https://volleyballchina.com/2026gjnvzpqd",
+        "season": "2026",
+        "role": "Başantrenör"
+      }
+    }
+  },
+  "countryMarks": [
+    {
+      "code": "AR",
+      "path": "marks/countries/ar.svg",
+      "source": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/ar.svg",
+      "license": "MIT; notice in public/marks/countries/LICENSE.txt",
+      "sha256": "da39bfbe83fd35fae781f605c4a297b632f03ccf72d4cb0499e86dac8370663d"
+    },
+    {
+      "code": "CA",
+      "path": "marks/countries/ca.svg",
+      "source": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/ca.svg",
+      "license": "MIT; notice in public/marks/countries/LICENSE.txt",
+      "sha256": "345ec9dac057e203f1331b2d3f9f473789864edaee1182a26bc261356bcf72f1"
+    }
+  ]
+}

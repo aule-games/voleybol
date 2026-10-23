@@ -14,6 +14,7 @@ export class ContentCoordinator {
   private contentSignature = '';
   private rightsSignature = '';
   private quizVersion: { id: string; revision: number; signature: string } | null = null;
+  private rosterVersions = new Map<string, string>();
   private fixtureVersions = new Map<string, Pick<Fixture, 'startsAt' | 'locksAt' | 'state' | 'scheduleRevision' | 'resultRevision' | 'result'>>();
   constructor(private readonly url: URL, private readonly fetcher: typeof fetch = fetch, private readonly now: () => number = Date.now) {}
   invalidate() { this.generation++; this.controller?.abort(); this.trusted = false; }
@@ -68,7 +69,12 @@ export class ContentCoordinator {
   }
   private checkModeRevisions(next: Content): Content {
     const issues = [...next.issues];
-    let quiz = next.quiz; let fixtures = next.fixtures;
+    let quiz = next.quiz; let fixtures = next.fixtures; let roster = next.roster;
+    if (roster?.budget) {
+      const signature = JSON.stringify(roster); const previous = this.rosterVersions.get(roster.version);
+      if (previous && previous !== signature) { roster = null; issues.push('roster'); }
+      else this.rosterVersions.set(roster.version, signature);
+    }
     if (quiz) {
       const previous = this.quizVersion; const signature = JSON.stringify(quiz);
       if (previous?.id === quiz.id && (quiz.revision < previous.revision || (quiz.revision === previous.revision && signature !== previous.signature))) { quiz = null; issues.push('quiz'); }
@@ -87,6 +93,6 @@ export class ContentCoordinator {
     });
     if (invalidFixtures) { fixtures = []; if (!issues.includes('fixtures')) issues.push('fixtures'); }
     else for (const m of fixtures) this.fixtureVersions.set(m.id, { startsAt: m.startsAt, locksAt: m.locksAt, state: m.state, scheduleRevision: m.scheduleRevision, resultRevision: m.resultRevision, result: m.result });
-    return freeze({ ...next, fixtures, quiz, issues });
+    return freeze({ ...next, fixtures, quiz, roster, issues });
   }
 }

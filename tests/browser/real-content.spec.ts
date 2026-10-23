@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import type { Page } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
-import raw from '../../public/content.json' with { type: 'json' };
+import raw from '../data/legacy-real-content.json' with { type: 'json' };
 import { GameStore } from '../../src/platform/storage.ts';
 import { memoryStorage, sample, TEAM } from '../fixtures.ts';
 import { beginAttempt } from '../../src/domain/quiz.ts';
@@ -9,8 +9,11 @@ const indices = [0, 2, 4, 6, 8, 9, 12];
 const ids = indices.map(i => raw.roster.players[i]!.id);
 const artifactDir = '.gstack/qa-reports/real-content-20261022';
 const teamLink = `/#/takim?v=1&r=${raw.roster.version}&p=${ids.join(',')}`;
-// No content mocking: these checks consume the actual built JSON and local assets.
-test.beforeEach(async ({ page }) => { await page.clock.setFixedTime(new Date(Date.parse(raw.publishedAt) + 1000)); });
+// Historical schema-3 regression fixture; current schema-4 is covered separately.
+test.beforeEach(async ({ page }) => {
+  await page.clock.setFixedTime(new Date(Date.parse(raw.publishedAt) + 1000));
+  await page.route("**/content.json", route => route.fulfill({ json: raw }));
+});
 async function pickTeam(page: Page) {
   for (let i = 0; i < indices.length; i++) {
     await page.locator(`#slot-${i}`).click();
@@ -19,7 +22,7 @@ async function pickTeam(page: Page) {
 }
 
 // Rehost the real built bytes at the approved origin; this is not live CDN/TLS proof.
-test('Pages project path loads real content and exports a cross-device team link', async ({ page, request }) => {
+test('Pages project path preserves legacy content and exports a cross-device team link', async ({ page, request }) => {
   const base = 'https://aule-games.github.io/voleybol/';
   const errors: string[] = []; const external: string[] = [];
   page.on('pageerror', e => errors.push(e.message));
@@ -30,6 +33,7 @@ test('Pages project path loads real content and exports a cross-device team link
   });
   await page.route(`${base}**`, async route => {
     const remote = new URL(route.request().url());
+    if (remote.pathname.endsWith("/content.json")) { await route.fulfill({ json: raw }); return; }
     const local = new URL(remote.pathname.slice('/voleybol'.length), 'http://127.0.0.1:4173');
     await route.fulfill({ response: await request.get(local.href) });
   });
@@ -49,7 +53,7 @@ test('Pages project path loads real content and exports a cross-device team link
   expect(errors).toEqual([]); expect(external).toEqual([]);
 });
 
-test('all 14 current identities load both marks without third-party traffic', async ({ page }) => {
+test('all 14 legacy identities load both marks without third-party traffic', async ({ page }) => {
   const errors: string[] = [], external: string[] = [];
   page.on('pageerror', e => errors.push(e.message)); page.on('request', r => { if (new URL(r.url()).origin !== 'http://127.0.0.1:4173') external.push(r.url()); });
   await page.goto('/#/takim'); await expect(page.locator('.demo-banner')).toContainText('Gerçek oyuncular');

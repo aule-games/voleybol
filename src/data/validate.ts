@@ -1,5 +1,6 @@
+import { TEAM_BUDGET } from '../domain/types.ts';
 import { CLUBS, COUNTRIES, officialSource } from './identities.ts';
-import { ID, SLOT_ROLES, isScore } from '../domain/types.ts';
+import { ID, SLOT_ROLES, QUIZ_CATEGORIES, isScore } from '../domain/types.ts';
 import type { Content, Fixture, Player, QuizPack, Roster } from '../domain/types.ts';
 import { fail, ok } from '../platform/result.ts';
 import type { Result } from '../platform/result.ts';
@@ -33,6 +34,32 @@ function roster(v: unknown, withdrawn: string[], real: boolean): v is Roster {
     && Array.isArray(v.players) && v.players.length <= 35 && v.players.every(p => player(p, real))
     && unique(v.players.map(p => p.id)) && v.players.every(p => !withdrawn.includes(p.id));
 }
+function internationalRoster(v: unknown, withdrawn: string[]): v is Roster {
+  if (!isObject(v) || !exact(v, ['version', 'asOf', 'players', 'coaches', 'budget']) || !id(v.version) || !utc(v.asOf) || v.budget !== TEAM_BUDGET
+    || !Array.isArray(v.players) || v.players.length !== 100 || !Array.isArray(v.coaches) || v.coaches.length !== 10) return false;
+  const players = v.players.every(p => isObject(p) && exact(p, ['id', 'name', 'role', 'clubId', 'countryCode', 'sourceUrl', 'sourceLabel', 'cost'])
+    && id(p.id) && String(p.id).startsWith('real-') && text(p.name, 120) && SLOT_ROLES.some(r => r === p.role)
+    && typeof p.clubId === 'string' && (p.clubId === '' || Object.hasOwn(CLUBS, p.clubId))
+    && typeof p.countryCode === 'string' && Object.hasOwn(COUNTRIES, p.countryCode) && officialSource(p.sourceUrl, 'international')
+    && text(p.sourceLabel) && integer(p.cost) && p.cost >= 3 && p.cost <= 12);
+  const coaches = v.coaches.every(c => isObject(c) && exact(c, ['id', 'name', 'cost', 'reference', 'sourceUrl'])
+    && id(c.id) && text(c.name, 120) && integer(c.cost) && c.cost >= 2 && c.cost <= 6 && text(c.reference) && officialSource(c.sourceUrl, 'international'));
+  return players && coaches && unique([...v.players, ...v.coaches].map(p => p.id))
+    && [...v.players, ...v.coaches].every(p => !withdrawn.includes(p.id))
+    && [...new Set(SLOT_ROLES)].every(role => (v.players as Player[]).filter((p: Player) => p.role === role).length >= SLOT_ROLES.filter(r => r === role).length);
+}
+function internationalQuiz(v: unknown, withdrawn: string[], now: number): v is QuizPack {
+  if (!isObject(v) || !exact(v, ['id', 'revision', 'questions', 'roundSize']) || !id(v.id) || !integer(v.revision) || withdrawn.includes(v.id)
+    || v.roundSize !== 10 || !Array.isArray(v.questions) || v.questions.length !== 100) return false;
+  return v.questions.every(q => isObject(q) && exact(q, ['id', 'revision', 'text', 'choices', 'correctId', 'explanation', 'season', 'source', 'category'])
+    && id(q.id) && !withdrawn.includes(q.id) && integer(q.revision) && text(q.text, 400) && text(q.explanation, 600) && text(q.season, 80)
+    && QUIZ_CATEGORIES.some(c => c === q.category) && isObject(q.source) && exact(q.source, ['title', 'url', 'checkedAt'])
+    && text(q.source.title) && officialSource(q.source.url, 'international') && utc(q.source.checkedAt) && Date.parse(q.source.checkedAt) <= now
+    && Array.isArray(q.choices) && q.choices.length === 4 && q.choices.every((c: unknown) => isObject(c) && exact(c, ['id', 'text']) && id(c.id) && !withdrawn.includes(c.id) && text(c.text))
+    && unique(q.choices.map((c: { id: string }) => c.id)) && unique(q.choices.map((c: { text: string }) => c.text)) && q.choices.some((c: { id: string }) => c.id === q.correctId))
+    && unique(v.questions.map(q => q.id)) && unique(v.questions.map(q => q.text))
+    && QUIZ_CATEGORIES.every(category => (v.questions as { category: string }[]).filter((q: { category: string }) => q.category === category).length >= 2);
+}
 function quiz(v: unknown, withdrawn: string[], real: boolean, now: number): v is QuizPack {
   if (!isObject(v) || !exact(v, ['id', 'revision', 'questions']) || !id(v.id) || !integer(v.revision) || withdrawn.includes(v.id) || !Array.isArray(v.questions) || v.questions.length !== (real ? 10 : 5)) return false;
   const valid = v.questions.every((q: unknown) => isObject(q) && exact(q, real ? ['id', 'revision', 'text', 'choices', 'correctId', 'explanation', 'season', 'source'] : ['id', 'revision', 'text', 'choices', 'correctId', 'explanation'])
@@ -51,7 +78,8 @@ export function freeze<T>(value: T): T {
 /** Real-content previews need explicit caller policy; schema 2 remains local-only. */
 export function validateContent(raw: unknown, now: number, options: { allowLocalPreview?: boolean; allowPublicPreview?: boolean } = {}): Result<Content> {
   const local = isObject(raw) && raw.schema === 2;
-  const publicPreview = isObject(raw) && raw.schema === 3;
+  const international = isObject(raw) && raw.schema === 4;
+  const publicPreview = isObject(raw) && (raw.schema === 3 || international);
   const real = local || publicPreview;
   const keys = ['schema', 'demo', 'revision', 'rightsRevision', 'publishedAt', 'validUntil', 'rights', 'fixtures', 'roster', 'quiz'];
   if (real) keys.push(local ? 'localOnly' : 'previewOnly', 'modes');
@@ -71,11 +99,11 @@ export function validateContent(raw: unknown, now: number, options: { allowLocal
     && raw.fixtures.every(f => Date.parse(f.checkedAt) <= now && !withdrawn.includes(f.id))
     && unique(raw.fixtures.map(f => f.id)) && raw.fixtures.filter(f => f.state !== 'final').length <= 21 && raw.fixtures.filter(f => f.state === 'final').length <= 42;
   if (!fixturesValid) issues.push('fixtures');
-  const rosterValid = roster(raw.roster, withdrawn, real) && Date.parse(raw.roster.asOf) <= now;
+  const rosterValid = (international ? internationalRoster(raw.roster, withdrawn) : roster(raw.roster, withdrawn, real)) && Date.parse((raw.roster as Roster).asOf) <= now;
   if (!rosterValid) issues.push('roster');
-  const quizValid = quiz(raw.quiz, withdrawn, real, now);
+  const quizValid = international ? internationalQuiz(raw.quiz, withdrawn, now) : quiz(raw.quiz, withdrawn, real, now);
   if (!quizValid) issues.push('quiz');
-  return ok(freeze({ schema: local ? 2 : publicPreview ? 3 : 1, demo: !real,
+  return ok(freeze({ schema: international ? 4 : local ? 2 : publicPreview ? 3 : 1, demo: !real,
     ...(local ? { localOnly: true as const } : publicPreview ? { previewOnly: true as const } : {}),
     ...(real ? { modes: { fixtures: 'fictional' as const, roster: 'real' as const, quiz: 'factual' as const } } : {}),
     revision: raw.revision, rightsRevision: raw.rightsRevision, publishedAt: raw.publishedAt, validUntil: raw.validUntil,

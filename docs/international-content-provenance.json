@@ -1,0 +1,1752 @@
+{
+  "checkedAt": "2026-10-23T12:45:00.000Z",
+  "scope": "Local development of an international budget game. No live feed, prices copied from VNL, new club marks or photos. Editorial game costs, not official ratings.",
+  "rosterBasis": "Existing 14 identities retain 2026–27 league references. Added identities use explicitly labelled 2025 national-team call-ups/World Championship rosters; not a current squad claim.",
+  "costModel": {
+    "version": "world-20261023-v2",
+    "budget": 65,
+    "playerBands": [
+      3,
+      5,
+      7,
+      9,
+      12
+    ],
+    "coachBands": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "method": "Independent within-position editorial tiers (development/depth, established, international regular, elite, premium); costs then tested for feasible diverse lineups. Not a mathematical cross-position performance score.",
+    "vnlPriceStatus": "No public current player or coach fantasy-price table verified. No VNL fantasy values imported.",
+    "reviewStatus": "Initial editorial calibration, subject to user playtest; not a verified ranking."
+  },
+  "players": [
+    {
+      "id": "real-wd-q16535532",
+      "name": "Cansu Özbay",
+      "cost": 7,
+      "role": "setter",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205745/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q65949766",
+      "name": "Elif Şahin",
+      "cost": 5,
+      "role": "setter",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205863/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q20853404",
+      "name": "Melissa Vargas",
+      "cost": 12,
+      "role": "opposite",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2206094/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q99387328",
+      "name": "Alexia Carutasu",
+      "cost": 5,
+      "role": "opposite",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205623/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q55384174",
+      "name": "Ebrar Karakurt",
+      "cost": 9,
+      "role": "outside",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205483/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q16146392",
+      "name": "Hande Baladın",
+      "cost": 7,
+      "role": "outside",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2204934/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q96902355",
+      "name": "Derya Cebecioğlu",
+      "cost": 5,
+      "role": "outside",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205057/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q65950006",
+      "name": "Saliha Şahin",
+      "cost": 5,
+      "role": "outside",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205866/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q2610534",
+      "name": "Eda Erdem Dündar",
+      "cost": 9,
+      "role": "middle",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205240/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q48977782",
+      "name": "Zehra Güneş",
+      "cost": 7,
+      "role": "middle",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205362/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q2866702",
+      "name": "Aslı Kalaç",
+      "cost": 5,
+      "role": "middle",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205457/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q125696642",
+      "name": "Deniz Uyanık",
+      "cost": 3,
+      "role": "middle",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2206079/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q3108218",
+      "name": "Gizem Örge",
+      "cost": 7,
+      "role": "libero",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2205733/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-wd-q41806462",
+      "name": "Simge Aköz",
+      "cost": 5,
+      "role": "libero",
+      "country": "TR",
+      "source": "https://sultanlar.volleystation.com/en/players/2204823/",
+      "basis": "2026–27 Sultanlar Ligi kaydı"
+    },
+    {
+      "id": "real-br-macris",
+      "name": "Macris",
+      "cost": 7,
+      "role": "setter",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-roberta",
+      "name": "Roberta",
+      "cost": 5,
+      "role": "setter",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-rosamaria",
+      "name": "Rosamaria",
+      "cost": 7,
+      "role": "opposite",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-kisy",
+      "name": "Kisy",
+      "cost": 5,
+      "role": "opposite",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-tainara",
+      "name": "Tainara",
+      "cost": 5,
+      "role": "opposite",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-gabi",
+      "name": "Gabi Guimarães",
+      "cost": 12,
+      "role": "outside",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-ana-cristina",
+      "name": "Ana Cristina",
+      "cost": 9,
+      "role": "outside",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-julia-bergmann",
+      "name": "Julia Bergmann",
+      "cost": 9,
+      "role": "outside",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-helena",
+      "name": "Helena",
+      "cost": 3,
+      "role": "outside",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-diana",
+      "name": "Diana",
+      "cost": 5,
+      "role": "middle",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-julia-kudiess",
+      "name": "Julia Kudiess",
+      "cost": 7,
+      "role": "middle",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-lorena",
+      "name": "Lorena",
+      "cost": 3,
+      "role": "middle",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-lais",
+      "name": "Laís",
+      "cost": 5,
+      "role": "libero",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-br-marcelle",
+      "name": "Marcelle",
+      "cost": 3,
+      "role": "libero",
+      "country": "BR",
+      "source": "https://br.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/elenco-selecao-feminina-vnl-2025-anunciado",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-seki",
+      "name": "Nanami Seki",
+      "cost": 7,
+      "role": "setter",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-matsui",
+      "name": "Tamaki Matsui",
+      "cost": 5,
+      "role": "setter",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-wada",
+      "name": "Yukiko Wada",
+      "cost": 7,
+      "role": "opposite",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-nonaka",
+      "name": "Rui Nonaka",
+      "cost": 3,
+      "role": "opposite",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-ishikawa",
+      "name": "Mayu Ishikawa",
+      "cost": 9,
+      "role": "outside",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-sato",
+      "name": "Yoshino Sato",
+      "cost": 7,
+      "role": "outside",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-kurogo",
+      "name": "Ai Kurogo",
+      "cost": 5,
+      "role": "outside",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-osanai",
+      "name": "Miwako Osanai",
+      "cost": 3,
+      "role": "outside",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-araki",
+      "name": "Ayaka Araki",
+      "cost": 5,
+      "role": "middle",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-yamada",
+      "name": "Nichika Yamada",
+      "cost": 5,
+      "role": "middle",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-miyabe",
+      "name": "Airi Miyabe",
+      "cost": 5,
+      "role": "middle",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-shimamura",
+      "name": "Haruyo Shimamura",
+      "cost": 5,
+      "role": "middle",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-kojima",
+      "name": "Manami Kojima",
+      "cost": 7,
+      "role": "libero",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-jp-fukudome",
+      "name": "Satomi Fukudome",
+      "cost": 5,
+      "role": "libero",
+      "country": "JP",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-it-orro",
+      "name": "Alessia Orro",
+      "cost": 9,
+      "role": "setter",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-cambi",
+      "name": "Carlotta Cambi",
+      "cost": 5,
+      "role": "setter",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-egonu",
+      "name": "Paola Egonu",
+      "cost": 12,
+      "role": "opposite",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-antropova",
+      "name": "Ekaterina Antropova",
+      "cost": 9,
+      "role": "opposite",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-sylla",
+      "name": "Myriam Sylla",
+      "cost": 9,
+      "role": "outside",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-giovannini",
+      "name": "Gaia Giovannini",
+      "cost": 5,
+      "role": "outside",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-omoruyi",
+      "name": "Loveth Omoruyi",
+      "cost": 5,
+      "role": "outside",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-nervini",
+      "name": "Stella Nervini",
+      "cost": 5,
+      "role": "outside",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-danesi",
+      "name": "Anna Danesi",
+      "cost": 9,
+      "role": "middle",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-fahr",
+      "name": "Sarah Fahr",
+      "cost": 9,
+      "role": "middle",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-sartori",
+      "name": "Benedetta Sartori",
+      "cost": 5,
+      "role": "middle",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-akrari",
+      "name": "Yasmina Akrari",
+      "cost": 3,
+      "role": "middle",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-de-gennaro",
+      "name": "Monica De Gennaro",
+      "cost": 9,
+      "role": "libero",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-it-fersino",
+      "name": "Eleonora Fersino",
+      "cost": 5,
+      "role": "libero",
+      "country": "IT",
+      "source": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-rs-perovic",
+      "name": "Rada Perović",
+      "cost": 5,
+      "role": "setter",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-mirkovic",
+      "name": "Slađana Mirković",
+      "cost": 5,
+      "role": "setter",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-boskovic",
+      "name": "Tijana Bošković",
+      "cost": 12,
+      "role": "opposite",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-bukilic",
+      "name": "Vanja Bukilić",
+      "cost": 5,
+      "role": "opposite",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-uzelac",
+      "name": "Aleksandra Uzelac",
+      "cost": 7,
+      "role": "outside",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-milenkovic",
+      "name": "Bojana Milenković",
+      "cost": 5,
+      "role": "outside",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-dangubic",
+      "name": "Katarina Dangubić",
+      "cost": 5,
+      "role": "outside",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-tica",
+      "name": "Branka Tica",
+      "cost": 3,
+      "role": "outside",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-kurtagic",
+      "name": "Hena Kurtagić",
+      "cost": 7,
+      "role": "middle",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-aleksic",
+      "name": "Maja Aleksić",
+      "cost": 7,
+      "role": "middle",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-kocic",
+      "name": "Jovana Kocić",
+      "cost": 3,
+      "role": "middle",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-milojevic",
+      "name": "Ljubica Milojević",
+      "cost": 3,
+      "role": "middle",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-pusic",
+      "name": "Teodora Pušić",
+      "cost": 5,
+      "role": "libero",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-rs-jegdic",
+      "name": "Aleksandra Jegdić",
+      "cost": 5,
+      "role": "libero",
+      "country": "RS",
+      "source": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-wenerska",
+      "name": "Katarzyna Wenerska",
+      "cost": 5,
+      "role": "setter",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-kowalewska",
+      "name": "Marlena Kowalewska",
+      "cost": 5,
+      "role": "setter",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-stysiak",
+      "name": "Magdalena Stysiak",
+      "cost": 9,
+      "role": "opposite",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-smarzek",
+      "name": "Malwina Smarzek",
+      "cost": 5,
+      "role": "opposite",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-lukasik",
+      "name": "Martyna Łukasik",
+      "cost": 7,
+      "role": "outside",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-czyrnianska",
+      "name": "Martyna Czyrniańska",
+      "cost": 7,
+      "role": "outside",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-rozanski",
+      "name": "Olivia Różański",
+      "cost": 5,
+      "role": "outside",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-korneluk",
+      "name": "Agnieszka Korneluk",
+      "cost": 9,
+      "role": "middle",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-jurczyk",
+      "name": "Magdalena Jurczyk",
+      "cost": 5,
+      "role": "middle",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-pl-szczyglowska",
+      "name": "Aleksandra Szczygłowska",
+      "cost": 5,
+      "role": "libero",
+      "country": "PL",
+      "source": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-us-poulter",
+      "name": "Jordyn Poulter",
+      "cost": 7,
+      "role": "setter",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-kaahaaina-torres",
+      "name": "Saige Ka’aha’aina-Torres",
+      "cost": 3,
+      "role": "setter",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-madisen-skinner",
+      "name": "Madisen Skinner",
+      "cost": 7,
+      "role": "opposite",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-samedy",
+      "name": "Stephanie Samedy",
+      "cost": 5,
+      "role": "opposite",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-avery-skinner",
+      "name": "Avery Skinner",
+      "cost": 9,
+      "role": "outside",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-franklin",
+      "name": "Sarah Franklin",
+      "cost": 5,
+      "role": "outside",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-frantti",
+      "name": "Ali Frantti",
+      "cost": 5,
+      "role": "outside",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-ogbogu",
+      "name": "Chiaka Ogbogu",
+      "cost": 9,
+      "role": "middle",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-rettke",
+      "name": "Dana Rettke",
+      "cost": 7,
+      "role": "middle",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-us-hentz",
+      "name": "Morgan Hentz",
+      "cost": 7,
+      "role": "libero",
+      "country": "US",
+      "source": "https://usavolleyball.org/story/u-s-women-ready-for-2025-world-championship-in-thailand/",
+      "basis": "2025 Dünya Şampiyonası kadrosu"
+    },
+    {
+      "id": "real-cn-zhang-zixuan",
+      "name": "Zhang Zixuan",
+      "cost": 5,
+      "role": "setter",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-yin-xiaolan",
+      "name": "Yin Xiaolan",
+      "cost": 3,
+      "role": "setter",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-gong-xiangyu",
+      "name": "Gong Xiangyu",
+      "cost": 9,
+      "role": "opposite",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-yang-shuming",
+      "name": "Yang Shuming",
+      "cost": 3,
+      "role": "opposite",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-li-yingying",
+      "name": "Li Yingying",
+      "cost": 9,
+      "role": "outside",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-wu-mengjie",
+      "name": "Wu Mengjie",
+      "cost": 7,
+      "role": "outside",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-zhuang-yushan",
+      "name": "Zhuang Yushan",
+      "cost": 5,
+      "role": "outside",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-wang-yuanyuan",
+      "name": "Wang Yuanyuan",
+      "cost": 7,
+      "role": "middle",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-wang-aoqian",
+      "name": "Wang Aoqian",
+      "cost": 3,
+      "role": "middle",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    },
+    {
+      "id": "real-cn-wang-mengjie",
+      "name": "Wang Mengjie",
+      "cost": 7,
+      "role": "libero",
+      "country": "CN",
+      "source": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025",
+      "basis": "2025 millî takım çağrısı"
+    }
+  ],
+  "coaches": [
+    {
+      "id": "coach-santarelli",
+      "name": "Daniele Santarelli",
+      "cost": 6,
+      "reference": "Conegliano · 2024 Avrupa şampiyonu teknik ekibi",
+      "sourceUrl": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/"
+    },
+    {
+      "id": "coach-velasco",
+      "name": "Julio Velasco",
+      "cost": 6,
+      "reference": "İtalya · 2025 millî takım başantrenörü",
+      "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia"
+    },
+    {
+      "id": "coach-guimaraes",
+      "name": "José Roberto Guimarães",
+      "cost": 5,
+      "reference": "Brezilya · 2025 millî takım başantrenörü",
+      "sourceUrl": "https://cbv.com.br/noticias/volei-de-quadra/2025-07-31/jose-roberto-guimaraes-convoca-15-jogadoras-para-os-treinos-visando-o-campeonato-mundial"
+    },
+    {
+      "id": "coach-guidetti",
+      "name": "Giovanni Guidetti",
+      "cost": 5,
+      "reference": "VakıfBank · 2025–28 sözleşme duyurusu",
+      "sourceUrl": "https://www.vakifbanksporkulubu.com/tr/haber-detay/giovanni-guidetti-ile-20-yila---n2677"
+    },
+    {
+      "id": "coach-terzic",
+      "name": "Zoran Terzić",
+      "cost": 5,
+      "reference": "Sırbistan · 2025 millî takım başantrenörü",
+      "sourceUrl": "https://en.volleyballworld.com/news/boskovic-lead-renovated-serbian-squad-2025"
+    },
+    {
+      "id": "coach-lavarini",
+      "name": "Stefano Lavarini",
+      "cost": 4,
+      "reference": "Polonya · 2025 millî takım başantrenörü",
+      "sourceUrl": "https://en.volleyballworld.com/news/poland-2025-roster-mixes-veterans-youngsters"
+    },
+    {
+      "id": "coach-akbas",
+      "name": "Ferhat Akbaş",
+      "cost": 3,
+      "reference": "Japonya · 2025 millî takım başantrenörü",
+      "sourceUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/2025/news/akbas-selects-34-players-first-call-up-japan"
+    },
+    {
+      "id": "coach-barbolini",
+      "name": "Massimo Barbolini",
+      "cost": 3,
+      "reference": "İtalya · 2025 millî takım yardımcı antrenörü",
+      "sourceUrl": "https://www.federvolley.it/campionato-del-mondo-le-14-azzurre-partenza-la-thailandia"
+    },
+    {
+      "id": "coach-sullivan",
+      "name": "Erik Sullivan",
+      "cost": 3,
+      "reference": "ABD · 2025 başantrenörlük duyurusu",
+      "sourceUrl": "https://usavolleyball.org/story/usa-volleyball-names-erik-sullivan-as-new-head-coach-of-the-u-s-womens-national-team/"
+    },
+    {
+      "id": "coach-zhao",
+      "name": "Zhao Yong",
+      "cost": 2,
+      "reference": "Çin · 2025 millî takım başantrenörü",
+      "sourceUrl": "https://en.volleyballworld.com/news/with-new-coach-china-start-preparations-2025"
+    }
+  ],
+  "questions": [
+    {
+      "id": "sultanlar-q01",
+      "category": "league",
+      "event": "2023-24",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q02",
+      "category": "league",
+      "event": "2023-24",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q03",
+      "category": "league",
+      "event": "2023-24",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-madalya-kupa-ve-oduller-sahiplerini-buldu",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q04",
+      "category": "league",
+      "event": "2024-25",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-sampiyon-vakifbank",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q05",
+      "category": "league",
+      "event": "2024-25",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q06",
+      "category": "league",
+      "event": "2024-25",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q07",
+      "category": "league",
+      "event": "2025-26",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu-1",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q08",
+      "category": "league",
+      "event": "2025-26",
+      "source": "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-kupa-madalya-ve-oduller-sahiplerini-buldu-1",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q09",
+      "category": "league",
+      "event": "2025-26",
+      "source": "https://www.vakifbanksporkulubu.com/tr/haber-detay/vakifbank-son-13-sezonun-9unda-zirveye-cikti-n2821",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "sultanlar-q10",
+      "category": "league",
+      "event": "2025-26",
+      "source": "https://www.vakifbanksporkulubu.com/tr/haber-detay/vakifbank-son-13-sezonun-9unda-zirveye-cikti-n2821",
+      "checkedAt": "2026-10-22T19:34:18.198Z"
+    },
+    {
+      "id": "iq-011",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2205745/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-012",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2206094/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-013",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2204934/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-014",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2205240/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-015",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2205733/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-016",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2205745/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-017",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2205863/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-018",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2205057/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-019",
+      "category": "league",
+      "event": "2026–27 Sultanlar Ligi",
+      "source": "https://sultanlar.volleystation.com/en/players/2205866/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-020",
+      "category": "league",
+      "event": "2025–28 sözleşme duyurusu",
+      "source": "https://www.vakifbanksporkulubu.com/tr/haber-detay/giovanni-guidetti-ile-20-yila---n2677",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-021",
+      "category": "vnl",
+      "event": "VNL 2021",
+      "source": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-022",
+      "category": "vnl",
+      "event": "VNL 2021",
+      "source": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-023",
+      "category": "vnl",
+      "event": "VNL 2021",
+      "source": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-024",
+      "category": "vnl",
+      "event": "VNL 2021",
+      "source": "https://usavolleyball.org/story/triple-triumph-u-s-women-win-3rd-straight-vnl-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-025",
+      "category": "vnl",
+      "event": "VNL 2022",
+      "source": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-026",
+      "category": "vnl",
+      "event": "VNL 2022",
+      "source": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-027",
+      "category": "vnl",
+      "event": "VNL 2022",
+      "source": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-028",
+      "category": "vnl",
+      "event": "VNL 2022",
+      "source": "https://en.volleyballworld.com/news/womens-vnl-medal-matches",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-029",
+      "category": "vnl",
+      "event": "VNL 2023",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-030",
+      "category": "vnl",
+      "event": "VNL 2023",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-031",
+      "category": "vnl",
+      "event": "VNL 2023",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-032",
+      "category": "vnl",
+      "event": "VNL 2023",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vargas-takes-the-vnl-by-storm-with-mvp-award",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-033",
+      "category": "vnl",
+      "event": "VNL 2024",
+      "source": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-034",
+      "category": "vnl",
+      "event": "VNL 2024",
+      "source": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-035",
+      "category": "vnl",
+      "event": "VNL 2024",
+      "source": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-036",
+      "category": "vnl",
+      "event": "VNL 2024",
+      "source": "https://www.fivb.com/egonu-leads-italy-to-their-second-vnl-title-japan-settles-for-historic-silver-poland-defend-their-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-037",
+      "category": "vnl",
+      "event": "VNL 2025",
+      "source": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-038",
+      "category": "vnl",
+      "event": "VNL 2025",
+      "source": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-039",
+      "category": "vnl",
+      "event": "VNL 2025",
+      "source": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-040",
+      "category": "vnl",
+      "event": "VNL 2025",
+      "source": "https://it.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/volleyball-nations-league-2025-l-italia-femminile-campionessa-per-la-terza-volta",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-041",
+      "category": "olympics",
+      "event": "Paris 2024",
+      "source": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-042",
+      "category": "olympics",
+      "event": "Paris 2024",
+      "source": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-043",
+      "category": "olympics",
+      "event": "Paris 2024",
+      "source": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-044",
+      "category": "olympics",
+      "event": "Paris 2024",
+      "source": "https://www.fivb.com/italy-beat-the-usa-to-secure-first-olympic-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-045",
+      "category": "olympics",
+      "event": "Paris 2024 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-046",
+      "category": "olympics",
+      "event": "Paris 2024 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-047",
+      "category": "olympics",
+      "event": "Paris 2024 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-048",
+      "category": "olympics",
+      "event": "Paris 2024 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/news/egonu-crowned-as-mvp-in-italy-s-golden-campaign-in-paris",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-049",
+      "category": "olympics",
+      "event": "Paris 2024 bronz maçı",
+      "source": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-050",
+      "category": "olympics",
+      "event": "Paris 2024 bronz maçı",
+      "source": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-051",
+      "category": "olympics",
+      "event": "Paris 2024 bronz maçı",
+      "source": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-052",
+      "category": "olympics",
+      "event": "Paris 2024 bronz maçı",
+      "source": "https://www.fivb.com/brazil-bounce-back-and-leave-paris-with-bronze/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-053",
+      "category": "olympics",
+      "event": "Tokyo 2020 · 2021’de oynandı",
+      "source": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-054",
+      "category": "olympics",
+      "event": "Tokyo 2020 · 2021’de oynandı",
+      "source": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-055",
+      "category": "olympics",
+      "event": "Tokyo 2020 · 2021’de oynandı",
+      "source": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-056",
+      "category": "olympics",
+      "event": "Tokyo 2020 · 2021’de oynandı",
+      "source": "https://usavolleyball.org/story/gold-at-last-u-s-women-beat-brazil-to-win-olympic-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-057",
+      "category": "olympics",
+      "event": "Tokyo 2020 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-058",
+      "category": "olympics",
+      "event": "Tokyo 2020 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-059",
+      "category": "olympics",
+      "event": "Tokyo 2020 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-060",
+      "category": "olympics",
+      "event": "Tokyo 2020 ödülleri",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/olympics-2020/news/larson-leads-women-s-tokyo-2020-dream-team",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-061",
+      "category": "europe",
+      "event": "EuroVolley 2023",
+      "source": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-062",
+      "category": "europe",
+      "event": "EuroVolley 2023",
+      "source": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-063",
+      "category": "europe",
+      "event": "EuroVolley 2023",
+      "source": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-064",
+      "category": "europe",
+      "event": "EuroVolley 2023",
+      "source": "https://www.fivb.com/magnificent-turkiye-seal-maiden-european-trophy-with-dramatic-comeback/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-065",
+      "category": "europe",
+      "event": "EuroVolley 2021",
+      "source": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-066",
+      "category": "europe",
+      "event": "EuroVolley 2021",
+      "source": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-067",
+      "category": "europe",
+      "event": "EuroVolley 2021",
+      "source": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-068",
+      "category": "europe",
+      "event": "EuroVolley 2021",
+      "source": "https://www.fivb.com/italy-back-on-top-of-eurovolley-podium-egonu-mvp/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-069",
+      "category": "europe",
+      "event": "EuroVolley 2019",
+      "source": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-070",
+      "category": "europe",
+      "event": "EuroVolley 2019",
+      "source": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-071",
+      "category": "europe",
+      "event": "EuroVolley 2019",
+      "source": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-072",
+      "category": "europe",
+      "event": "EuroVolley 2019",
+      "source": "https://www.cev.eu/articles/volleyball/serbia-silence-record-breaking-crowd-to-retain-eurovolley-crown/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-073",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2024",
+      "source": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-074",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2024",
+      "source": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-075",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2024",
+      "source": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-076",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2024",
+      "source": "https://championsleague.cev.eu/en/articles/2024/imoco-conegliano-earn-the-champions-league-crown-after-dramatic-five-setter/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-077",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2023",
+      "source": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-078",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2023",
+      "source": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-079",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2023",
+      "source": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-080",
+      "category": "europe",
+      "event": "CEV Şampiyonlar Ligi 2023",
+      "source": "https://www.fivb.com/fivb-president-joins-european-volleyball-family-at-cev-super-finals/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-081",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025",
+      "source": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-082",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025",
+      "source": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-083",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025",
+      "source": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-084",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025",
+      "source": "https://www.fivb.com/italy-continue-to-dominate-and-claim-the-world-title/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-085",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025 ödülleri",
+      "source": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-086",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025 ödülleri",
+      "source": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-087",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025 ödülleri",
+      "source": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-088",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2025 ödülleri",
+      "source": "https://www.fivb.com/orro-recognized-as-the-mvp-in-italys-second-world-championship-victory/",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-089",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022",
+      "source": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-090",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022",
+      "source": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-091",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022",
+      "source": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-092",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022",
+      "source": "https://en.volleyballworld.com/news/serbia-sweep-brazil-and-retain-world-title",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-093",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2018",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-094",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2018",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-095",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2018",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-096",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2018",
+      "source": "https://en.volleyballworld.com/volleyball/competitions/women-world-championship/2022/news/2018-review-serbia-celebrate-first-world-championship-gold",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-097",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022 bronz maçı",
+      "source": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-098",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022 bronz maçı",
+      "source": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-099",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022 bronz maçı",
+      "source": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    },
+    {
+      "id": "iq-100",
+      "category": "world",
+      "event": "Dünya Şampiyonası 2022 bronz maçı",
+      "source": "https://en.volleyballworld.com/news/italy-shut-out-usa-for-bronze",
+      "checkedAt": "2026-10-23T12:45:00.000Z"
+    }
+  ],
+  "flags": [
+    {
+      "file": "public/marks/countries/br.svg",
+      "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/br.svg",
+      "license": "MIT; adjacent LICENSE.txt",
+      "sha256": "b0a912826c3ffd7287435ebed66e18fe058e992309c00dc10b430dd41a29ba91"
+    },
+    {
+      "file": "public/marks/countries/jp.svg",
+      "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/jp.svg",
+      "license": "MIT; adjacent LICENSE.txt",
+      "sha256": "bfea80baf9989383dc4bf7ca594ed95be0df0ff125bfc88d0bfa878eb0198022"
+    },
+    {
+      "file": "public/marks/countries/it.svg",
+      "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/it.svg",
+      "license": "MIT; adjacent LICENSE.txt",
+      "sha256": "9fa88118818d9b64838f578e2babcca3d0630aed21b5c33b34aff7ac5ce506bc"
+    },
+    {
+      "file": "public/marks/countries/rs.svg",
+      "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/rs.svg",
+      "license": "MIT; adjacent LICENSE.txt",
+      "sha256": "b6e08e2eca1ec4c287e5d5d7c36d7d4ad9503ad030133b04cf315f95ab49961c"
+    },
+    {
+      "file": "public/marks/countries/pl.svg",
+      "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/pl.svg",
+      "license": "MIT; adjacent LICENSE.txt",
+      "sha256": "369bb3e14ee718df1ee15fd2fb3ad0dae713f78f622e277710fb2b30a313f2aa"
+    },
+    {
+      "file": "public/marks/countries/us.svg",
+      "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/us.svg",
+      "license": "MIT; adjacent LICENSE.txt",
+      "sha256": "e7be4240cf57987926673708f09233be1ab6bdf35acc7b86bd32a263f197a2a7"
+    },
+    {
+      "file": "public/marks/countries/cn.svg",
+      "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/cn.svg",
+      "license": "MIT; adjacent LICENSE.txt",
+      "sha256": "981da9bdf82d48e31691f20578cefcb26cf7d0bd95e4ebd5c0df00bdfe988c1a"
+    }
+  ],
+  "exclusions": [
+    "No disputed set-by-set 2025 world final score included. TVF and FIVB disagree on the tie-break score; overall 3-2 agrees.",
+    "Brazil name aliases follow official call-up naming; no current club inferred.",
+    "Japan Wada/Nonaka roles follow the dated English 2025 national-team call-up (opposite), not a claim about every competition registration.",
+    "Old 2026 league event/date caveats remain in the previous provenance manifest."
+  ]
+}
